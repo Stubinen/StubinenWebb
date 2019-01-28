@@ -14,12 +14,19 @@ class Register extends Component {
           isStudent: false,
           password: '',
           verifyPassword:'',
+          Personnummer:'',
+          Adress:'',
+          Postnummer:'',
           kar: 'ingen',
+          Stad: '',
+          Telefonnummer:'',
           ErrorText: '',
           redirectToReferrer: false,
+          page:0,
       };
       this.onChange = this.onChange.bind(this);
       this.Register = this.Register.bind(this);
+      this.renderPage = this.renderPage.bind(this);
 
     }
     Register(){
@@ -27,7 +34,7 @@ class Register extends Component {
             ErrorText :'',
         });
         if(this.state.firstname.length > 0 && this.state.lastname.length > 0 && this.validateEmail(this.state.email) && this.validatePassword(this.state.password) == "" && this.state.password.length > 0){
-            RegisterAPI(this.state.email, this.state.password, this.state.firstname, this.state.lastname, this.state.kar).then(function(r) {
+            RegisterAPI(this.state.email, this.state.password, this.state.firstname, this.state.lastname, this.state.kar, this.state.Personnummer, this.state.Adress, this.state.Postnummer, this.state.Stad, this.state.Kon, this.state.Telefonnummer).then(function(r) {
                 console.log(r);
                 if(r.data.success != null){
                     this.setState({
@@ -80,57 +87,113 @@ class Register extends Component {
         }
         return "";
     }
+    changePage(i){
+        this.setState({
+            page: this.state.page + i,
+        })
+    }
+    renderPage(){
+        if(this.state.page == 0){
+            return(<div className="form-wrapper-register">
+            <h1>Skapa konto</h1>
+            <p className="WarningText">{this.state.ErrorText}</p>
+            <form>
+              <div className="form-item">
+                <label for="Förnamn"></label>
+                <input type="text" name="firstname" required="required" placeholder="Förnamn" value={this.state.firstname} onChange={this.onChange}></input>
+              </div>
+              <div className="form-item">
+                <label for="Efternamn"></label>
+                <input type="text" name="lastname" required="required" placeholder="Efternamn" value={this.state.lastname}  onChange={this.onChange}></input>
+              </div>
+              <div className="form-item">
+                <label for="email"></label>
+                <input type="email" name="email" required="required" placeholder="Email" value={this.state.email}  onChange={this.onChange}></input>
+                <p className="WarningText">{this.validateEmail(this.state.email) || this.state.email.length < 8? "": "Ange en korrekt email"}</p>
+              </div>
+              <div className="form-item">
+                  <label for="kar">Kårmedlemskap?</label>
+                  <select name="kar" value={this.state.kar} onChange={this.onChange}>
+                       <option value="ingen">ingen (men är student)</option>
+                       <option value="ej student">Ej student</option>
+                       <option value="LinTek">LinTek</option>
+                       <option value="Consensus">Consensus</option>
+                       <option value="StuFF">StuFF</option>
+                  </select>
+              </div>
+              <div className="form-item">
+                <label for="password"></label>
+                <input type="password" name="password" required="required" placeholder="Lösenord" value={this.state.password} onChange={this.onChange}></input>
+                  <p className="WarningText">{this.validatePassword(this.state.password)}</p>
+              </div>
+              <div className="form-item">
+                <label for="password"></label>
+                <input type="password" name="verifyPassword" required="required" placeholder="Upprepa Lösenord" value={this.state.verifyPassword}  onChange={this.onChange}></input>
+                <p className="WarningText">{this.state.password != this.state.verifyPassword && this.state.verifyPassword.length > 0? "Lösenordet matchar inte!" : ""}</p>
+              </div>
+              <div className="button-panel">
+                <input  className="button"  placeholder="Nästa"  onClick={() => this.changePage(1)}></input>
+              </div>
+            </form>
+            <div className="form-footer">
+              <p><a href="/Login">Logga in</a></p>
+              <p><a href="/">Startsida</a></p>
+            </div>
+        </div>);
+        }
+        else{
+            return(<div className="form-wrapper-register">
+            <h1>Skapa konto</h1>
+            <p className="WarningText">{this.state.ErrorText}</p>
+            <form>
+              <div className="form-item">
+                <label for="Personnummer"></label>
+                <input type="text" name="Personnummer" required="required" placeholder="Personnummer" value={this.state.Personnummer} onChange={this.onChange}></input>
+              </div>
+              <div className="form-item">
+                <label for="Adress"></label>
+                <input type="text" name="Adress" required="required" placeholder="Adress" value={this.state.Adress}  onChange={this.onChange}></input>
+              </div>
+              <div className="form-item">
+                <label for="Postnummer"></label>
+                <input type="text" name="Postnummer" required="required" placeholder="Postnummer" value={this.state.Postnummer}  onChange={this.onChange}></input>
+              </div>
+              <div className="form-item">
+                <label for="Stad"></label>
+                <input type="text" name="Stad" required="required" placeholder="Stad"  value={this.state.Stad} onChange={this.onChange}></input>
+              </div>
+              <div className="form-item">
+                  <label for="Kon">Kön: </label>
+                  <select name="Kon" value={this.state.Kon} onChange={this.onChange}>
+                        <option value="Kvinna">Kvinna</option>
+                        <option value="Man">Man</option>
+                        <option value="non-binary">icke binär</option>
+                  </select>
+              </div>
+              <div className="form-item">
+                <label for="Telefonnummer"></label>
+                <input type="text" name="Telefonnummer" required="required" placeholder="Telefonnummer" value={this.state.Telefonnummer} onChange={this.onChange}></input>
+              </div>
+              <div className="button-panel">
+                <input  className="button"  placeholder="Föregående"  onClick={() => this.changePage(-1)}></input>
+                <input  className="button"  placeholder="Registrera"  onClick={this.Register}></input>
+              </div>
+            </form>
+            <div className="form-footer">
+              <p><a href="/Login">Logga in</a></p>
+              <p><a href="/">Startsida</a></p>
+            </div>
+        </div>);
+        }
+    }
 
       render() {
           if (this.state.redirectToReferrer){
               return (<Redirect to={'/MemberPage'}/>)
           }
           return(
-                  <div className="form-wrapper-register">
-                  <h1>Skapa konto</h1>
-                  <p className="WarningText">{this.state.ErrorText}</p>
-                  <form>
-                    <div className="form-item">
-                      <label for="Förnamn"></label>
-                      <input type="text" name="firstname" required="required" placeholder="Förnamn" onChange={this.onChange}></input>
-                    </div>
-                    <div className="form-item">
-                      <label for="Efternamn"></label>
-                      <input type="text" name="lastname" required="required" placeholder="Efternamn" onChange={this.onChange}></input>
-                    </div>
-                    <div className="form-item">
-                      <label for="email"></label>
-                      <input type="email" name="email" required="required" placeholder="Email" onChange={this.onChange}></input>
-                      <p className="WarningText">{this.validateEmail(this.state.email) || this.state.email.length < 8? "": "Ange en korrekt email"}</p>
-                    </div>
-                    <div className="form-item">
-                        <label for="kar">Kårmedlemskap?</label>
-                        <select name="kar" onChange={this.onChange}>
-                             <option value="ingen">ingen (men är student)</option>
-                             <option value="ej student">Ej student</option>
-                             <option value="LinTek">LinTek</option>
-                             <option value="Consensus">Consensus</option>
-                             <option value="StuFF">StuFF</option>
-                        </select>
-                    </div>
-                    <div className="form-item">
-                      <label for="password"></label>
-                      <input type="password" name="password" required="required" placeholder="Lösenord" onChange={this.onChange}></input>
-                        <p className="WarningText">{this.validatePassword(this.state.password)}</p>
-                    </div>
-                    <div className="form-item">
-                      <label for="password"></label>
-                      <input type="password" name="verifyPassword" required="required" placeholder="Upprepa Lösenord" onChange={this.onChange}></input>
-                      <p className="WarningText">{this.state.password != this.state.verifyPassword && this.state.verifyPassword.length > 0? "Lösenordet matchar inte!" : ""}</p>
-                    </div>
-                    <div className="button-panel">
-                      <input  className="button"  placeholder="Registrera"  onClick={this.Register}></input>
-                    </div>
-                  </form>
-                  <div className="form-footer">
-                    <p><a href="/Login">Logga in</a></p>
-                    <p><a href="/">Startsida</a></p>
-                  </div>
+              <div>
+              {this.renderPage()}
               </div>
         );
       }

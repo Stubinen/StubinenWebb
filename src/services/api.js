@@ -24,13 +24,19 @@ export function LoginAPI(email, password) {
     password: password
   });
 }
-export function RegisterAPI(email, password, firstname, lastname, kar ) {
+export function RegisterAPI(email, password, firstname, lastname, kar,Personnummer,Adress, Postnummer, Stad ,Kon,Telefonnummer) {
   return post('Register.php', {
     email: email,
     password: password,
     firstname: firstname,
     lastname: lastname,
-    kar: kar
+    kar: kar,
+    Personnummer:Personnummer,
+    Adress:Adress,
+    Postnummer:Postnummer,
+    Stad:Stad,
+    Kon:Kon,
+    Telefonnummer:Telefonnummer,
   });
 }
 export function PayedAPI(id){

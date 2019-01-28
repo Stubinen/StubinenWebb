@@ -9,6 +9,13 @@ $password= $_POST['password'];
 $firstname= $_POST['firstname'];
 $lastname= $_POST['lastname'];
 $kar = $_POST['kar'];
+$Personnummer = $_POST['Personnummer'];
+$Adress = $_POST['Adress'];
+$Postnummer = $_POST['Postnummer'];
+$Stad = $_POST['Stad'];
+$Kon = $_POST['Kon'];
+$Telefonnummer = $_POST['Telefonnummer'];
+
 error_log($kar);
 if($kar == "ej student"){
     $isStudent= false;
@@ -30,7 +37,7 @@ try{
         $mainCount=$stmt->rowCount();
         $created=time();
         if($mainCount==0){
-            $sql1="INSERT INTO users(FirstName, LastName,Membership,Email, Password,isStudent, karMedlemskap)VALUES(:firstname,:lastname,:membership ,:email,:password,:isStudent,:kar)";
+            $sql1="INSERT INTO users(FirstName, LastName,Membership,Email, Password,isStudent, karMedlemskap, Personnummer, Adress, Postnummer, Stad,Kon,Telefonnummer)VALUES(:firstname,:lastname,:membership ,:email,:password,:isStudent,:kar,:Personnummer, :Adress,:Postnummer, :Stad,:Kon,:Telefonnummer)";
             $stmt1 = $db->prepare($sql1);
             $stmt1->bindParam("firstname", $firstname,PDO::PARAM_STR);
             $stmt1->bindParam("lastname", $lastname,PDO::PARAM_STR);
@@ -40,6 +47,13 @@ try{
             $stmt1->bindParam("password", $password,PDO::PARAM_STR);
             $stmt1->bindParam("isStudent", $isStudent,PDO::PARAM_BOOL);
             $stmt1->bindParam("kar", $kar, PDO::PARAM_STR);
+            $stmt1->bindParam("Personnummer", $Personnummer, PDO::PARAM_STR);
+            $stmt1->bindParam("Adress", $Adress, PDO::PARAM_STR);
+            $stmt1->bindParam("Postnummer", $Postnummer, PDO::PARAM_STR);
+            $stmt1->bindParam("Stad", $Stad, PDO::PARAM_STR);
+            $stmt1->bindParam("Kon", $Kon, PDO::PARAM_STR);
+            $stmt1->bindParam("Telefonnummer", $Telefonnummer, PDO::PARAM_STR);
+
             $stmt1->execute();
             $resp = array('success' => "Successful");
             echo json_encode($resp);
