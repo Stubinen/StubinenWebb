@@ -74,6 +74,34 @@ class AllMembers extends Component{
                             Header: "Kår",
                             accessor: "karMedlemskap"
                         },
+                        {
+                            Header: "Personnummer",
+                            accessor: "Personnummer"
+                        },
+                        {
+                            Header: "Adress",
+                            accessor: "Adress"
+                        },
+                        {
+                            Header: "Postnummer",
+                            accessor: "Postnummer"
+                        },
+                        {
+                            Header: "Stad",
+                            accessor: "Stad"
+                        },
+                        {
+                            Header: "Kön",
+                            accessor: "Kon"
+                        },
+                        {
+                            Header: "Telefonnummer",
+                            accessor: "Telefonnummer"
+                        },
+                        {
+                            Header: "Registreringsdatum",
+                            accessor: "reg_date"
+                        },
 
                     ]
                   }]}
