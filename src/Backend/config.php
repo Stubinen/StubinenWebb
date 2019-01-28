@@ -6,9 +6,10 @@ session_start();
 define('DB_SERVER', 'mysql84.unoeuro.com');
 define('DB_USERNAME', 'stubinen_org');
 define('DB_PASSWORD', 'nw1w172499');
-define('DB_DATABASE', 'Stubinen');
+define('DB_DATABASE', 'stubinen_org_db_4');
 define("BASE_URL", "http://localhost/Stubinen");
 define("SITE_KEY", 'NoneShallPass');
+header("Access-Control-Allow-Origin: *");
 function getDB()
 {
 	$dbhost=DB_SERVER;

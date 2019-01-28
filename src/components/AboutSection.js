@@ -8,14 +8,14 @@ class AboutSection extends Component {
     constructor(props) {
       super(props);
         this.IMAGES = [
-          { src: 'http://81.228.240.169/Stubinen/august.jpg', name: 'August',roll: "Ordförande"},
-          { src: 'http://81.228.240.169/Stubinen/ludwig.jpg', name: 'Ludwig',roll: "Sekreterare"},
-          { src: 'http://81.228.240.169/Stubinen/rasmus.jpg', name: 'Rasmus',roll: "Kassör"},
-          { src: 'http://81.228.240.169/Stubinen/martin.jpg', name: 'Marting',roll: "Event"},
-          { src: 'http://81.228.240.169/Stubinen/hannes.jpg', name: 'Alice',roll: "Filmansvarig"},
-          { src: 'http://81.228.240.169/Stubinen/linnea.jpg', name: 'Linnea',roll: "Marknadsföring Tryck"},
-          { src: 'http://81.228.240.169/Stubinen/index.jpg', name: 'Ludvig',roll: "Marknadsföring Digital"},
-          { src: 'http://81.228.240.169/Stubinen/david.jpg', name: 'David',roll: "Webb"},
+          { src: 'https://api.stubinen.org/img/august.jpg', name: 'August',roll: "Ordförande"},
+          { src: 'https://api.stubinen.org/img/ludwig.jpg', name: 'Ludwig',roll: "Sekreterare"},
+          { src: 'https://api.stubinen.org/img/rasmus.jpg', name: 'Rasmus',roll: "Kassör"},
+          { src: 'https://api.stubinen.org/img/martin.jpg', name: 'Marting',roll: "Event"},
+          { src: 'https://api.stubinen.org/img/alice.jpg', name: 'Alice',roll: "Filmansvarig"},
+          { src: 'https://api.stubinen.org/img/linnea.jpg', name: 'Linnea',roll: "Marknadsföring Tryck"},
+          { src: 'https://api.stubinen.org/img/ludvig.jpg', name: 'Ludvig',roll: "Marknadsföring Digital"},
+          { src: 'https://api.stubinen.org/img/david.jpg', name: 'David',roll: "Webb"},
       ];
     }
     render() {
