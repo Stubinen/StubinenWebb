@@ -1,7 +1,7 @@
 import axios from 'axios';
 import querystring from 'querystring';
 
-const apiBaseUrl = 'http://81.228.240.169/Stubinen/';
+const apiBaseUrl = 'https://api.stubinen.org/';
 
 var ax = axios.create({
     baseUrl: apiBaseUrl,
