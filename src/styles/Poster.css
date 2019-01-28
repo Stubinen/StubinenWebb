@@ -157,6 +157,9 @@ h1, h2, h3 {
   color: white;
   transition: 0.4s;
     color: #cfd6e1;
+    position: absolute;
+    bottom: 10px;
+    left:10px;
 }
 
 .movie-btn-outline {

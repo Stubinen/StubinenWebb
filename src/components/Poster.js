@@ -22,17 +22,13 @@ class Poster extends Component {
         <div id="movie-card-list">
           <div className="movie-card" style={MoviePoster}>
             <div className="movie-card__overlay"></div>
-            <div className="movie-card__share">
-              <button className="movie-card__icon"><i className="fab fa-imdb"></i></button>
-
-            </div>
+            <button onClick={this.handleClick} className="movie-btn movie-btn-outline movie-card__button" type="button"><i class="fas fa-play"></i>Play trailer</button>
             <div className="movie-card__content">
               <div className="movie-card__header">
                 <h1 className="movie-card__title">{this.props.title}</h1>
                 <h4 className="movie-card__info">{this.props.date}</h4>
               </div>
               <p className="movie-card__desc">{this.props.text}</p>
-              <button onClick={this.handleClick} className="movie-btn movie-btn-outline movie-card__button" type="button"><i class="fas fa-play"></i>Play trailer</button>
             </div>
           </div>
         </div>
