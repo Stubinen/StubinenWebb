@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import logo from '../logo.svg';
 import LazyHero from 'react-lazy-hero';
 import '../styles/LandingPage.css';
-import '../styles/Standard.css';
 import Button from './Button';
 import Hero from './Hero';
+import PosterSection from './PosterSection';
+import AboutSection from './AboutSection';
 import { Link } from 'react-router-dom';
 
 
@@ -16,6 +17,8 @@ class LandingPage extends Component {
     return (
       <div className="LandingPage">
         <Hero />
+        <PosterSection />
+        <AboutSection />
       </div>
     );
   }
