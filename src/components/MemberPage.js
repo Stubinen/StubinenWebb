@@ -53,12 +53,32 @@ class MemberPage extends Component{
                   </div>
                 );
             }
+            if(this.state.Membership == "gold"){
+                return(
+                <div className="Bod">
+                <aside className="profile-card gold">
+                <header>
+                  <h1>{this.state.FirstName + " " + this.state.LastName}</h1>
+                  <h2>Guld Medlem</h2>
+                </header>
+                <div className="profile-bio">
+                  <p>
+                    “I am serious. And don’t call me Shirley.”
+                    -Airplane (1980)
+                  </p>
+                </div>
+                <a href="/"><FontAwesomeIcon icon={faHome} className="icon"/></a>
+              </aside>
+              </div>
+          );
+
+            }
             return(
                 <div className="Bod">
                 <aside className="profile-card">
                 <header>
                   <h1>{this.state.FirstName + " " + this.state.LastName}</h1>
-                  <h2>{this.state.Membership}</h2>
+                  <h2>Aktiv Medlem</h2>
                 </header>
                 <div className="profile-bio">
                   <p>

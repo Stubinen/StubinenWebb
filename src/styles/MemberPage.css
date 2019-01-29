@@ -32,7 +32,9 @@ html {
   -webkit-animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
   animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
 }
-
+.gold{
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%) !important;
+}
 h1,
 h2 {
   font-weight: 500;
@@ -79,7 +81,7 @@ p {
   display: inline-block;
   float: left;
   border-right: 2px dashed #EEEEEE;
-  background: #FFFFFF;
+  background: transparent;
   color: #000000;
   margin-top: 50px;
   opacity: 0;
@@ -132,7 +134,7 @@ p {
   display: inline-block;
   float: right;
   padding: 50px 20px 30px 20px;
-  background: #FFFFFF;
+  background: transparent;
   color: #333333;
   margin-top: 50px;
   text-align: center;
