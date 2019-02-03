@@ -15,10 +15,14 @@ class MemberPage extends Component{
     activate(){
         PayedAPI(this.state.id).then(function(v){
             console.log(v);
-        }.bind(this));;
+        }.bind(this));
         this.setState({
             paymentstatus: "pending",
         })
+        let uD = this.state;
+        uD.paymentstatus = "pending";
+        console.log(uD);
+        sessionStorage.setItem('userData', JSON.stringify(uD));
     }
 
     render(){
@@ -62,10 +66,7 @@ class MemberPage extends Component{
                   <h2>Guld Medlem</h2>
                 </header>
                 <div className="profile-bio">
-                  <p>
-                    “I am serious. And don’t call me Shirley.”
-                    -Airplane (1980)
-                  </p>
+
                 </div>
                 <a href="/"><FontAwesomeIcon icon={faHome} className="icon"/></a>
               </aside>
@@ -81,10 +82,7 @@ class MemberPage extends Component{
                   <h2>Aktiv Medlem</h2>
                 </header>
                 <div className="profile-bio">
-                  <p>
-                    “I am serious. And don’t call me Shirley.”
-                    -Airplane (1980)
-                  </p>
+
                 </div>
                 <a href="/"><FontAwesomeIcon icon={faHome} className="icon"/></a>
               </aside>

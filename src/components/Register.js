@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/Register.css';
 import {Redirect} from 'react-router-dom';
-import {RegisterAPI} from '../services/api';
+import {RegisterAPI, LoginAPI} from '../services/api';
 
 class Register extends Component {
 
@@ -19,6 +19,7 @@ class Register extends Component {
           Postnummer:'',
           kar: 'ingen',
           Stad: '',
+          Kon: 'Kvinna',
           Telefonnummer:'',
           ErrorText: '',
           redirectToReferrer: false,
@@ -33,13 +34,30 @@ class Register extends Component {
         this.setState({
             ErrorText :'',
         });
-        if(this.state.firstname.length > 0 && this.state.lastname.length > 0 && this.validateEmail(this.state.email) && this.validatePassword(this.state.password) == "" && this.state.password.length > 0){
+        if(this.state.firstname.length > 0 && this.state.lastname.length > 0 && this.validateEmail(this.state.email) && this.validatePassword(this.state.password) == "" && this.state.password.length > 0 && this.CheckAllFields()){
             RegisterAPI(this.state.email, this.state.password, this.state.firstname, this.state.lastname, this.state.kar, this.state.Personnummer, this.state.Adress, this.state.Postnummer, this.state.Stad, this.state.Kon, this.state.Telefonnummer).then(function(r) {
-                console.log(r);
                 if(r.data.success != null){
-                    this.setState({
-                        redirectToReferrer: true,
-                    })
+                    LoginAPI(this.state.email, this.state.password).then(function(v){
+                        if(v.data != null){
+                            if(v.data.error != null){
+                                this.setState({
+                                    ErrorText: "Fel lösenord eller email."
+                                })
+                                console.log(v.data);
+                                console.log("v.data.error");
+                            }
+                            else{
+                                sessionStorage.setItem('userData', JSON.stringify(v.data));
+                                console.log(v.data);
+                                console.log("no v.data.error");
+                                this.setState({
+                                    redirectToReferrer: true,
+                                })
+                            }
+                        }
+                    }.bind(this));
+
+
                 }
                 if(r.data.error != null){
                     this.setState({
@@ -49,7 +67,7 @@ class Register extends Component {
             }.bind(this))
         }
         else{
-            console.log(this.state);
+
         }
     }
 
@@ -86,6 +104,21 @@ class Register extends Component {
             return "Lösenordet måste innehålla minst en liten bokstav";
         }
         return "";
+    }
+    CheckAllFields(){
+        if(this.state.firstname.length > 0 && this.state.lastname.length > 0 && this.state.kar.length >0 && this.state.Personnummer.length >0 && this.state.Adress.length > 0 && this.state.Postnummer.length > 0 && this.state.Stad.length > 0 && this.state.Kon.length > 0 ){
+            this.setState({
+                ErrorText: "",
+            })
+            return true;
+        }
+        else{
+            this.setState({
+                ErrorText: "Fyll i hela formuläret",
+            })
+            console.log(this.state);
+            return false;
+        }
     }
     changePage(i){
         this.setState({
