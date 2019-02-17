@@ -27,7 +27,7 @@ $membership = "inactive";
 try{
     $email_check = preg_match('~^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.([a-zA-Z]{2,4})$~i', $email);
     $password_check = preg_match('~^[A-Za-z0-9!@#$%^&*()_]{6,20}$~i', $password);
-    if (strlen(trim($password))>0 && strlen(trim($email))>0 && $email_check>0 && $password_check>0){
+    if (strlen(trim($password))> 0 && strlen(trim($email))> 0){
         $db = getDB();
         $userData = '';
         $sql = "SELECT id FROM users WHERE email=:email";

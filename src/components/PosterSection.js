@@ -63,7 +63,9 @@ class PosterSection extends Component {
     return (
       <div className='PosterSection'>
             {notShownItems}
-            {shownItems.length != 0 ?'<h1> Redan visade filmer denna termin</h1>': ''}
+            <h1>
+            {shownItems.length != 0 ?'Redan visade filmer denna termin': ''}
+            </h1>
             {shownItems}
       </div>
     );
