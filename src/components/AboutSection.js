@@ -8,14 +8,14 @@ class AboutSection extends Component {
     constructor(props) {
       super(props);
         this.IMAGES = [
-          { src: 'https://api.stubinen.org/img/august.jpg', name: 'August',roll: "Ordförande"},
-          { src: 'https://api.stubinen.org/img/ludwig.jpg', name: 'Ludwig',roll: "Sekreterare"},
-          { src: 'https://api.stubinen.org/img/rasmus.jpg', name: 'Rasmus',roll: "Kassör"},
-          { src: 'https://api.stubinen.org/img/martin.jpg', name: 'Marting',roll: "Event"},
-          { src: 'https://api.stubinen.org/img/alice.jpg', name: 'Alice',roll: "Filmansvarig"},
-          { src: 'https://api.stubinen.org/img/linnea.jpg', name: 'Linnea',roll: "Marknadsföring Tryck"},
-          { src: 'https://api.stubinen.org/img/ludvig.jpg', name: 'Ludvig',roll: "Marknadsföring Digital"},
-          { src: 'https://api.stubinen.org/img/david.jpg', name: 'David',roll: "Webb"},
+          { src: 'https://api.stubinen.org/img/nyaBilder/august.png', name: 'August',roll: "Ordförande"},
+          { src: 'https://api.stubinen.org/img/nyaBilder/ludwig.png', name: 'Ludwig',roll: "Sekreterare"},
+          { src: 'https://api.stubinen.org/img/nyaBilder/rasmus.png', name: 'Rasmus',roll: "Kassör"},
+          { src: 'https://api.stubinen.org/img/nyaBilder/martin.png', name: 'Marting',roll: "Event"},
+          { src: 'https://api.stubinen.org/img/nyaBilder/alice.png', name: 'Alice',roll: "Filmansvarig"},
+          { src: 'https://api.stubinen.org/img/nyaBilder/linnea.png', name: 'Linnea',roll: "Marknadsföring Tryck"},
+          { src: 'https://api.stubinen.org/img/nyaBilder/ludvig.png', name: 'Ludvig',roll: "Marknadsföring Digital"},
+          { src: 'http://api.stubinen.org/img/nyaBilder/david.png', name: 'David',roll: "Webb"},
       ];
     }
     render() {
