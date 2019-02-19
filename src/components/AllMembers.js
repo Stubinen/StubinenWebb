@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
-import {GetAllMembersAPI, DeleteMemberAPI} from '../services/api';
+import {GetAllMembersAPI, DeleteMemberAPI, UpdateMembershipAPI} from '../services/api';
 import ReactModal from 'react-modal';
 import ReactTable from "react-table";
 import "react-table/react-table.css";
 import Close from "@material-ui/icons/Close";
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
 
 class AllMembers extends Component{
     constructor(){
@@ -26,10 +28,31 @@ class AllMembers extends Component{
        });
 
     }
-    handleDelete(id){
-        DeleteMemberAPI(id);
-        this.handleCloseModal();
+    handleMembership(id, membership){
+        UpdateMembershipAPI(id,membership);
         this.getData();
+        this.handleCloseModal();
+
+    }
+    handleDelete(id){
+        confirmAlert({
+         title: 'Confirm to delete',
+         message: 'Are you sure to do this.',
+         buttons: [
+           {
+             label: 'Yes',
+             onClick: () => {
+                 DeleteMemberAPI(id);
+                 this.getData();
+                 this.handleCloseModal();
+             }
+           },
+           {
+             label: 'No',
+             onClick: () => alert('Click No')
+           }
+         ]
+       })
     }
 
     handleCloseModal () {
@@ -117,6 +140,10 @@ class AllMembers extends Component{
                 <button onClick={this.handleCloseModal}><Close/></button>
                 <h1 style={styles.Name}>{this.state.currentObj.FirstName + " " + this.state.currentObj.LastName}</h1>
                 <button onClick={() =>this.handleDelete(this.state.currentObj.id)}>Ta bort användaren</button>
+                <br />
+                <button onClick={() => this.handleMembership(this.state.currentObj.id, 'gold')}>Gör till Guld</button>
+                <br />
+                <button onClick={() => this.handleMembership(this.state.currentObj.id, 'boardmember')}>Gör till Boardmember</button>
 
               </ReactModal>
             </div>

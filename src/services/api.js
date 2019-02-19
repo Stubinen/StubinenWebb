@@ -49,6 +49,12 @@ export function ActivateMemberAPI(id){
         id: id
     })
 }
+export function UpdateMembershipAPI(id, membership){
+    return post('UpdateMembership.php', {
+        id: id,
+        membership: membership,
+    })
+}
 export function DeleteMemberAPI(id){
     return post('DeleteMember.php', {
         id: id
