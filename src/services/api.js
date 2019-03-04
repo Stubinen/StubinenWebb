@@ -66,6 +66,9 @@ export function MembersOnPendingAPI(){
 export function MemberCountAPI(){
     return post('MemberCount.php', {})
 }
+export function ActiveMemberCountAPI(){
+    return post('ActiveMemberCount.php', {})
+}
 export function GetAllMembersAPI(){
     return post("GetAllMembers.php", {})
 }

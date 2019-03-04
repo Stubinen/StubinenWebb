@@ -14,7 +14,7 @@ import Menu from "@material-ui/icons/Menu";
 import Home from "@material-ui/icons/Home";
 import ActivateMembers from "./ActivateMembers";
 import AllMembers from "./AllMembers";
-import { MemberCountAPI } from '../services/api';
+import { MemberCountAPI, ActiveMemberCountAPI } from '../services/api';
 
 const styles = {
   list: {
@@ -40,6 +40,7 @@ class Admin extends Component{
           top: false,
           content: 0,
           MemberCount:0,
+          ActiveMemberCount:0,
         };
         this.MemberCount = this.MemberCount.bind(this);
     }
@@ -60,6 +61,11 @@ class Admin extends Component{
                 MemberCount: r.data.Count,
             })
         }.bind(this))
+        ActiveMemberCountAPI().then(function(r){
+            this.setState({
+                ActiveMemberCount: r.data.Count,
+            })
+        }.bind(this))
     }
     getContent(){
         if(this.state.content == 0){
@@ -67,6 +73,7 @@ class Admin extends Component{
                 <div>
                     <h1>Välkommen till Admin sidan!</h1>
                     <h1>Antal medlemmar: {" " + this.state.MemberCount} </h1>
+                    <h1>Antal betalande medlemmar: {" " + this.state.ActiveMemberCount} </h1>
                 </div>
             );
         }
