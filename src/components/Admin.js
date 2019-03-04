@@ -44,6 +44,9 @@ class Admin extends Component{
         };
         this.MemberCount = this.MemberCount.bind(this);
     }
+    componentDidMount(){
+        this.MemberCount();
+    }
     toggleDrawer = (side, open) => () => {
       this.setState({
         [side]: open
@@ -89,7 +92,6 @@ class Admin extends Component{
         }
     }
     render(){
-        this.MemberCount();
         const fullList = (
           <div>
             <List>
