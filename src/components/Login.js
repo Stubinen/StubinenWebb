@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
 import '../styles/Login.css';
 import {LoginAPI} from '../services/api';
+import {translate} from '../services/Local';
 class Login extends Component {
     constructor(){
         super();
@@ -27,7 +28,7 @@ class Login extends Component {
                 if(v.data != null){
                     if(v.data.error != null){
                         this.setState({
-                            errorMessage: "Fel lösenord eller email."
+                            errorMessage: translate("Fel lösenord eller email.")
                         })
                         this.WrongPassword();
                     }
@@ -51,7 +52,7 @@ class Login extends Component {
         }
         return (
                 <div className="form-wrapper">
-                <h1>Logga in</h1>
+                <h1>{translate("Logga in")}</h1>
                 <p class="ErrorMessage">{this.state.errorMessage}</p>
                 <form>
                   <div class="form-item">
@@ -60,15 +61,15 @@ class Login extends Component {
                   </div>
                   <div class="form-item">
                     <label for="password"></label>
-                    <input type="password" name="password" required="required" placeholder="Lösenord" value={this.state.password} onChange={this.onChange}/>
+                    <input type="password" name="password" required="required" placeholder={translate("Lösenord")} value={this.state.password} onChange={this.onChange}/>
                   </div>
                   <div class="button-panel">
-                    <input class="button" placeholder="Logga in" onClick={this.login}/>
+                    <input class="button" placeholder={translate("Logga in")} onClick={this.login}/>
                   </div>
                 </form>
                 <div class="form-footer">
-                  <p><a href="/Register">Skapa konto</a></p>
-                  <p><a href="/">Startsida</a></p>
+                  <p><a href="/Register">{translate("Skapa konto")}</a></p>
+                  <p><a href="/">{translate("Startsida")}</a></p>
                 </div>
               </div>
         );

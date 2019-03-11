@@ -8,6 +8,7 @@ import Poster from './Poster';
 import Lightbox from 'react-images';
 import { Container, Row, Col } from 'reactstrap';
 import {DateCompare} from '../services/Dates';
+import {translate} from '../services/Local';
 
 class PosterSection extends Component {
   constructor(props) {
@@ -64,7 +65,7 @@ class PosterSection extends Component {
       <div className='PosterSection'>
             {notShownItems}
             <h1>
-            {shownItems.length != 0 ?'Redan visade filmer denna termin': ''}
+            {shownItems.length != 0 ? translate("RedanSpelade"): ''}
             </h1>
             {shownItems}
       </div>

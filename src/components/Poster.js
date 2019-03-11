@@ -4,6 +4,7 @@ import '../styles/Poster.css';
 import { Container, Row, Col } from 'reactstrap';
 import YouTube from 'react-youtube';
 import { FaImdb } from "react-icons/fa";
+import {translate} from '../services/Local';
 
 class Poster extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class Poster extends Component {
         <div id="movie-card-list">
           <div className="movie-card" style={MoviePoster}>
             <div className="movie-card__overlay"></div>
-            <button onClick={this.handleClick} className="movie-btn movie-btn-outline movie-card__button" type="button"><i class="fas fa-play"></i>Play trailer</button>
+            <button onClick={this.handleClick} className="movie-btn movie-btn-outline movie-card__button" type="button"><i class="fas fa-play"></i>{translate("Spela Trailer")}</button>
             <div className="movie-card__content">
               <div className="movie-card__header">
                 <h1 className="movie-card__title">{this.props.title}</h1>
