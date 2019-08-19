@@ -8,14 +8,13 @@ class AboutSection extends Component {
     constructor(props) {
       super(props);
         this.IMAGES = [
-          { src: 'https://api.stubinen.org/img/nyaBilder/august.png', name: 'August',roll: translate("Ordförande")},
-          { src: 'https://api.stubinen.org/img/nyaBilder/ludwig.png', name: 'Ludwig',roll: translate("Sekreterare")},
-          { src: 'https://api.stubinen.org/img/nyaBilder/rasmus.png', name: 'Rasmus',roll: translate("Kassör")},
-          { src: 'https://api.stubinen.org/img/nyaBilder/martin.png', name: 'Marting',roll: translate("Event")},
-          { src: 'https://api.stubinen.org/img/nyaBilder/alice.png', name: 'Alice',roll: translate("Filmansvarig")},
-          { src: 'https://api.stubinen.org/img/nyaBilder/linnea.png', name: 'Linnea',roll: translate("Marknadsföring Tryck")},
-          { src: 'https://api.stubinen.org/img/nyaBilder/ludvig.png', name: 'Ludvig',roll: translate("Marknadsföring Digital")},
-          { src: 'http://api.stubinen.org/img/nyaBilder/david.png', name: 'David',roll: translate("Webb")},
+          { src: 'https://api.stubinen.org/img/styrelsen1920/Elida.png', name: 'Elida',roll: translate("Ordförande")},
+          { src: 'https://api.stubinen.org/img/styrelsen1920/Astrid.png', name: 'Astrid',roll: translate("Sekreterare")},
+          { src: 'https://api.stubinen.org/img/styrelsen1920/Simon.png', name: 'Simon',roll: translate("Kassör")},
+          { src: 'https://api.stubinen.org/img/styrelsen1920/Rebecka.png', name: 'Rebecka',roll: translate("Event")},
+          { src: 'https://api.stubinen.org/img/styrelsen1920/saknas.jpg', name: 'Dasmit',roll: translate("Filmansvarig")},
+          { src: 'https://api.stubinen.org/img/styrelsen1920/Johanna.png', name: 'Johanna',roll: translate("Marknadsföring")},
+          { src: 'http://api.stubinen.org/img/styrelsen1920/Matilda.png', name: 'Matilda',roll: translate("Webb")},
       ];
     }
     render() {
@@ -30,7 +29,7 @@ class AboutSection extends Component {
         return (
           <div className='AboutSection'>
           <Container>
-            <h2>{translate("Styrelsen")} 18/19</h2>
+            <h2>{translate("Styrelsen")} 19/20</h2>
                 <Row form ={true}>
                     {listItems}
                 </Row>
@@ -42,3 +41,6 @@ class AboutSection extends Component {
 
 
 export default AboutSection
+
+
+{/*src: 'https://api.stubinen.org/img/nyaBilder/linnea.png', name: 'Klara',roll: translate("Marknadsföring Tryck")*/}
