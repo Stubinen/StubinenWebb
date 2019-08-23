@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import LazyHero from 'react-lazy-hero';
 import Button from './Button';
 import { Link } from 'react-router-dom';

@@ -13,6 +13,7 @@ import Done from "@material-ui/icons/HowToReg";
 import Menu from "@material-ui/icons/Menu";
 import Home from "@material-ui/icons/Home";
 import ActivateMembers from "./ActivateMembers";
+import {Redirect} from 'react-router-dom';
 import AllMembers from "./AllMembers";
 import { MemberCountAPI, ActiveMemberCountAPI } from '../services/api';
 
@@ -41,7 +42,11 @@ class Admin extends Component{
           content: 0,
           MemberCount:0,
           ActiveMemberCount:0,
-        };
+		};
+		let userData = JSON.parse(sessionStorage.getItem('userData'))
+		this.state = {...this.state, userData}
+		console.log(this.state);
+
         this.MemberCount = this.MemberCount.bind(this);
     }
     componentDidMount(){
@@ -92,6 +97,9 @@ class Admin extends Component{
         }
     }
     render(){
+		if(this.state.userData === null||this.state.userData.Membership !== "boardmember"){
+			return (<Redirect to={'/Login'}/>)
+		}
         const fullList = (
           <div>
             <List>

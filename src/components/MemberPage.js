@@ -4,11 +4,12 @@ import {Redirect} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { PayedAPI } from '../services/api';
+import {translate} from '../services/Local';
 class MemberPage extends Component{
     constructor(){
         super();
-        this.state = JSON.parse(sessionStorage.getItem('userData'));
-        console.log(this.state)
+		this.state = JSON.parse(sessionStorage.getItem('userData'));
+		this.state = {...this.state, logout: false}
         this.activate = this.activate.bind(this);
 
     }
@@ -23,15 +24,24 @@ class MemberPage extends Component{
         uD.paymentstatus = "pending";
         console.log(uD);
         sessionStorage.setItem('userData', JSON.stringify(uD));
-    }
+	}
+	logout(){
+		sessionStorage.removeItem('userData');
+		this.setState({
+			logout: true,
+		})
+	}
 
     render(){
+		if(this.state.logout){
+			return (<Redirect to={'/'}/>)
+		}
         if(sessionStorage.getItem('userData')){
-            if(this.state.Membership == "boardmember"){
+            if(this.state.Membership === "boardmember"){
                 return (<Redirect to={'/Admin'}/>)
             }
-            if(this.state.Membership == "inactive"){
-                if(this.state.paymentstatus == "pending"){
+            if(this.state.Membership === "inactive"){
+                if(this.state.paymentstatus === "pending"){
                     return(
                         <div className="Bod">
                         <aside className="profile-card">
@@ -40,7 +50,9 @@ class MemberPage extends Component{
                           <h2>Har du betalat kan du gå på film visningen så verifierar vi din betalning där.</h2>
                         </header>
                       </aside>
+					  <div style={{zIndex:2, position: 'fixed'}}onClick={() => this.logout()} >{translate("Logga ut")}</div>
                       </div>
+					  
                     );
                 }
                 return(
@@ -54,7 +66,9 @@ class MemberPage extends Component{
                       <input  className="button"  placeholder="Jag har swishat" onClick={this.activate}></input>
                     </div>
                   </aside>
+				  <div style={{zIndex:2, position: 'fixed'}}onClick={() => this.logout()} >{translate("Logga ut")}</div>
                   </div>
+				  
                 );
             }
             if(this.state.Membership == "gold"){
@@ -70,6 +84,7 @@ class MemberPage extends Component{
                 </div>
                 <a href="/"><FontAwesomeIcon icon={faHome} className="icon"/></a>
               </aside>
+			  <div style={{zIndex:2, position: 'fixed'}}onClick={() => this.logout()} >{translate("Logga ut")}</div>
               </div>
           );
 
@@ -86,6 +101,7 @@ class MemberPage extends Component{
                 </div>
                 <a href="/"><FontAwesomeIcon icon={faHome} className="icon"/></a>
               </aside>
+			  <div style={{zIndex:2, position: 'fixed'}}onClick={() => this.logout()} >{translate("Logga ut")}</div>
               </div>
             );
         }

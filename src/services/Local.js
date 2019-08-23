@@ -45,6 +45,7 @@ let Strings ={
         "Fel lösenord eller email." : "Fel lösenord eller email.",
         "Logga in" :"Logga in",
         "Lösenord" : "Lösenord",
+        "Logga ut" : "Logga ut",
 
     },
     en:{
@@ -93,6 +94,7 @@ let Strings ={
         "Fel lösenord eller email." : "Wrong password or email.",
         "Logga in": "Log in",
         "Lösenord" : "Password",
+        "Logga ut" : "Log out",
     },
 
 }
