@@ -46,6 +46,13 @@ let Strings ={
         "Logga in" :"Logga in",
         "Lösenord" : "Lösenord",
         "Logga ut" : "Logga ut",
+        "BeskrivFilm1" : "Jack Torrance, hans hustru Wendy och lille son Danny flyttar in i ett övergivet hotell i bergiga Colorado för att under vintern sköta om det, men hotellet har en tragisk historia som plötsligt verkar vara på väg att upprepa sig.",
+        "BeskrivFilm2" : "En far och hans trettonåriga dotter lever en idealisk existens i en stor stadspark i Portland, Oregon, när ett litet misstag förändrar deras liv för evigt.",
+        "BeskrivFilm3" : "När hans flickvän gör slut börjar den hopplösa romantikern Tim gå igenom året de tillbringat tillsammans.",
+        "BeskrivFilm4" : "Det är en mycket varm dag i kvarteret Bedford-Stuyvesant i Brooklyn och en dispyt på Sals Famous Pizzeria leder till en situation som urartar.",
+        "BeskrivFilm5" : "Jerry är en positiv fabriksarbetare som är svårt psykiskt sjuk och lever i en värld där hans katt och hund kan prata. När han av misstag begår ett mord försöker katten övertala honom om att bli seriemördare medan hunden argumenterar emot.",
+        "BeskrivFilm6" : "En språkforskare samarbetar med militären för att kommunicera med främmande livsformer efter att tolv mystiska rymdskepp dyker upp runt om i världen.",
+        "BeskrivFilm7" : "Cady Heron flyttar från Afrika till USA för att upptäcka att det finns en hel uppsättning regler för hur man beter sig bland skolkamraterna i high school.",
 
     },
     en:{
@@ -95,6 +102,13 @@ let Strings ={
         "Logga in": "Log in",
         "Lösenord" : "Password",
         "Logga ut" : "Log out",
+        "BeskrivFilm1" : "Jack Torrance, his wife Wendy and their little son Danny move into an abandoned hotel in mountainous Colorado to look after it during the winter, but the hotel has a tragic history that suddenly seems to be on the verge of repeating itself.",
+        "BeskrivFilm2" : "A father and his thirteen year-old daughter are living an ideal existence in a vast urban park in Portland, Oregon, when a small mistake derails their lives forever.",
+        "BeskrivFilm3" : "When his girlfriend breaks up with him, the hopeless romantic Tim begins to go through the year they spent together.",
+        "BeskrivFilm4" : "It's a very hot day in the Bedford-Stuyvesant section of Brooklyn and a dispute at Sal’s Famous Pizzeria leads to a situation that is degenerate.",
+        "BeskrivFilm5" : "Jerry is a positive factory worker who is seriously mentally ill and lives in a world where his cat and dog can talk. When he accidentally commits a murder, the cat tries to persuade him to become a serial killer while the dog argues against it.",
+        "BeskrivFilm6" : "A linguist works with the military to communicate with alien lifeforms after twelve mysterious spacecraft appear around the world.",
+        "BeskrivFilm7" : "Cady Heron moves from Africa to the United States to discover that there are a whole set of rules for how to behave among high school classmates.",
     },
 
 }
