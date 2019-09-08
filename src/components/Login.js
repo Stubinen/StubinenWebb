@@ -3,6 +3,12 @@ import {Redirect} from 'react-router-dom';
 import '../styles/Login.css';
 import {LoginAPI} from '../services/api';
 import {translate} from '../services/Local';
+
+const h1style = {
+    fontFamily: 'Montserrat,helvetica,arial,sans-serif',
+    fontSize: '24px',
+}
+
 class Login extends Component {
     constructor(){
         super();
@@ -52,7 +58,7 @@ class Login extends Component {
         }
         return (
                 <div className="form-wrapper">
-                <h1>{translate("Logga in")}</h1>
+                <h1 style={ h1style }>{translate("Logga in")}</h1>
                 <p class="ErrorMessage">{this.state.errorMessage}</p>
                 <form>
                   <div class="form-item">
@@ -68,8 +74,8 @@ class Login extends Component {
                   </div>
                 </form>
                 <div class="form-footer">
-                  <p><a href="/Register">{translate("Skapa konto")}</a></p>
-                  <p><a href="/">{translate("Startsida")}</a></p>
+                  <p style={{marginBottom:0}}><a href="/Register">{translate("Skapa konto")}</a></p>
+                  <p style={{marginBottom:0}}><a href="/">{translate("Startsida")}</a></p>
                 </div>
               </div>
         );

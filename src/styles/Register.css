@@ -110,6 +110,7 @@ form {
   background-color: transparent;
   border: 3px solid #ffffff;
   margin-bottom: 10px;
+  color: transparent;
 }
 
 .button:hover {

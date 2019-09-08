@@ -47,10 +47,10 @@ class MemberPage extends Component{
                         <aside className="profile-card">
                         <header>
                           <h1>Vi verifierar din betalning</h1>
-                          <h2>Har du betalat kan du gå på film visningen så verifierar vi din betalning där.</h2>
+                          <h2>Har du betalat kan du gå på filmvisningen så verifierar vi din betalning där.</h2>
                         </header>
                       </aside>
-					  <div style={{zIndex:2, position: 'fixed'}}onClick={() => this.logout()} >{translate("Logga ut")}</div>
+					  <div className="logoutButton" onClick={() => this.logout()} >{translate("Logga ut")}</div>
                       </div>
 					  
                     );
@@ -66,7 +66,7 @@ class MemberPage extends Component{
                       <input  className="button"  placeholder="Jag har swishat" onClick={this.activate}></input>
                     </div>
                   </aside>
-				  <div style={{zIndex:2, position: 'fixed'}}onClick={() => this.logout()} >{translate("Logga ut")}</div>
+				  <div className="logoutButton" onClick={() => this.logout()} >{translate("Logga ut")}</div>
                   </div>
 				  
                 );
@@ -77,14 +77,14 @@ class MemberPage extends Component{
                 <aside className="profile-card gold">
                 <header>
                   <h1>{this.state.FirstName + " " + this.state.LastName}</h1>
-                  <h2>Guld Medlem</h2>
+                  <h2>Guldmedlem</h2>
                 </header>
                 <div className="profile-bio">
 
                 </div>
                 <a href="/"><FontAwesomeIcon icon={faHome} className="icon"/></a>
               </aside>
-			  <div style={{zIndex:2, position: 'fixed'}}onClick={() => this.logout()} >{translate("Logga ut")}</div>
+			  <div className="logoutButton" onClick={() => this.logout()} >{translate("Logga ut")}</div>
               </div>
           );
 
@@ -101,7 +101,7 @@ class MemberPage extends Component{
                 </div>
                 <a href="/"><FontAwesomeIcon icon={faHome} className="icon"/></a>
               </aside>
-			  <div style={{zIndex:2, position: 'fixed'}}onClick={() => this.logout()} >{translate("Logga ut")}</div>
+			  <div className="logoutButton" onClick={() => this.logout()} >{translate("Logga ut")}</div>
               </div>
             );
         }

@@ -16,6 +16,7 @@ import ActivateMembers from "./ActivateMembers";
 import {Redirect} from 'react-router-dom';
 import AllMembers from "./AllMembers";
 import { MemberCountAPI, ActiveMemberCountAPI } from '../services/api';
+import {translate} from '../services/Local';
 
 const styles = {
   list: {
@@ -23,13 +24,17 @@ const styles = {
   },
   fullList: {
     width: "auto"
-},
+  },
   Button: {
       color: "#fff"
   },
   Icon:{
       width:60,
       height: 60,
+  },
+  h1: {
+    fontFamily: 'Montserrat,helvetica,arial,sans-serif',
+    fontSize: '24px',
   }
 };
 
@@ -79,9 +84,9 @@ class Admin extends Component{
         if(this.state.content == 0){
             return(
                 <div>
-                    <h1>Välkommen till Admin sidan!</h1>
-                    <h1>Antal medlemmar: {" " + this.state.MemberCount} </h1>
-                    <h1>Antal betalande medlemmar: {" " + this.state.ActiveMemberCount} </h1>
+                    <h1 style={styles.h1}>Välkommen till Admin sidan!</h1>
+                    <h1 style={styles.h1}>Antal medlemmar: {" " + this.state.MemberCount} </h1>
+                    <h1 style={styles.h1}>Antal betalande medlemmar: {" " + this.state.ActiveMemberCount} </h1>
                 </div>
             );
         }
@@ -96,7 +101,17 @@ class Admin extends Component{
             );
         }
     }
+    logout(){
+      sessionStorage.removeItem('userData');
+      this.setState({
+      logout: true,
+    })
+  }
+
     render(){
+    if(this.state.logout){
+      return (<Redirect to={'/'}/>)
+    }
 		if(this.state.userData === null||this.state.userData.Membership !== "boardmember"){
 			return (<Redirect to={'/Login'}/>)
 		}
@@ -136,6 +151,7 @@ class Admin extends Component{
           <div>
             {this.getContent()}
           </div>
+          <div className="logoutButton" style={{right: '160px', left: 'unset' }}onClick={() => this.logout()} >{translate("Logga ut")}</div>
           </div>
 
         );

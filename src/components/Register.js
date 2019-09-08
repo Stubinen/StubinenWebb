@@ -4,6 +4,11 @@ import {Redirect} from 'react-router-dom';
 import {RegisterAPI, LoginAPI} from '../services/api';
 import {translate} from '../services/Local';
 
+const h1style = {
+    fontFamily: 'Montserrat,helvetica,arial,sans-serif',
+    fontSize: '24px',
+}
+
 class Register extends Component {
 
     constructor(props) {
@@ -129,7 +134,7 @@ class Register extends Component {
     renderPage(){
         if(this.state.page == 0){
             return(<div className="form-wrapper-register">
-            <h1>{translate("Skapa konto")}</h1>
+            <h1 style={ h1style }>{translate("Skapa konto")}</h1>
             <p className="WarningText">{this.state.ErrorText}</p>
             <form>
               <div className="form-item">
@@ -170,14 +175,14 @@ class Register extends Component {
               </div>
             </form>
             <div className="form-footer">
-              <p><a href="/Login">{translate("Logga in")}</a></p>
-              <p><a href="/">{translate("Startsida")}</a></p>
+              <p style={{marginBottom:0}}><a href="/Login">{translate("Logga in")}</a></p>
+              <p style={{marginBottom:0}}><a href="/">{translate("Startsida")}</a></p>
             </div>
         </div>);
         }
         else{
             return(<div className="form-wrapper-register">
-            <h1>{translate("Skapa konto")}</h1>
+            <h1 style={ h1style }>{translate("Skapa konto")}</h1>
             <p className="WarningText">{this.state.ErrorText}</p>
             <form>
               <div className="form-item">
@@ -197,7 +202,7 @@ class Register extends Component {
                 <input type="text" name="Stad" required="required" placeholder={translate("Stad")}  value={this.state.Stad} onChange={this.onChange}></input>
               </div>
               <div className="form-item">
-                  <label for="Kon">{translate("Kön: ")}"</label>
+                  <label for="Kon">{translate("Kön: ")}</label>
                   <select name="Kon" value={this.state.Kon} onChange={this.onChange}>
                         <option value="Kvinna">{translate("Kvinna")}</option>
                         <option value="Man">{translate("Man")}</option>
@@ -214,8 +219,8 @@ class Register extends Component {
               </div>
             </form>
             <div className="form-footer">
-              <p><a href="/Login">{translate("Logga in")}</a></p>
-              <p><a href="/">{translate("Startsida")}</a></p>
+              <p style={{marginBottom:0}}><a href="/Login">{translate("Logga in")}</a></p>
+              <p style={{marginBottom:0}}><a href="/">{translate("Startsida")}</a></p>
             </div>
         </div>);
         }

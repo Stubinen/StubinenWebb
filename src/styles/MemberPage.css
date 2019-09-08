@@ -479,3 +479,29 @@ p {
   font-size: 1.2em;
   letter-spacing: 0.05em;
 }
+
+.logoutButton {
+  z-index: 2;
+  position: absolute;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+  background-color: transparent;
+  border: 3px solid #ffffff;
+  top: 16px;
+  left: 10px;
+  padding: .15rem 2rem;
+}
+
+.logoutButton:hover {
+  background: white;
+  color: rgba(58,45,77,0.8);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+}
