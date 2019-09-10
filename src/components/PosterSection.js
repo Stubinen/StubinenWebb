@@ -20,7 +20,7 @@ class PosterSection extends Component {
       { src: 'https://api.stubinen.org/img/postersHT19/TheShining.png', caption: 'The Shining', date: "2019-09-15",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/title/tt0081505/videoplayer/vi1476002073?ref_=tt_ov_vi"},
       { src: 'https://api.stubinen.org/img/postersHT19/LeaveNoTrace.png', caption: 'Leave No Trace', date: "2019-09-29", text: translate("BeskrivFilm2"), vidID :"https://www.imdb.com/title/tt3892172/videoplayer/vi1901508633?ref_=tt_ov_vi"},
       { src: 'https://api.stubinen.org/img/postersHT19/500DaysOfSummer.png', caption: '500 Days of Summer', date: "2019-10-13", text: translate("BeskrivFilm3"), vidID :"https://www.imdb.com/title/tt1022603/videoplayer/vi2234581785?ref_=tt_ov_vi"},
-      { src: '', caption: 'Do the Right Thing', date: "2019-10-27", text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/title/tt0097216/videoplayer/vi3282174233?ref_=tt_ov_vi"},
+      { src: 'https://api.stubinen.org/img/postersHT19/DoTheRightThing.png', caption: 'Do the Right Thing', date: "2019-10-27", text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/title/tt0097216/videoplayer/vi3282174233?ref_=tt_ov_vi"},
       { src: '', caption: 'The Voices', date: "2019-11-10", text: translate("BeskrivFilm5"), vidID :"https://www.imdb.com/title/tt1567437/videoplayer/vi1174318617?ref_=tt_ov_vi"},
       { src: '', caption: 'Arrival', date: "2019-11-24", text: translate("BeskrivFilm6"), vidID :"https://www.imdb.com/title/tt2543164/videoplayer/vi4225807897?ref_=tt_ov_vi"},
       { src: '', caption: 'Mean Girls', date: "2019-12-15", text: translate("BeskrivFilm7"), vidID :"https://www.imdb.com/title/tt0377092/videoplayer/vi3868524825?ref_=tt_ov_vi"},
