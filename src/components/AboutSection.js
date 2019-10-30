@@ -12,7 +12,7 @@ class AboutSection extends Component {
           { src: 'https://api.stubinen.org/img/styrelsen1920/Astrid.png', name: 'Astrid',roll: translate("Sekreterare")},
           { src: 'https://api.stubinen.org/img/styrelsen1920/Simon.png', name: 'Simon',roll: translate("Kassör")},
           { src: 'https://api.stubinen.org/img/styrelsen1920/Rebecka.png', name: 'Rebecka',roll: translate("Event")},
-          { src: 'https://api.stubinen.org/img/styrelsen1920/saknas.jpg', name: 'Dasmit',roll: translate("Filmansvarig")},
+          { src: 'https://api.stubinen.org/img/styrelsen1920/Dasmit.png', name: 'Dasmit',roll: translate("Filmansvarig")},
           { src: 'https://api.stubinen.org/img/styrelsen1920/Johanna.png', name: 'Johanna',roll: translate("Marknadsföring")},
           { src: 'http://api.stubinen.org/img/styrelsen1920/Matilda.png', name: 'Matilda',roll: translate("Webb")},
       ];
