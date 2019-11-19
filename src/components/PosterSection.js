@@ -23,7 +23,8 @@ class PosterSection extends Component {
       { src: 'https://api.stubinen.org/img/postersHT19/DoTheRightThing.png', caption: 'Do the Right Thing', date: "2019-10-27", text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/title/tt0097216/videoplayer/vi3282174233?ref_=tt_ov_vi"},
       { src: 'https://api.stubinen.org/img/postersHT19/TheVoices.png', caption: 'The Voices', date: "2019-11-10", text: translate("BeskrivFilm5"), vidID :"https://www.imdb.com/title/tt1567437/videoplayer/vi1174318617?ref_=tt_ov_vi"},
       { src: '', caption: 'Arrival', date: "2019-11-24", text: translate("BeskrivFilm6"), vidID :"https://www.imdb.com/title/tt2543164/videoplayer/vi4225807897?ref_=tt_ov_vi"},
-      { src: '', caption: 'Mean Girls', date: "2019-12-15", text: translate("BeskrivFilm7"), vidID :"https://www.imdb.com/title/tt0377092/videoplayer/vi3868524825?ref_=tt_ov_vi"},
+      { src: '', caption: translate("MedlemmarnasVal"), date: "2019-12-08", text: translate("BeskrivFilm7"), vidID :"https://www.imdb.com/title/tt1489887/videoplayer/vi2100608281?ref_=vp_pl_1"},
+      { src: '', caption: 'Mean Girls', date: "2019-12-15", text: translate("BeskrivFilm8"), vidID :"https://www.imdb.com/title/tt0377092/videoplayer/vi3868524825?ref_=tt_ov_vi"},
     ];
     this.IMAGES.sort(function(a,b) {
         return new Date(a.date) - new Date(b.date);

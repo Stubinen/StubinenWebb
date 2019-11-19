@@ -52,7 +52,9 @@ let Strings ={
         "BeskrivFilm4" : "Det är en mycket varm dag i kvarteret Bedford-Stuyvesant i Brooklyn och en dispyt på Sals Famous Pizzeria leder till en situation som urartar.",
         "BeskrivFilm5" : "Jerry är en positiv fabriksarbetare som är svårt psykiskt sjuk och lever i en värld där hans katt och hund kan prata. När han av misstag begår ett mord försöker katten övertala honom om att bli seriemördare medan hunden argumenterar emot.",
         "BeskrivFilm6" : "En språkforskare samarbetar med militären för att kommunicera med främmande livsformer efter att tolv mystiska rymdskepp dyker upp runt om i världen.",
-        "BeskrivFilm7" : "Cady Heron flyttar från Afrika till USA för att upptäcka att det finns en hel uppsättning regler för hur man beter sig bland skolkamraterna i high school.",
+        "BeskrivFilm7" : "Dagen innan studenten inser två akademiska superstjärnor tillika bästa vänner att de borde ha pluggat mindre och upplevt mer, och bestämmer sig därför för att försöka klämma in fyra år av nöje på en enda kväll.",
+        "BeskrivFilm8" : "Cady Heron flyttar från Afrika till USA för att upptäcka att det finns en hel uppsättning regler för hur man beter sig bland skolkamraterna i high school.",
+        "MedlemmarnasVal" : "Medlemmarnas val: Booksmart",
 
     },
     en:{
@@ -108,7 +110,9 @@ let Strings ={
         "BeskrivFilm4" : "It's a very hot day in the Bedford-Stuyvesant section of Brooklyn and a dispute at Sal’s Famous Pizzeria leads to a situation that is degenerate.",
         "BeskrivFilm5" : "Jerry is a positive factory worker who is seriously mentally ill and lives in a world where his cat and dog can talk. When he accidentally commits a murder, the cat tries to persuade him to become a serial killer while the dog argues against it.",
         "BeskrivFilm6" : "A linguist works with the military to communicate with alien lifeforms after twelve mysterious spacecraft appear around the world.",
-        "BeskrivFilm7" : "Cady Heron moves from Africa to the United States to discover that there are a whole set of rules for how to behave among high school classmates.",
+        "BeskrivFilm7" : "On the eve of their high school graduation, two academic superstars and best friends realize they should have worked less and played more. Determined not to fall short of their peers, the girls try to cram four years of fun into one night.",
+        "BeskrivFilm8" : "Cady Heron moves from Africa to the United States to discover that there are a whole set of rules for how to behave among high school classmates.",
+        "MedlemmarnasVal" : "Members' choice: Booksmart",
     },
 
 }
