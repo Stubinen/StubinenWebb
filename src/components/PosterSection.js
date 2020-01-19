@@ -10,6 +10,7 @@ import { Container, Row, Col } from 'reactstrap';
 import {DateCompare} from '../services/Dates';
 import {translate} from '../services/Local';
 
+
 class PosterSection extends Component {
   constructor(props) {
     super(props);
@@ -17,14 +18,13 @@ class PosterSection extends Component {
       lightboxIsOpen: false,
     }
     this.IMAGES = [
-      { src: 'https://api.stubinen.org/img/postersHT19/TheShining.png', caption: 'The Shining', date: "2019-09-15",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/title/tt0081505/videoplayer/vi1476002073?ref_=tt_ov_vi"},
-      { src: 'https://api.stubinen.org/img/postersHT19/LeaveNoTrace.png', caption: 'Leave No Trace', date: "2019-09-29", text: translate("BeskrivFilm2"), vidID :"https://www.imdb.com/title/tt3892172/videoplayer/vi1901508633?ref_=tt_ov_vi"},
-      { src: 'https://api.stubinen.org/img/postersHT19/500DaysOfSummer.png', caption: '500 Days of Summer', date: "2019-10-13", text: translate("BeskrivFilm3"), vidID :"https://www.imdb.com/title/tt1022603/videoplayer/vi2234581785?ref_=tt_ov_vi"},
-      { src: 'https://api.stubinen.org/img/postersHT19/DoTheRightThing.png', caption: 'Do the Right Thing', date: "2019-10-27", text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/title/tt0097216/videoplayer/vi3282174233?ref_=tt_ov_vi"},
-      { src: 'https://api.stubinen.org/img/postersHT19/TheVoices.png', caption: 'The Voices', date: "2019-11-10", text: translate("BeskrivFilm5"), vidID :"https://www.imdb.com/title/tt1567437/videoplayer/vi1174318617?ref_=tt_ov_vi"},
-      { src: '', caption: 'Arrival', date: "2019-11-24", text: translate("BeskrivFilm6"), vidID :"https://www.imdb.com/title/tt2543164/videoplayer/vi4225807897?ref_=tt_ov_vi"},
-      { src: '', caption: translate("MedlemmarnasVal"), date: "2019-12-08", text: translate("BeskrivFilm7"), vidID :"https://www.imdb.com/title/tt1489887/videoplayer/vi2100608281?ref_=vp_pl_1"},
-      { src: '', caption: 'Mean Girls', date: "2019-12-15", text: translate("BeskrivFilm8"), vidID :"https://www.imdb.com/title/tt0377092/videoplayer/vi3868524825?ref_=tt_ov_vi"},
+      { src: 'https://api.stubinen.org/img/postersVT20/noPoster.png', caption: 'The Shape of Water', date: "2020-01-26",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/videoplayer/vi4105025561?playlistId=tt5580390&ref_=tt_ov_vi"},
+      { src: 'https://api.stubinen.org/img/postersVT20/noPoster.png', caption: 'Taxi Driver', date: "2020-02-09", text: translate("BeskrivFilm2"), vidID :"https://www.imdb.com/title/tt0075314/videoplayer/vi474987289?ref_=tt_ov_vi"},
+      { src: 'https://api.stubinen.org/img/postersVT20/noPoster.png', caption: 'First Reformed', date: "2020-02-23", text: translate("BeskrivFilm3"), vidID :"https://www.imdb.com/title/tt6053438/videoplayer/vi923580441?ref_=tt_ov_vi"},
+      { src: 'https://api.stubinen.org/img/postersVT20/noPoster.png', caption: 'Blackkklansman', date: "2020-03-08", text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/title/tt7349662/videoplayer/vi2444933657?ref_=tt_ov_vi"},
+      { src: 'https://api.stubinen.org/img/postersVT20/noPoster.png', caption: 'The Talented Mr Ripley', date: "2020-03-29", text: translate("BeskrivFilm5"), vidID :"https://www.youtube.com/watch?v=Ylc5ToQoLg0"},
+      { src: 'https://api.stubinen.org/img/postersVT20/noPoster.png', caption: 'The Florida Project', date: "2020-04-19", text: translate("BeskrivFilm6"), vidID :"https://www.imdb.com/video/vi1518975513?playlistId=tt5649144&ref_=tt_ov_vi"},
+      { src: 'https://api.stubinen.org/img/postersVT20/noPoster.png', caption: 'Baby Driver', date: "2020-05-17", text: translate("BeskrivFilm8"), vidID :"https://www.imdb.com/video/vi2482288921?playlistId=tt3890160&ref_=tt_ov_vi"},
     ];
     this.IMAGES.sort(function(a,b) {
         return new Date(a.date) - new Date(b.date);
