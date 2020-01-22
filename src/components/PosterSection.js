@@ -18,7 +18,7 @@ class PosterSection extends Component {
       lightboxIsOpen: false,
     }
     this.IMAGES = [
-      { src: 'https://api.stubinen.org/img/postersVT20/noPoster.png', caption: 'The Shape of Water', date: "2020-01-26",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/videoplayer/vi4105025561?playlistId=tt5580390&ref_=tt_ov_vi"},
+      { src: 'https://api.stubinen.org/img/postersVT20/ShapeOfWater.png', caption: 'The Shape of Water', date: "2020-01-26",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/videoplayer/vi4105025561?playlistId=tt5580390&ref_=tt_ov_vi"},
       { src: 'https://api.stubinen.org/img/postersVT20/noPoster.png', caption: 'Taxi Driver', date: "2020-02-09", text: translate("BeskrivFilm2"), vidID :"https://www.imdb.com/title/tt0075314/videoplayer/vi474987289?ref_=tt_ov_vi"},
       { src: 'https://api.stubinen.org/img/postersVT20/noPoster.png', caption: 'First Reformed', date: "2020-02-23", text: translate("BeskrivFilm3"), vidID :"https://www.imdb.com/title/tt6053438/videoplayer/vi923580441?ref_=tt_ov_vi"},
       { src: 'https://api.stubinen.org/img/postersVT20/noPoster.png', caption: 'Blackkklansman', date: "2020-03-08", text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/title/tt7349662/videoplayer/vi2444933657?ref_=tt_ov_vi"},
