@@ -3,6 +3,7 @@ let Strings ={
         "Logga in" : "Logga in",
         "Registrera" : "Registrera",
         "Spela Trailer" : "Spela Trailer",
+        "SkaSpelas" : "Kommande visningar",
         "RedanSpelade" : "Redan visade filmer denna termin",
         "Styrelsen" : "Styrelsen",
         "Ordförande" : "Ordförande",
@@ -55,12 +56,14 @@ let Strings ={
         "BeskrivFilm7" : "Varje termin uppfyller vi er önskning! Vilken film vill du att vi ska visa här? Ta chansen att nominera och rösta så kanske vi visar just din film!",
         "BeskrivFilm8" : "En begåvad flyktbilsförare tar musiken till hjälp för att bli bäst på det han gör. När han en dag möter kvinnan i hans drömmar ser Baby en chans till en sista flykt, denna gång från sitt liv som kriminell. Men ledaren för ett brottssyndikat har andra planer för Baby och snart tvingas han, med livet, kärleken och friheten som insats, ta del i en stöt dömd att misslyckas.",
         "MedlemmarnasVal" : "Medlemmarnas val",
+        "Cancelled" : "Följande planerade visningar är inställda på grund av rådande omständigheter",
 
     },
     en:{
         "Logga in" : "Log in",
         "Registrera" : "Register",
         "Spela Trailer" : "Play Trailer",
+        "SkaSpelas" : "Upcoming screenings",
         "RedanSpelade" : "Already shown movies this semester",
         "Styrelsen" : "The Board",
         "Ordförande" : "President",
@@ -113,6 +116,7 @@ let Strings ={
         "BeskrivFilm7" : "Every semester we make your wish come true! What movie do you want us to screen? Take the chance to nominate and vote and maybe we’ll screen your movie!",
         "BeskrivFilm8" : "A talented getaway driver uses music to help him be the best at what he does. When one day he meets the woman of his dreams, Baby sees a chance for one last escape, this time from his life as a criminal. But the leader of a crime syndicate has other plans for Baby and soon he is forced, with his life, love and freedom at stake, to take part in a heist doomed to failure.",
         "MedlemmarnasVal" : "Members' choice",
+        "Cancelled" : "The following scheduled screenings have been cancelled due to the current circumstances",
     },
 
 }
