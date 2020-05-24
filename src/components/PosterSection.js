@@ -65,11 +65,8 @@ class PosterSection extends Component {
     return (
       <div className='PosterSection'>
             <h1>
-            {notShownItems.length != 0 ? translate("Cancelled"): ''}
-            </h1>
-        {/*  <h1>
             {notShownItems.length != 0 ? translate("SkaSpelas"): ''}
-            </h1> */}
+            </h1>
             {notShownItems}
             <h1>
             {shownItems.length != 0 ? translate("RedanSpelade"): ''}

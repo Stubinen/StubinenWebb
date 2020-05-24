@@ -41,6 +41,3 @@ class AboutSection extends Component {
 
 
 export default AboutSection
-
-
-{/*src: 'https://api.stubinen.org/img/nyaBilder/linnea.png', name: 'Klara',roll: translate("Marknadsföring Tryck")*/}
