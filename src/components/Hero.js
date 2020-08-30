@@ -10,9 +10,9 @@ class Hero extends Component {
 
   render() {
     return (
-        <LazyHero imageSrc={'https://api.stubinen.org/img/styrelsen1920/Board1920_3.png'} color="#fff" isFixed={true} opacity={0.15} minHeight='75vh' transitionDuration={1000}>
+        <LazyHero imageSrc={'https://api.stubinen.org/img/styrelsen2021/styrelsen.jpg'} color="#fff" isFixed={true} opacity={0.15} minHeight='75vh' transitionDuration={1000}>
           <div className='row'>
-            <img src={require('../../src/img/logo.png')} />
+            <img src={require('../../src/img/logo.png')} style={{marginTop:150}}/>
           </div>
           <Button text={translate("Logga in")} link={loginlink}/>
           <Button text={translate("Registrera")} link={registerlink}/>

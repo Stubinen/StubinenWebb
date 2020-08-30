@@ -18,13 +18,13 @@ class PosterSection extends Component {
       lightboxIsOpen: false,
     }
     this.IMAGES = [
-      { src: 'https://api.stubinen.org/img/postersVT20/ShapeOfWater.png', caption: 'The Shape of Water', date: "2020-01-26",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/videoplayer/vi4105025561?playlistId=tt5580390&ref_=tt_ov_vi"},
-      { src: 'https://api.stubinen.org/img/postersVT20/TaxiDriver.png', caption: 'Taxi Driver', date: "2020-02-09", text: translate("BeskrivFilm2"), vidID :"https://www.imdb.com/title/tt0075314/videoplayer/vi474987289?ref_=tt_ov_vi"},
-      { src: 'https://api.stubinen.org/img/postersVT20/FirstReformed.png', caption: 'First Reformed', date: "2020-02-23", text: translate("BeskrivFilm3"), vidID :"https://www.imdb.com/title/tt6053438/videoplayer/vi923580441?ref_=tt_ov_vi"},
-      { src: 'https://api.stubinen.org/img/postersVT20/Blackkklansman.png', caption: 'Blackkklansman', date: "2020-03-08", text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/title/tt7349662/videoplayer/vi2444933657?ref_=tt_ov_vi"},
-      { src: 'https://api.stubinen.org/img/postersVT20/noPoster.png', caption: 'The Talented Mr Ripley', date: "2020-03-29", text: translate("BeskrivFilm5"), vidID :"https://www.youtube.com/watch?v=Ylc5ToQoLg0"},
-      { src: 'https://api.stubinen.org/img/postersVT20/noPoster.png', caption: 'The Florida Project', date: "2020-04-19", text: translate("BeskrivFilm6"), vidID :"https://www.imdb.com/video/vi1518975513?playlistId=tt5649144&ref_=tt_ov_vi"},
-      { src: 'https://api.stubinen.org/img/postersVT20/noPoster.png', caption: 'Baby Driver', date: "2020-05-17", text: translate("BeskrivFilm8"), vidID :"https://www.imdb.com/video/vi2482288921?playlistId=tt3890160&ref_=tt_ov_vi"},
+      { src: 'https://api.stubinen.org/img/postersHT20/theniceguys.png', caption: 'The Nice Guys', date: "2020-09-13",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/video/vi3740709913?playlistId=tt3799694&ref_=tt_ov_vi"},
+      { src: 'https://api.stubinen.org/img/postersHT20/ghostintheshell.png', caption: 'Ghost in the Shell', date: "2020-09-20", text: translate("BeskrivFilm2"), vidID :"https://www.imdb.com/video/vi3886612761?playlistId=tt0113568&ref_=tt_ov_vi"},
+      { src: 'https://api.stubinen.org/img/postersHT20/goodtime.png', caption: 'Good Time', date: "2020-10-04", text: translate("BeskrivFilm3"), vidID :"https://www.imdb.com/video/vi1389607193?playlistId=tt4846232&ref_=tt_ov_vi"},
+      { src: 'https://api.stubinen.org/img/postersHT20/thefloridaproject.png', caption: 'The Florida Project', date: "2020-10-18", text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/video/vi1923202841?playlistId=tt5649144&ref_=tt_ov_vi"},
+      { src: 'https://api.stubinen.org/img/postersHT20/knivesout.png', caption: 'Knives Out', date: "2020-11-01", text: translate("BeskrivFilm5"), vidID :"https://www.imdb.com/video/vi2464857881?playlistId=tt8946378&ref_=tt_ov_vi"},
+      { src: 'https://api.stubinen.org/img/postersHT20/memoriesofmurder.png', caption: 'Memories of Murder', date: "2020-11-15", text: translate("BeskrivFilm6"), vidID :"https://www.imdb.com/video/vi1302834713?playlistId=tt0353969&ref_=tt_ov_vi"},
+      { src: 'https://api.stubinen.org/img/postersHT20/prisoners.png', caption: 'Prisoners', date: "2020-12-13", text: translate("BeskrivFilm8"), vidID :"https://www.imdb.com/video/vi3294275865?playlistId=tt1392214&ref_=tt_ov_vi"},
     ];
     this.IMAGES.sort(function(a,b) {
         return new Date(a.date) - new Date(b.date);

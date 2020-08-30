@@ -52,7 +52,7 @@ class MemberPage extends Component{
                       </aside>
 					  <div className="logoutButton" onClick={() => this.logout()} >{translate("Logga ut")}</div>
                       </div>
-					  
+
                     );
                 }
                 return(
@@ -60,7 +60,7 @@ class MemberPage extends Component{
                     <aside className="profile-card">
                     <header>
                       <h1>Hej! </h1>
-                      <h2>Swisha 70kr till 076-829 07 08 för att aktivera ditt konto</h2>
+                      <h2>Swisha 70kr till 076 167 12 90 för att aktivera ditt konto</h2>
                     </header>
                     <div className="activate-panel">
                       <input  className="button"  placeholder="Jag har swishat" onClick={this.activate}></input>
@@ -68,7 +68,7 @@ class MemberPage extends Component{
                   </aside>
 				  <div className="logoutButton" onClick={() => this.logout()} >{translate("Logga ut")}</div>
                   </div>
-				  
+
                 );
             }
             if(this.state.Membership == "gold"){
