@@ -23,7 +23,7 @@ class PosterSection extends Component {
       { src: 'https://api.stubinen.org/img/postersHT20/goodtime.png', caption: 'Good Time', date: "2020-10-04", text: translate("BeskrivFilm3"), vidID :"https://www.imdb.com/video/vi1389607193?playlistId=tt4846232&ref_=tt_ov_vi"},
       { src: 'https://api.stubinen.org/img/postersHT20/thefloridaproject.png', caption: 'The Florida Project', date: "2020-10-18", text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/video/vi1923202841?playlistId=tt5649144&ref_=tt_ov_vi"},
       { src: 'https://api.stubinen.org/img/postersHT20/knivesout.png', caption: 'Knives Out', date: "2020-11-01", text: translate("BeskrivFilm5"), vidID :"https://www.imdb.com/video/vi2464857881?playlistId=tt8946378&ref_=tt_ov_vi"},
-      { src: 'https://api.stubinen.org/img/postersHT20/memoriesofmurder.png', caption: 'Memories of Murder', date: "2020-11-15", text: translate("BeskrivFilm6"), vidID :"https://www.imdb.com/video/vi1302834713?playlistId=tt0353969&ref_=tt_ov_vi"},
+      { src: 'https://api.stubinen.org/img/postersHT20/memoriesofmurder.png', caption: 'Memories of Murder', date: "2020-11-22", text: translate("BeskrivFilm6"), vidID :"https://www.imdb.com/video/vi1302834713?playlistId=tt0353969&ref_=tt_ov_vi"},
       { src: 'https://api.stubinen.org/img/postersHT20/prisoners.png', caption: 'Prisoners', date: "2020-12-13", text: translate("BeskrivFilm8"), vidID :"https://www.imdb.com/video/vi3294275865?playlistId=tt1392214&ref_=tt_ov_vi"},
     ];
     this.IMAGES.sort(function(a,b) {
