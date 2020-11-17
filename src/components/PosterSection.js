@@ -64,6 +64,10 @@ class PosterSection extends Component {
       );
     return (
       <div className='PosterSection'>
+            <div style={{backgroundColor: 'crimson', width: '60%', margin: 'auto', display: 'flex', marginBottom: '5vw'}} >
+              <p style={{fontSize: '5vw', marginLeft: '3.5vw', marginTop: '0.5vw'}}>!</p>
+              <p style={{fontSize: '1.4em', margin: '2vw', marginLeft: '3vw'}}>Due to the current COVID-related restrictions all screenings have been cancelled until the end of the year.</p>
+            </div>
             <h1>
             {notShownItems.length != 0 ? translate("SkaSpelas"): ''}
             </h1>
