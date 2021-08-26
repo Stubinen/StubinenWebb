@@ -8,12 +8,8 @@ class AboutSection extends Component {
     constructor(props) {
       super(props);
         this.IMAGES = [
-          { src: 'https://api.stubinen.org/img/styrelsen2021/fredrik.jpg', name: 'Fredrik',roll: translate("Ordförande")},
-          { src: 'https://api.stubinen.org/img/styrelsen2021/levi.jpg', name: 'Levi',roll: translate("Sekreterare")},
-          { src: 'https://api.stubinen.org/img/styrelsen2021/alex.jpg', name: 'Alex',roll: translate("Kassör")},
-          { src: 'https://api.stubinen.org/img/styrelsen2021/tannya.jpg', name: 'Tannya',roll: translate("Event")},
-          { src: 'https://api.stubinen.org/img/styrelsen2021/douglas.jpg', name: 'Douglas',roll: translate("Filmansvarig")},
-          { src: 'https://api.stubinen.org/img/styrelsen2021/lovisa.jpg', name: 'Lovisa',roll: translate("Marknadsföring")},
+          { src: 'https://api.stubinen.org/img/styrelsen2021/fredrik.jpg', name: 'Fredrik',roll: translate("Webb")},
+          { src: 'https://api.stubinen.org/img/styrelsen2021/levi.jpg', name: 'Levi',roll: translate("Kassör")},
           { src: 'https://api.stubinen.org/img/styrelsen2021/ludvig.jpg', name: 'Ludvig',roll: translate("Webb")},
       ];
     }

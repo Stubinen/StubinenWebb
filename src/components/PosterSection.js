@@ -18,14 +18,8 @@ class PosterSection extends Component {
       lightboxIsOpen: false,
     }
     this.IMAGES = [
-      { src: 'https://api.stubinen.org/img/postersHT20/theniceguys.png', caption: 'The Nice Guys', date: "2020-09-13",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/video/vi3740709913?playlistId=tt3799694&ref_=tt_ov_vi"},
-      { src: 'https://api.stubinen.org/img/postersHT20/ghostintheshell.png', caption: 'Ghost in the Shell', date: "2020-09-20", text: translate("BeskrivFilm2"), vidID :"https://www.imdb.com/video/vi3886612761?playlistId=tt0113568&ref_=tt_ov_vi"},
-      { src: 'https://api.stubinen.org/img/postersHT20/goodtime.png', caption: 'Good Time', date: "2020-10-04", text: translate("BeskrivFilm3"), vidID :"https://www.imdb.com/video/vi1389607193?playlistId=tt4846232&ref_=tt_ov_vi"},
-      { src: 'https://api.stubinen.org/img/postersHT20/thefloridaproject.png', caption: 'The Florida Project', date: "2020-10-18", text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/video/vi1923202841?playlistId=tt5649144&ref_=tt_ov_vi"},
-      { src: 'https://api.stubinen.org/img/postersHT20/knivesout.png', caption: 'Knives Out', date: "2020-11-01", text: translate("BeskrivFilm5"), vidID :"https://www.imdb.com/video/vi2464857881?playlistId=tt8946378&ref_=tt_ov_vi"},
-      { src: 'https://api.stubinen.org/img/postersHT20/memoriesofmurder.png', caption: 'Memories of Murder', date: "2020-11-22", text: translate("BeskrivFilm6"), vidID :"https://www.imdb.com/video/vi1302834713?playlistId=tt0353969&ref_=tt_ov_vi"},
-      { src: 'https://api.stubinen.org/img/postersHT20/prisoners.png', caption: 'Prisoners', date: "2020-12-13", text: translate("BeskrivFilm8"), vidID :"https://www.imdb.com/video/vi3294275865?playlistId=tt1392214&ref_=tt_ov_vi"},
-    ];
+      {src: 'https://api.stubinen.org/img/postersHT20/theniceguys.png', caption: 'Spirited Away', date: "2021-09-12",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/video/vi3619684633?playlistId=tt0245429&ref_=tt_ov_vi"},
+   ];
     this.IMAGES.sort(function(a,b) {
         return new Date(a.date) - new Date(b.date);
     });
@@ -44,41 +38,37 @@ class PosterSection extends Component {
     }
   }
   render() {
-      const shownItems = this.SHOWN.map((Obj) =>
-          <Poster
-            title={Obj.caption}
-            text ={Obj.text}
-            date = {Obj.date}
-            poster={Obj.src}
-            IMDB = {Obj.vidID}
-          />
-      );
-      const notShownItems = this.NOTSHOWN.map((Obj) =>
-          <Poster
-            title={Obj.caption}
-            text ={Obj.text}
-            date = {Obj.date}
-            poster={Obj.src}
-            IMDB = {Obj.vidID}
-          />
-      );
-    return (
-      <div className='PosterSection'>
-            <div style={{backgroundColor: 'crimson', width: '60%', margin: 'auto', display: 'flex', marginBottom: '5vw'}} >
-              <p style={{fontSize: '5vw', marginLeft: '3.5vw', marginTop: '0.5vw'}}>!</p>
-              <p style={{fontSize: '1.4em', margin: '2vw', marginLeft: '3vw'}}>Due to the current COVID-related restrictions all screenings have been cancelled until the end of the year.</p>
-            </div>
-            <h1>
-            {notShownItems.length != 0 ? translate("SkaSpelas"): ''}
-            </h1>
-            {notShownItems}
-            <h1>
-            {shownItems.length != 0 ? translate("RedanSpelade"): ''}
-            </h1>
-            {shownItems}
-      </div>
+    const shownItems = this.SHOWN.map((Obj) =>
+        <Poster
+          title={Obj.caption}
+          text ={Obj.text}
+          date = {Obj.date}
+          poster={Obj.src}
+          IMDB = {Obj.vidID}
+        />
     );
-  }
+    const notShownItems = this.NOTSHOWN.map((Obj) =>
+        <Poster
+          title={Obj.caption}
+          text ={Obj.text}
+          date = {Obj.date}
+          poster={Obj.src}
+          IMDB = {Obj.vidID}
+        />
+    );
+  return (
+    <div className='PosterSection'>
+          <h1>
+          {notShownItems.length != 0 ? translate("SkaSpelas"): ''}
+          </h1>
+          {notShownItems}
+          <h1>
+          {shownItems.length != 0 ? translate("RedanSpelade"): ''}
+          </h1>
+          {shownItems}
+    </div>
+  );
+}
   _onReady(event) {
     // access to player in all event handlers via event.target
     event.target.pauseVideo();
