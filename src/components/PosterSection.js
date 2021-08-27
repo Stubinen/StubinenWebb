@@ -18,7 +18,7 @@ class PosterSection extends Component {
       lightboxIsOpen: false,
     }
     this.IMAGES = [
-      {src: 'https://api.stubinen.org/img/postersHT20/theniceguys.png', caption: 'Spirited Away', date: "2021-09-12",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/video/vi3619684633?playlistId=tt0245429&ref_=tt_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersHT20/goodtime.png', caption: 'Spirited Away', date: "2021-09-12",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/video/vi3619684633?playlistId=tt0245429&ref_=tt_ov_vi"},
    ];
     this.IMAGES.sort(function(a,b) {
         return new Date(a.date) - new Date(b.date);
