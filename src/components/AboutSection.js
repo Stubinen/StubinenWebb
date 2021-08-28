@@ -9,13 +9,13 @@ class AboutSection extends Component {
       super(props);
         this.IMAGES = [
           { src: 'https://api.stubinen.org/img/styrelsen2122/silhouette.png', name: 'Elliot',roll: translate("Ordförande")},
-          { src: 'https://api.stubinen.org/img/styrelsen2021/fredrik.jpg', name: 'Fredrik',roll: translate("Webb")},
           { src: 'https://api.stubinen.org/img/styrelsen2021/levi.jpg', name: 'Levi',roll: translate("Kassör")},
-          { src: 'https://api.stubinen.org/img/styrelsen2021/ludvig.jpg', name: 'Ludvig',roll: translate("")},
           { src: 'https://api.stubinen.org/img/styrelsen2122/silhouette.png', name: 'Klara',roll: translate("Sekreterare")},
-          { src: 'https://api.stubinen.org/img/styrelsen2122/silhouette.png', name: 'Marw',roll: translate("")},
           { src: 'https://api.stubinen.org/img/styrelsen2122/silhouette.png', name: 'Samuel',roll: translate("Marknadsföring")},
+          { src: 'https://api.stubinen.org/img/styrelsen2021/fredrik.jpg', name: 'Fredrik',roll: translate("Webb")},
           { src: 'https://api.stubinen.org/img/styrelsen2122/silhouette.png', name: 'Simon',roll: translate("Event")},
+          { src: 'https://api.stubinen.org/img/styrelsen2122/silhouette.png', name: 'Marw',roll: translate("")},
+          { src: 'https://api.stubinen.org/img/styrelsen2021/ludvig.jpg', name: 'Ludvig',roll: translate("")},
       ];
     }
     render() {

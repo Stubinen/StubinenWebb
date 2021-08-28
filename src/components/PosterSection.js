@@ -19,7 +19,14 @@ class PosterSection extends Component {
     }
     this.IMAGES = [
       {src: 'https://api.stubinen.org/img/postersHT21/SA.png', caption: 'Spirited Away', date: "2021-09-12",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/video/vi3619684633?playlistId=tt0245429&ref_=tt_ov_vi"},
-   ];
+      {src: 'https://api.stubinen.org/img/postersHT21/TheLighthouse.png', caption: 'The Lighthouse', date: "2021-09-26",text: translate("BeskrivFilm2"), vidID :"https://www.imdb.com/video/vi3619684633?playlistId=tt0245429&ref_=tt_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersHT21/clerks.png', caption: 'Clerks', date: "2021-10-10",text: translate("BeskrivFilm3"), vidID :"https://www.imdb.com/video/vi3619684633?playlistId=tt0245429&ref_=tt_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersHT21/theassassination.png', caption: 'The Assasination of Jesse James By the Cowardly Robert Ford', date: "2021-10-24",text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/video/vi3619684633?playlistId=tt0245429&ref_=tt_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersHT21/BladeRunner.png', caption: 'Bladerunner 2049', date: "2021-11-07",text: translate("BeskrivFilm5"), vidID :"https://www.imdb.com/video/vi3619684633?playlistId=tt0245429&ref_=tt_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersVT20/noPoster.png', caption: 'Lars and the Real Girl', date: "2021-11-21",text: translate("BeskrivFilm6"), vidID :"https://www.imdb.com/video/vi3619684633?playlistId=tt0245429&ref_=tt_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersVT20/noPoster.png', caption: 'Medlemmarnas val', date: "2021-11-28",text: translate("BeskrivFilm7"), vidID :"https://www.imdb.com/video/vi3619684633?playlistId=tt0245429&ref_=tt_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersHT21/Ran.png', caption: 'Ran', date: "2021-12-12",text: translate("BeskrivFilm8"), vidID :"https://www.imdb.com/video/vi3619684633?playlistId=tt0245429&ref_=tt_ov_vi"},
+    ];
     this.IMAGES.sort(function(a,b) {
         return new Date(a.date) - new Date(b.date);
     });
