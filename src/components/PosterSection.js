@@ -19,6 +19,13 @@ class PosterSection extends Component {
     }
     this.IMAGES = [
       {src: 'https://api.stubinen.org/img/postersHT20/prisoners.png', caption: 'Prisoners', date: "2022-01-23",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/video/vi3294275865?playlistId=tt1392214&ref_=tt_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersVT22/melancholia_a1-1.png', caption: 'Melancholia', date: "2022-02-20",text: translate("BeskrivFilm2"), vidID :"https://www.imdb.com/video/vi3294275865?playlistId=tt1392214&ref_=tt_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersVT22/barry.png', caption: 'Barry Lyndon', date: "2022-02-06",text: translate("BeskrivFilm3"), vidID :"https://www.imdb.com/video/vi3294275865?playlistId=tt1392214&ref_=tt_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersVT22/minari.png', caption: 'Minari', date: "2022-03-06",text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/video/vi3294275865?playlistId=tt1392214&ref_=tt_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersVT22/rain2.png', caption: 'Singing in the rain', date: "2022-03-27",text: translate("BeskrivFilm5"), vidID :"https://www.imdb.com/video/vi3294275865?playlistId=tt1392214&ref_=tt_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersVT22/firelady.png', caption: 'Portrait of a lady on fire', date: "2022-04-10",text: translate("BeskrivFilm6"), vidID :"https://www.imdb.com/video/vi3294275865?playlistId=tt1392214&ref_=tt_ov_vi"},
+      {src: 'https://api.stubinen.org/img/LadyBird.png', caption: 'Medlemmarnas val', date: "2022-04-24",text: translate("BeskrivFilm7"), vidID :""},
+      {src: 'https://api.stubinen.org/img/postersHT20/memoriesofmurder.png', caption: 'Memories of murder', date: "2022-05-08",text: translate("BeskrivFilm8"), vidID :""},
     ];
     this.IMAGES.sort(function(a,b) {
         return new Date(a.date) - new Date(b.date);
