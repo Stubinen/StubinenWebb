@@ -111,7 +111,7 @@ let Strings ={
         "BeskrivFilm4" : "The title says it all.",
         "BeskrivFilm5" : "The lapd-employed blade runner K reveals a long-buried secret with the potential to destroy what remains of society. K's revelation leads him on a hunt for Rick Deckard, a former blade runner who disappeared three decades ago.",
         "BeskrivFilm6" : "The film revolves around the weirdo Lars Lindstrom who begins a relationship with the sex doll Bianca, in the belief that she is real. Soon, the whole city has to adapt to Lars and pretend that the doll is real while his friends and family begin to question his mental well-being.",
-        "BeskrivFilm7" : "Every semester we make your wish come true! What movie do you want us to screen? Take the chance to nominate and vote and maybe we’ll screen your movie!",
+        "BeskrivFilm7" : "Every semester we make your wish come true! What movie do you want us to screen? Take the chance to nominate and vote and maybe we'll screen your movie!",
         "BeskrivFilm8" : "Hidetora wakes up after a terrible nightmare and decides in the autumn of age, immediately for him to divide his kingdom between his sons. However, quarrels immediately break out between the sons who feel that the father's decision was not well thought out.",
         "MedlemmarnasVal" : "Members' choice",
     },
