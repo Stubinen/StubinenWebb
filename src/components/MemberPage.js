@@ -60,7 +60,7 @@ class MemberPage extends Component{
                     <aside className="profile-card">
                     <header>
                       <h1>Hej! </h1>
-                      <h2>Swisha 70kr till 076 804 45 34 för att aktivera ditt konto</h2>
+                      <h2>Swisha 70kr till 072-331 19 27 för att aktivera ditt konto</h2>
                     </header>
                     <div className="activate-panel">
                       <input  className="button"  placeholder="Jag har swishat" onClick={this.activate}></input>
