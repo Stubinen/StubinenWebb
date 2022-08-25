@@ -18,14 +18,14 @@ class PosterSection extends Component {
       lightboxIsOpen: false,
     }
     this.IMAGES = [
-      {src: 'https://api.stubinen.org/img/postersHT20/prisoners.png', caption: 'Prisoners', date: "2022-01-23",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/video/vi3294275865?playlistId=tt1392214&ref_=tt_ov_vi"},
-      {src: 'https://api.stubinen.org/img/postersVT22/melancholia_a1-1.png', caption: 'Melancholia', date: "2022-02-20",text: translate("BeskrivFilm2"), vidID :"https://www.imdb.com/video/vi3294275865?playlistId=tt1392214&ref_=tt_ov_vi"},
-      {src: 'https://api.stubinen.org/img/postersVT22/barry.png', caption: 'Barry Lyndon', date: "2022-02-06",text: translate("BeskrivFilm3"), vidID :"https://www.imdb.com/video/vi3294275865?playlistId=tt1392214&ref_=tt_ov_vi"},
-      {src: 'https://api.stubinen.org/img/postersVT22/minari.png', caption: 'Minari', date: "2022-03-06",text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/video/vi3294275865?playlistId=tt1392214&ref_=tt_ov_vi"},
-      {src: 'https://api.stubinen.org/img/postersVT22/rain2.png', caption: 'Singing in the rain', date: "2022-03-27",text: translate("BeskrivFilm5"), vidID :"https://www.imdb.com/video/vi3294275865?playlistId=tt1392214&ref_=tt_ov_vi"},
-      {src: 'https://api.stubinen.org/img/postersVT22/firelady.png', caption: 'Portrait of a lady on fire', date: "2022-04-10",text: translate("BeskrivFilm6"), vidID :"https://www.imdb.com/video/vi3294275865?playlistId=tt1392214&ref_=tt_ov_vi"},
-      {src: 'https://api.stubinen.org/img/LadyBird.png', caption: 'Medlemmarnas val', date: "2022-04-24",text: translate("BeskrivFilm7"), vidID :""},
-      {src: 'https://api.stubinen.org/img/postersHT20/memoriesofmurder.png', caption: 'Memories of murder', date: "2022-05-08",text: translate("BeskrivFilm8"), vidID :""},
+      {src: 'https://api.stubinen.org/img/postersHT22/grandbudapest.jpg', caption: 'Grand Budapest Hotel', date: "2022-09-04",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/video/vi1157933593/?playlistId=tt2278388&ref_=tt_pr_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersHT22/gbu.jpg', caption: 'The Good. the Bad and the Ugly', date: "2022-09-18",text: translate("BeskrivFilm2"), vidID :"https://www.imdb.com/video/vi3416964889/?playlistId=tt0060196&ref_=tt_pr_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersHT22/cinema.jpg', caption: 'Cinema Paradiso', date: "2022-10-02",text: translate("BeskrivFilm3"), vidID :"https://www.imdb.com/video/vi2800655897/?playlistId=tt0095765&ref_=tt_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersHT22/edwood.jpg', caption: 'Ed Wood', date: "2022-10-16",text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/video/vi2695102745/?playlistId=tt0109707&ref_=tt_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersHT22/clockwork.jpg', caption: 'A Clockwork Orange', date: "2022-10-30",text: translate("BeskrivFilm5"), vidID :"https://www.imdb.com/video/vi4030506521/?playlistId=tt0066921&ref_=tt_pr_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersHT22/trainspotting.jpg', caption: 'Trainspotting', date: "2022-11-13",text: translate("BeskrivFilm6"), vidID :"https://www.imdb.com/video/vi2148899865/?playlistId=tt0117951&ref_=tt_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersHT22/medlemmarnas.png', caption: 'Medlemmarnas val', date: "2022-11-27",text: translate("BeskrivFilm7"), vidID :""},
+      {src: 'https://api.stubinen.org/img/postersHT22/django.jpg', caption: 'Django Unchained', date: "2022-12-11",text: translate("BeskrivFilm8"), vidID :"https://www.imdb.com/video/vi2291574553/?playlistId=tt1853728&ref_=tt_pr_ov_vi"},
     ];
     this.IMAGES.sort(function(a,b) {
         return new Date(a.date) - new Date(b.date);

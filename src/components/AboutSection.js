@@ -8,14 +8,12 @@ class AboutSection extends Component {
     constructor(props) {
       super(props);
         this.IMAGES = [
-          { src: 'https://api.stubinen.org/img/styrelsen2122/silhouette.png', name: 'Elliot',roll: translate("Ordförande")},
-          { src: 'https://api.stubinen.org/img/styrelsen2021/levi.jpg', name: 'Levi',roll: translate("Kassör")},
-          { src: 'https://api.stubinen.org/img/styrelsen2122/silhouette.png', name: 'Klara',roll: translate("Sekreterare")},
-          { src: 'https://api.stubinen.org/img/styrelsen2122/silhouette.png', name: 'Samuel',roll: translate("Marknadsföring")},
-          { src: 'https://api.stubinen.org/img/styrelsen2021/fredrik.jpg', name: 'Fredrik',roll: translate("Webb")},
-          { src: 'https://api.stubinen.org/img/styrelsen2122/silhouette.png', name: 'Simon',roll: translate("Event")},
-          { src: 'https://api.stubinen.org/img/styrelsen2122/silhouette.png', name: 'Marw',roll: translate("")},
-          { src: 'https://api.stubinen.org/img/styrelsen2021/ludvig.jpg', name: 'Ludvig',roll: translate("")},
+          { src: 'https://api.stubinen.org/img/styrelsen2223/silhouette1.png', name: 'David',roll: translate("Ordförande")},
+          { src: 'https://api.stubinen.org/img/styrelsen2223/silhouette1.png', name: 'Henry',roll: translate("Kassör")},
+          { src: 'https://api.stubinen.org/img/styrelsen2223/silhouette1.png', name: 'Oliver',roll: translate("Filmansvarig")},
+          { src: 'https://api.stubinen.org/img/styrelsen2223/silhouette1.png', name: 'Arn',roll: translate("Marknadsföring")},
+          { src: 'https://api.stubinen.org/img/styrelsen2223/silhouette1.png', name: 'Jonathan',roll: translate("Marknadsföring")},
+          { src: 'https://api.stubinen.org/img/styrelsen2223/silhouette1.png', name: 'Felix',roll: translate("Webb")},
       ];
     }
     render() {
@@ -30,7 +28,7 @@ class AboutSection extends Component {
         return (
           <div className='AboutSection'>
           <Container>
-            <h2>{translate("Styrelsen")} 20/21</h2>
+            <h2>{translate("Styrelsen")} 22/23</h2>
                 <Row form ={true}>
                     {listItems}
                 </Row>
