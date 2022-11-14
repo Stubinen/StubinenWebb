@@ -25,7 +25,7 @@ class PosterSection extends Component {
       {src: 'https://api.stubinen.org/img/postersHT22/clockworkorange.png', caption: 'A Clockwork Orange', date: "2022-10-30",text: translate("BeskrivFilm5"), vidID :"https://www.imdb.com/video/vi4030506521/?playlistId=tt0066921&ref_=tt_pr_ov_vi"},
       {src: 'https://api.stubinen.org/img/postersHT22/TS.jpeg', caption: 'Trainspotting', date: "2022-11-13",text: translate("BeskrivFilm6"), vidID :"https://www.imdb.com/video/vi2148899865/?playlistId=tt0117951&ref_=tt_ov_vi"},
       {src: 'https://api.stubinen.org/img/postersHT22/medlemmarnas.png', caption: 'Medlemmarnas val', date: "2022-11-27",text: translate("BeskrivFilm7"), vidID :""},
-      {src: 'https://api.stubinen.org/img/postersHT22/DU.jpg', caption: 'Django Unchained', date: "2022-12-11",text: translate("BeskrivFilm8"), vidID :"https://www.imdb.com/video/vi2291574553/?playlistId=tt1853728&ref_=tt_pr_ov_vi"},
+      {src: 'https://api.stubinen.org/img/postersHT22/Django.png', caption: 'Django Unchained', date: "2022-12-11",text: translate("BeskrivFilm8"), vidID :"https://www.imdb.com/video/vi2291574553/?playlistId=tt1853728&ref_=tt_pr_ov_vi"},
     ];
     this.IMAGES.sort(function(a,b) {
         return new Date(a.date) - new Date(b.date);
