@@ -10,7 +10,7 @@ class Hero extends Component {
 
   render() {
     return (
-        <LazyHero imageSrc={'https://api.stubinen.org/img/styrelsen2223/rollfilm.jpg'} color="#fff" isFixed={true} opacity={0.15} minHeight='75vh' transitionDuration={1000} alt="Stubinenes styrelse">
+        <LazyHero imageSrc={'https://api.stubinen.org/img/styrelsen2223/Grupp.jpg'} color="#fff" isFixed={true} opacity={0.01} minHeight='75vh' transitionDuration={1000} alt="Stubinenes styrelse">
           <div className='row'>
             <img src={require('../../src/img/Logostubinen.png')} style={{marginTop:150}}/>
           </div>
