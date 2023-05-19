@@ -96,7 +96,7 @@ form {
 .button:hover {
   background: white;
   border: none;
-  color: rgba(58,45,77,0.8);
+  color: rgba(88, 88, 88, 0.8);
   font-family: 'Open Sans', sans-serif;
   font-size: 1.2em;
   letter-spacing: 0.05em;

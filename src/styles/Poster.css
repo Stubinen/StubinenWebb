@@ -42,13 +42,13 @@ button:focus {
 .movie-card{
   background-repeat: no-repeat;
   background-size: cover;
-  color: #cfd6e1;
+  color: #313131;
 }
 .movie-card__overlay {
   width: 100%;
   height: 100%;
   border-radius: 8px;
-  background: linear-gradient(to right, rgba(42, 159, 255, 0.2) 0%, #212120ef 50%);
+  background: linear-gradient(to right, #ffffff00 0%, #ffffffef 50%);
   background-blend-mode: multiply;
   position: absolute;
   top: 0;
@@ -58,7 +58,7 @@ button:focus {
 }
 @media screen and (max-width: 600px) {
   .movie-card__overlay {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, #212120 10%, #212121a9 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffffd5 100%);
   }
 }
 .movie-card__share {
@@ -104,6 +104,7 @@ button:focus {
   float: right;
   padding-right: 1em;
   padding-bottom: 1em;
+  overflow: hidden;
 }
 @media screen and (max-width: 1000px) {
   .movie-card__content {
@@ -124,7 +125,7 @@ button:focus {
 }
 .movie-card__title {
   font-size: 2.3rem;
-  color: #ffffff;
+  color: #313131;
   margin-bottom: .25em;
   opacity: .75;
 }
@@ -132,7 +133,7 @@ button:focus {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: .8em;
-  color: #9780b5;
+  color: #313131;
   line-height: 1;
   margin: 0;
   font-weight: 700;
@@ -162,6 +163,7 @@ h1, h2, h3 {
     position: absolute;
     bottom: 10px;
     left:10px;
+    z-index: 99;
 }
 
 .movie-btn-outline {
@@ -176,9 +178,9 @@ h1, h2, h3 {
 }
 
 .movie-btn-outline:hover {
-  border-color: #9780b5;
+  border-color: #000000;
   color: black;
-  box-shadow: 0px 1px 8px 0px rgba(245, 199, 0, 0.2);
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
 .fa-play {
