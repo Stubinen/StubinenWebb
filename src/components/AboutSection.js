@@ -28,7 +28,7 @@ class AboutSection extends Component {
         return (
           <div className='AboutSection'>
           <Container>
-            <h2>{translate("Styrelsen")} 22/23</h2>
+            <h2>{translate("Styrelsen")} 23/24</h2>
                 <Row form ={true}>
                     {listItems}
                 </Row>
