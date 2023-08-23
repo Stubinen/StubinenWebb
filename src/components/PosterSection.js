@@ -25,7 +25,7 @@ class PosterSection extends Component {
       {src: 'https://api.stubinen.org/img/postersHT23/SOTL.jpg', caption: 'The Silence of the Lambs', date: "2023-29-10",text: translate("BeskrivFilm5"), vidID :"https://www.imdb.com/video/vi3377380121/?playlistId=tt0102926&ref_=ext_shr_lnk"},
       {src: 'https://api.stubinen.org/img/postersHT23/MV.png', caption: 'Members Choice', date: "2023-11-26",text: translate("BeskrivFilm6"), vidID :"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"},
       {src: 'https://api.stubinen.org/img/postersHT23/BH.jpg', caption: 'Boyhood', date: "2023-12-03",text: translate("BeskrivFilm7"), vidID :"https://www.imdb.com/video/vi1306504217/?playlistId=tt1065073&ref_=ext_shr_lnk"},
-      {src: 'https://api.stubinen.org/img/postersHT23/DS.jpg', caption: 'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb', date: "2023-12-10",text: translate("BeskrivFilm8"), vidID :"https://www.imdb.com/video/vi3034955545/?ref_=ext_shr_lnk"},
+      {src: 'https://api.stubinen.org/img/postersHT23/DS.jpg', caption: 'Dr. Strangelove', date: "2023-12-10",text: translate("BeskrivFilm8"), vidID :"https://www.imdb.com/video/vi3034955545/?ref_=ext_shr_lnk"},
     ];
     this.IMAGES.sort(function(a,b) {
         return new Date(a.date) - new Date(b.date);
