@@ -18,7 +18,7 @@ class PosterSection extends Component {
       lightboxIsOpen: false,
     }
     this.IMAGES = [
-      {src: 'https://api.stubinen.org/img/posters23/TGP.jpg', caption: 'Tokyo Godfathers', date: "2023-01-22",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/video/vi867483161/?playlistId=tt0388473?ref_=ext_shr_lnk"},
+      {src: 'https://api.stubinen.org/img/posters23/TGP.jpg', caption: 'Birdman', date: "2023-09-10",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/video/vi1378069529/?playlistId=tt2562232&ref_=ext_shr_lnk"},
       {src: 'https://api.stubinen.org/img/postersVT23/WPP.jpg', caption: 'The Worst Person in the World', date: "2023-02-05",text: translate("BeskrivFilm2"), vidID :"https://www.imdb.com/video/vi2032321305/?playlistId=tt10370710?ref_=ext_shr_lnk"},
       {src: 'https://api.stubinen.org/img/postersVT23/ANP.jpg', caption: 'Apocalypse Now', date: "2023-02-19",text: translate("BeskrivFilm3"), vidID :"https://www.imdb.com/video/vi3543773721/?playlistId=tt0078788?ref_=ext_shr_lnk"},
       {src: 'https://api.stubinen.org/img/postersVT23/LMSP.jpg', caption: 'Little Miss Sunshine', date: "2023-03-05",text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/video/vi3667263769/?playlistId=tt0449059?ref_=ext_shr_lnk"},
