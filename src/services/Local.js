@@ -71,7 +71,6 @@ let Strings ={
         "Filmansvarig" : "Film Supervisor",
         "Marknadsföring" : "Marketing",
         "Webb" : "Web",
-        "Sekreterare" : "Secretary",
         "Fel lösenord eller email." : "Wrong password or email.",
         "Lösenordet behöver minst 8 karaktärer" : "The password needs atleast 8 characters",
         "Lösenordet måste innehålla minst en siffra" : "The password has to include atleast one number",
