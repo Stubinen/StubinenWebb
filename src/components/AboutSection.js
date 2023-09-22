@@ -8,12 +8,12 @@ class AboutSection extends Component {
     constructor(props) {
       super(props);
         this.IMAGES = [
-          { src: 'https://api.stubinen.org/img/styrelsen2324/Temp.jpg', name: 'Thea',roll: translate("Ordförande")},
-          { src: 'https://api.stubinen.org/img/styrelsen2324/Temp.jpg', name: 'Kristian',roll: translate("Kassör")},
-          { src: 'https://api.stubinen.org/img/styrelsen2324/Temp.jpg', name: 'Tobias',roll: translate("Filmansvarig")},
-          { src: 'https://api.stubinen.org/img/styrelsen2324/Temp.jpg', name: 'Kasper',roll: translate("Marknadsföring")},
-          { src: 'https://api.stubinen.org/img/styrelsen2324/Temp.jpg', name: 'Victor',roll: translate("Marknadsföring")},
-          { src: 'https://api.stubinen.org/img/styrelsen2324/Temp.jpg', name: 'Emma',roll: translate("Sekreterare")},
+          { src: 'https://api.stubinen.org/img/styrelsen2324/Thea.jpg', name: 'Thea',roll: translate("Ordförande")},
+          { src: 'https://api.stubinen.org/img/styrelsen2324/Kristian.jpg', name: 'Kristian',roll: translate("Kassör")},
+          { src: 'https://api.stubinen.org/img/styrelsen2324/Tobias.jpg', name: 'Tobias',roll: translate("Filmansvarig")},
+          { src: 'https://api.stubinen.org/img/styrelsen2324/Kasper.jpg', name: 'Kasper',roll: translate("Marknadsföring")},
+          { src: 'https://api.stubinen.org/img/styrelsen2324/Victor.jpg', name: 'Victor',roll: translate("Marknadsföring")},
+          { src: 'https://api.stubinen.org/img/styrelsen2324/Emma.jpg', name: 'Emma',roll: translate("Sekreterare")},
       ];
     }
     render() {
