@@ -54,9 +54,7 @@ let Strings ={
         "BeskrivFilm5" : "Ett skepp skickas för att undersöka en SOS-signal och råkar ut för en rymdvarelse som börjar döda besättningen en efter en.",
         "BeskrivFilm6" : "En gång varje termin uppfyller vi er önskning!",
         "BeskrivFilm7" : "Gravida Malin har ingenstans att bo. Hon söker upp sin pappa Martin som visar sig vara arrogant. Innan Malin hinner berätta vem hon är drabbas Martin av en stroke och vaknar upp med minnesförlust. Malin ser då sin chans till att få en riktigt pappa.",
-        "BeskrivFilm8" : "In nómine Pátris, et Fílii, + et Spirítus Sancti. Amen.Psalmus LXVII. Exsúrgat Deus et dissipéntur inimíci ejus: et fúgiant qui odérunt eum a fácie ejus.
-
-Sicut déficit fumus defíciant; sicut fluit cera a fácie ígnis, sic péreant peccatóres a fácie Dei.",
+        "BeskrivFilm8" : "In nómine Pátris, et Fílii, + et Spirítus Sancti. Amen.Psalmus LXVII. Exsúrgat Deus et dissipéntur inimíci ejus: et fúgiant qui odérunt eum a fácie ejus..Sicut déficit fumus defíciant; sicut fluit cera a fácie ígnis, sic péreant peccatóres a fácie Dei.",
         "MedlemmarnasVal" : "Medlemmarnas val",
     },
     en:{
