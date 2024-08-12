@@ -1,27 +1,111 @@
-html, body{
-    max-width: 100%;
-    overflow-x: hidden;
-}
 body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.header {
+  width: 100vw;
+  height: 75vh;
+  background-repeat: no-repeat;
+  background-image: url(https://api.stubinen.org/img/styrelsen2324/Gruppbild.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-a{
-  filter: grayscale(1);
+#imgLogo {
+  position: relative;
+  width: 400px;
 }
 
-a:hover{
-transform: rotate(-1deg);
-transition: 500ms;
+.nav-bar {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.207);
+  display: flex;
+  justify-content: space-around;
 }
+
+.nav-bar a {
+  color: white;
+  padding: 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.visningar {
+  margin: auto;
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  justify-content: center;
+  margin-bottom: 10vh;
+}
+
+#visningar-h1 {
+  text-align: center;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  color: white;
+  font-size: 24px;
+  letter-spacing: 4px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.movieCard img {
+  width: 35vh;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 13px;
+}
+
+.movieCard h2 {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer {
+  width: 100%;
+  height: 30vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#imgLogoFooter {
+  width: 300px;
+  position: absolute;
+  left: 25px;
+}
+
+.footer h3 {
+  text-align: center;
+  font-size: 24px;
+}
+
+#socialIcons {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
