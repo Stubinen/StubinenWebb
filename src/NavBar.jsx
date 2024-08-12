@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom"
 
 function NavBar() {
 
     return (
       <div className="nav-bar">
-        <a href="#">HEM</a>
-        <a href="#">OM STUBINEN</a>
-        <a href="#">VISNINGAR ÖVER ÅREN</a>
+        <Link to="/">HEM</Link>
+        <Link to="/about">OM STUBINEN</Link>
+        <Link to="previouslyShown">VISNINGAR ÖVER ÅREN</Link>
         <button>LOGGA IN</button>
         <button>REGISTRERA</button>
       </div>

@@ -1,6 +1,6 @@
 import Movie from "./MovieCard.jsx"
 
-function Visningar() {
+function Movies() {
 
     return (
     <>
@@ -19,4 +19,4 @@ function Visningar() {
     )
   }
   
-  export default Visningar
+  export default Movies
