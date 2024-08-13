@@ -4,8 +4,8 @@ function Movies() {
 
     return (
     <>
-        <h1 id="visningar-h1">VISNINGAR DENNA TERMIN</h1>
-        <div className="visningar">
+        <h1 id="titel-h1">VISNINGAR DENNA TERMIN</h1>
+        <div className="movies">
             <Movie/>
             <Movie/>
             <Movie/>
