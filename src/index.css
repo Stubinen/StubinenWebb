@@ -30,7 +30,7 @@ body {
   z-index: 100;
   position: fixed;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.207);
+  background-color: rgba(0, 0, 0);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -44,6 +44,31 @@ body {
   text-decoration: none;
   font-size: 1.2rem;
   text-transform: uppercase;
+}
+
+.nav-bar-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nav-bar-flags {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav-bar button {
+  border: none;
+  background-color: hsl(0,0%, 51%);
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  
 }
 
 .movies {
@@ -109,5 +134,41 @@ body {
   display: flex;
   gap: 50px;
   justify-content: center;
+}
+
+.profileCard {
+  width: 35vh;
+  height: 50vh;
+  border-radius: 13px;
+  filter: drop-shadow(gray 0px 5px 5px);
+  background-image: url("https://placehold.co/500x500");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.profileCard h2, .profileCard h1{
+  color: white;
+  position: absolute;
+  text-align: center;
+  font-size: 18px;
+  font-weight: normal;
+  bottom: 0px;
+  left: 20px;
+}
+
+.profileCard h1 {
+  bottom: 40px;
+}
+
+.profiles {
+  margin: auto;
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  justify-content: center;
+  margin-bottom: 10vh;
 }
 

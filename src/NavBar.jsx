@@ -8,11 +8,13 @@ function NavBar() {
         <Link to="/">HEM</Link>
         <Link to="/about">OM STUBINEN</Link>
         <Link to="previouslyShown">VISNINGAR ÖVER ÅREN</Link>
-        <div>
+
+        <div className="nav-bar-buttons">
           <button>LOGGA IN</button>
           <button>REGISTRERA</button>
         </div>
-        <div>
+
+        <div className="nav-bar-flags">
           <ReactCountryFlag countryCode="GB" style={{width: '3em', height: '3em'}} svg />
           <ReactCountryFlag countryCode="SE" style={{width: '3em', height: '3em'}} svg />
         </div>

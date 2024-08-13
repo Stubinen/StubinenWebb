@@ -4,11 +4,8 @@ import Movies from "./Movies.jsx"
 function Homepage() {
     return (
       <>
-            <Header/>
-            <Movies/>
-        
-        
-        
+      <Header/>
+      <Movies/>
       </>
     )
   }
