@@ -172,3 +172,21 @@ body {
   margin-bottom: 10vh;
 }
 
+.previousMovies {
+  margin: auto;
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  justify-content: center;
+  margin-bottom: 10vh;
+}
+
+.previousMovies img {
+  width: 8vw;
+  height: 11vw;
+  object-fit: cover;
+  border-radius: 13px;
+  filter: drop-shadow(gray 0px 5px 5px);
+}
+
