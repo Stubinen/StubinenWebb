@@ -23,7 +23,7 @@ class PosterSection extends Component {
       {src: 'https://api.stubinen.org/img/postersHT24/the_handmaiden.png', caption: 'The Handmaiden', date: "2024-10-06",text: translate("BeskrivFilm3"), vidID :"https://www.imdb.com/video/vi3452614681/"},
       {src: 'https://api.stubinen.org/img/postersHT24/snatch.png', caption: 'Snatch', date: "2024-10-20",text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/video/vi1558577433/"},
       {src: 'https://api.stubinen.org/img/postersHT24/akira.png', caption: 'Akira', date: "2024-11-03",text: translate("BeskrivFilm5"), vidID :"https://www.imdb.com/video/vi1723138329/"},
-      {src: 'https://api.stubinen.org/img/postersHT24/MV.png', caption: 'Members Choice', date: "2024-11-17",text: translate("BeskrivFilm6"), vidID :"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"},
+      {src: 'https://api.stubinen.org/img/postersVT24/MV.png', caption: 'Members Choice', date: "2024-11-17",text: translate("BeskrivFilm6"), vidID :"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"},
       {src: 'https://api.stubinen.org/img/postersHT24/her.png', caption: 'Her', date: "2024-11-24",text: translate("BeskrivFilm7"), vidID :"https://www.imdb.com/video/vi1211672857/"},
       {src: 'https://api.stubinen.org/img/postersHT24/the_dictator.png', caption: 'The Dictator', date: "2024-12-08",text: translate("BeskrivFilm8"), vidID :"https://www.imdb.com/video/vi663134233/"},
     ];
