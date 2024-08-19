@@ -18,14 +18,14 @@ class PosterSection extends Component {
       lightboxIsOpen: false,
     }
     this.IMAGES = [
-      {src: 'https://api.stubinen.org/img/postersVT24/DAT.jpg', caption: 'The Day After Tomorrow', date: "2024-01-28",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/video/vi2826045209/"},
-      {src: 'https://api.stubinen.org/img/postersVT24/DP.jpeg', caption: 'Deadpool', date: "2024-02-11",text: translate("BeskrivFilm2"), vidID :"https://www.imdb.com/video/vi567457049/"},
-      {src: 'https://api.stubinen.org/img/postersVT24/IBSCT.jpg', caption: 'If Beale Street Could Talk', date: "2024-03-03",text: translate("BeskrivFilm3"), vidID :"https://www.imdb.com/video/vi2767108633/"},
-      {src: 'https://api.stubinen.org/img/postersVT24/M.jpg', caption: 'Mother', date: "2024-03-24",text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/video/vi3905684505/"},
-      {src: 'https://api.stubinen.org/img/postersVT24/A.jpg', caption: 'Alien', date: "2024-04-07",text: translate("BeskrivFilm5"), vidID :"https://www.imdb.com/video/vi1497801241/"},
-      {src: 'https://api.stubinen.org/img/postersVT24/MV.png', caption: 'Members Choice', date: "2024-04-21",text: translate("BeskrivFilm6"), vidID :"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"},
-      {src: 'https://api.stubinen.org/img/postersVT24/MSKP.jpg', caption: 'Min så kallade pappa', date: "2024-05-05",text: translate("BeskrivFilm7"), vidID :"https://www.youtube.com/watch?v=R1Qgga-ThWU"},
-      {src: 'https://api.stubinen.org/img/postersVT24/LIT.jpg', caption: 'Lost in Translation', date: "2024-05-19",text: translate("BeskrivFilm8"), vidID :"https://www.imdb.com/video/vi26673433/"},
+      {src: 'https://api.stubinen.org/img/postersHT24/bullettrain.png', caption: 'Bullet Train', date: "2024-09-09",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/video/vi1743438361/"},
+      {src: 'https://api.stubinen.org/img/postersHT24/little_women.png', caption: 'Little Women', date: "2024-09-15",text: translate("BeskrivFilm2"), vidID :"https://www.imdb.com/video/vi2655304729/"},
+      {src: 'https://api.stubinen.org/img/postersHT24/the_handmaiden.png', caption: 'The Handmaiden', date: "2024-10-06",text: translate("BeskrivFilm3"), vidID :"https://www.imdb.com/video/vi3452614681/"},
+      {src: 'https://api.stubinen.org/img/postersHT24/snatch.png', caption: 'Snatch', date: "2024-10-20",text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/video/vi1558577433/"},
+      {src: 'https://api.stubinen.org/img/postersHT24/akira.png', caption: 'Akira', date: "2024-11-03",text: translate("BeskrivFilm5"), vidID :"https://www.imdb.com/video/vi1723138329/"},
+      {src: 'https://api.stubinen.org/img/postersHT24/MV.png', caption: 'Members Choice', date: "2024-11-17",text: translate("BeskrivFilm6"), vidID :"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"},
+      {src: 'https://api.stubinen.org/img/postersHT24/her.png', caption: 'Her', date: "2024-11-24",text: translate("BeskrivFilm7"), vidID :"https://www.imdb.com/video/vi1211672857/"},
+      {src: 'https://api.stubinen.org/img/postersHT24/the_dictator.png', caption: 'The Dictator', date: "2024-12-08",text: translate("BeskrivFilm8"), vidID :"https://www.imdb.com/video/vi663134233/"},
     ];
     this.IMAGES.sort(function(a,b) {
         return new Date(a.date) - new Date(b.date);
