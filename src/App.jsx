@@ -1,9 +1,9 @@
-import NavBar from "./NavBar.jsx"
-import Footer from "./Footer.jsx"
+import NavBar from "./components/NavBar.jsx"
+import Footer from "./components/Footer.jsx"
 import { Route, Routes} from "react-router-dom"
-import Homepage from "./Homepage.jsx"
-import About from "./About.jsx"
-import PreviousMovies from "./PreviousMovies.jsx"
+import Homepage from "./components/Homepage.jsx"
+import About from "./components/About.jsx"
+import PreviousMovies from "./components/PreviousMovies.jsx"
 
 function App() {
   return (

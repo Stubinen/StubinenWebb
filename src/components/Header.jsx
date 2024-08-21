@@ -1,4 +1,4 @@
-import logo from "./img/Logostubinen.png"
+import logo from "../img/Logostubinen.png"
 
 function Header() {
     

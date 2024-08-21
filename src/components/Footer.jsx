@@ -1,7 +1,7 @@
-import logo from "./img/Logostubinen.png"
-import instagramLogo from "./img/icons8-instagram.svg"
-import facebookLogo from "./img/icons8-facebook.svg"
-import tiktokLogo from "./img/icons8-tiktok.svg"
+import logo from "../img/Logostubinen.png"
+import instagramLogo from "../img/icons8-instagram.svg"
+import facebookLogo from "../img/icons8-facebook.svg"
+import tiktokLogo from "../img/icons8-tiktok.svg"
 
 function Footer() {
 
