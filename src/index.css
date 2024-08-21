@@ -107,6 +107,12 @@ body {
   object-fit: cover;
   border-radius: 13px;
   filter: drop-shadow(gray 0px 5px 5px);
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.movieCard img:hover {
+  transform: scale(1.05);
 }
 
 .movieCard h2 {
