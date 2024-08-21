@@ -18,7 +18,7 @@ class PosterSection extends Component {
       lightboxIsOpen: false,
     }
     this.IMAGES = [
-      {src: 'https://api.stubinen.org/img/postersHT24/bullettrain.png', caption: 'Bullet Train', date: "2024-09-09",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/video/vi1743438361/"},
+      {src: 'https://api.stubinen.org/img/postersHT24/bullettrain.png', caption: 'Bullet Train', date: "2024-09-01",text: translate("BeskrivFilm1"), vidID :"https://www.imdb.com/video/vi1743438361/"},
       {src: 'https://api.stubinen.org/img/postersHT24/little_women.png', caption: 'Little Women', date: "2024-09-15",text: translate("BeskrivFilm2"), vidID :"https://www.imdb.com/video/vi2655304729/"},
       {src: 'https://api.stubinen.org/img/postersHT24/the_handmaiden.png', caption: 'The Handmaiden', date: "2024-10-06",text: translate("BeskrivFilm3"), vidID :"https://www.imdb.com/video/vi3452614681/"},
       {src: 'https://api.stubinen.org/img/postersHT24/snatch.png', caption: 'Snatch', date: "2024-10-20",text: translate("BeskrivFilm4"), vidID :"https://www.imdb.com/video/vi1558577433/"},
