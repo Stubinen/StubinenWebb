@@ -17,6 +17,9 @@ body {
 
 
 .header {
+  position: absolute;
+  z-index: -100;
+  top: 0;
   height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
@@ -24,10 +27,6 @@ body {
   background-image:
     linear-gradient(to bottom, rgba(245, 246, 252, 0), hsl(0, 0%, 90%,1)),
     url('https://api.stubinen.org/img/styrelsen2324/Gruppbild.jpg');
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #imgLogo {
@@ -92,9 +91,9 @@ body {
 
 #titel-h1 {
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 20vh;
   margin-bottom: 10vh;
-  color: black;
+  color: white;
   font-size: 24px;
   letter-spacing: 4px;
   font-weight: normal;
@@ -102,8 +101,8 @@ body {
 }
 
 .movieCard img {
-  width: 35vh;
-  height: 50vh;
+  width: 30vh;
+  height: 45vh;
   object-fit: cover;
   border-radius: 13px;
   filter: drop-shadow(gray 0px 5px 5px);
