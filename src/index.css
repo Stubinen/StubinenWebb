@@ -81,7 +81,7 @@ body {
 
 .movies {
   margin: auto;
-  width: 90vw;
+  width: 70vw;
   display: flex;
   flex-wrap: wrap;
   gap: 2vw;
@@ -188,10 +188,10 @@ body {
 
 .previousMovies {
   margin: auto;
-  width: 90vw;
+  width: 70vw;
   display: flex;
   flex-wrap: wrap;
-  gap: 2vw;
+  gap: 0.5vw;
   justify-content: center;
   margin-bottom: 10vh;
 }
