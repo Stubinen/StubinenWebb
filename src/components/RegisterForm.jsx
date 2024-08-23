@@ -1,13 +1,14 @@
+import {signUpWithEmail} from "../supabase backend/auth.js"
 
 function RegisterForm({onClose}) {
 
-    const submitForm = (e) => {
+    const submitForm = async (e) => {
         e.preventDefault();
 
         const formData = new FormData(e.target);
         const payload = Object.fromEntries(formData);
 
-        console.log(payload);
+        await signUpWithEmail(payload.email, payload.password, payload);
     };
 
     return (
