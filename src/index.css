@@ -218,6 +218,7 @@ body {
 }
 
 .form-container {
+  position: relative;
   background-color: white;
   padding: 2em;
   border-radius: 8px;
@@ -225,12 +226,18 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-.form-container form {
+.form-container div {
   display: flex;
   flex-direction: column;
 }
 
 .form-container input {
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.form-container select {
   margin-bottom: 1em;
   padding: 0.5em;
   border: 1px solid #ccc;
@@ -249,4 +256,11 @@ body {
 
 .form-container button[type="button"] {
   background-color: red;
+}
+
+.hidden {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  pointer-events: none; /* Prevent interaction when hidden */
 }

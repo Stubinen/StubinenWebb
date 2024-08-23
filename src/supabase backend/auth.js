@@ -17,17 +17,17 @@ export const signUpWithEmail = async (email, password, additionalData) => {
             .from('profiles')
             .insert({ 
                 id: data.user.id, 
-                first_name: "Ludwig",
-                last_name: "Boge",
+                first_name: additionalData.first_name,
+                last_name: additionalData.last_name,
                 membership: "standard",
                 email: email,
-                kar_medlemskap: "Lintek",
-                personnummer: "0212301212",
-                adress: "Skomakaregatan 9",
-                postnummer: "60232",
-                stad: "Norrköping",
-                gender: "Man",
-                telefonnummer: "0702330253"
+                kar_medlemskap: additionalData.kar_medlemskap,
+                personnummer: additionalData.personnummer,
+                adress: additionalData.adress,
+                postnummer: additionalData.postnummer,
+                stad: additionalData.stad,
+                gender: additionalData.gender,
+                telefonnummer: additionalData.telefonnummer
             })
           }
 
