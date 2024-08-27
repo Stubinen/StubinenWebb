@@ -1,5 +1,6 @@
 import Movie from "./MovieCard.jsx"
 import movies from "../data/moviesData.js"
+import logo from "../img/Logostubinen.png"
 
 function Movies() {
 
@@ -17,12 +18,14 @@ function Movies() {
     });
 
     return (
-    <>
+    <div className="homepage">
+        
         <h1 id="titel-h1">VISNINGAR DENNA TERMIN</h1>
+        <img id="imgLogo" src={logo} alt="Stubinens logo" />
         <div className="movies">
             {movieItems}
         </div>
-    </>
+    </div>
     )
   }
   
