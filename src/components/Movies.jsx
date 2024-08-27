@@ -1,19 +1,26 @@
 import Movie from "./MovieCard.jsx"
+import movies from "../data/moviesData.js"
 
 function Movies() {
+
+    // Sort movies by soonest to latest date
+    movies.sort((a, b) => a.date - b.date);
+
+    // Map the movies to an array and if the movie has been shown, assign class "shown" in order to gray out
+    const movieItems = movies.map(m => {
+        const shown = new Date() > m.date;
+        const dateString = m.date.toISOString().split('T')[0]; // formats the date to yyyy-mm-dd
+
+        return (
+            <Movie key={m.id} imageSrc={m.image} name={m.name} date={dateString} hasBeenShown={shown}/>
+        );
+    });
 
     return (
     <>
         <h1 id="titel-h1">VISNINGAR DENNA TERMIN</h1>
         <div className="movies">
-            <Movie imageSrc="https://api.stubinen.org/img/postersHT24/bullettrain.png" name="Bullet Train" date="2024-09-01"/>
-            <Movie imageSrc="https://api.stubinen.org/img/postersHT24/little_women.png" name="Little Women" date="2024-09-15"/>
-            <Movie imageSrc="https://api.stubinen.org/img/postersHT24/the_handmaiden.png" name="The Handmaiden" date="2024-10-06"/>
-            <Movie imageSrc="https://api.stubinen.org/img/postersHT24/snatch.png" name="Snatch" date="2024-10-20"/>
-            <Movie imageSrc="https://api.stubinen.org/img/postersHT24/akira.png" name="Akira" date="2024-11-03"/>
-            <Movie imageSrc="https://api.stubinen.org/img/postersVT24/MV.png" name="Medlemmarnas Val!" date="2024-11-17"/>
-            <Movie imageSrc="https://api.stubinen.org/img/postersHT24/her.png" name="Her" date="2024-11-24"/>
-            <Movie imageSrc="https://api.stubinen.org/img/postersHT24/the_dictator.png" name="The Dictator" date="2024-12-08"/>
+            {movieItems}
         </div>
     </>
     )

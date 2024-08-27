@@ -2,10 +2,10 @@
 function MovieCard(props) {
 
     return (
-      <div className="movieCard">
+      <div className={`${props.hasBeenShown ? 'movieCard shown' : 'movieCard'}`}>
         <img src={props.imageSrc} alt={props.name} />
         <h2>{props.name}</h2>
-        <h2>{props.date}</h2>
+        <h3>{props.date}</h3>
       </div>
     )
 }
