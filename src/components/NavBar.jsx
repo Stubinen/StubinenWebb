@@ -40,18 +40,22 @@ function NavBar() {
 
     return (
       <div className="nav-bar">
-        <Link to="/">HEM</Link>
-        <Link to="/about">OM STUBINEN</Link>
-        <Link to="previouslyShown">VISNINGAR ÖVER ÅREN</Link>
-
-        <div className="nav-bar-buttons">
-          <button onClick={handleLoginClick}>LOGGA IN</button>
-          <button onClick={handleRegisterClick}>REGISTRERA</button>
+        <div className="nav-bar-links">
+          <Link to="/">HEM</Link>
+          <Link to="/about">OM STUBINEN</Link>
+          <Link to="previouslyShown">VISNINGAR ÖVER ÅREN</Link>
         </div>
 
-        <div className="nav-bar-flags">
-          <ReactCountryFlag countryCode="GB" style={{width: '3em', height: '3em'}} svg />
-          <ReactCountryFlag countryCode="SE" style={{width: '3em', height: '3em'}} svg />
+        <div className="nav-bar-right">
+          <div className="nav-bar-buttons">
+            <button onClick={handleLoginClick}>LOGGA IN</button>
+            <button onClick={handleRegisterClick}>REGISTRERA</button>
+          </div>
+
+          <div className="nav-bar-flags">
+            <ReactCountryFlag countryCode="GB" style={{width: '3em', height: '3em'}} svg />
+            <ReactCountryFlag countryCode="SE" style={{width: '3em', height: '3em'}} svg />
+          </div>
         </div>
 
         {showLoginForm && (

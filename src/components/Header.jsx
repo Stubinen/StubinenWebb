@@ -1,4 +1,3 @@
-import logo from "../img/Logostubinen.png"
 
 function Header() {
     
