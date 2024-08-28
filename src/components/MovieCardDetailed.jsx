@@ -1,9 +1,10 @@
 
-function MovieCardDetailed() {
+function MovieCardDetailed(props) {
 
     return (
-      <div className="movieCardDetailed">
-        
+      <div className="movieCardDetailed" onClick={props.onClose}>
+        <img src={props.imageSrc} alt={props.name} />
+
       </div>
     )
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MovieCardDetailed from "./MovieCardDetailed"
 
 function MovieCard(props) {
@@ -7,6 +7,25 @@ function MovieCard(props) {
     const openDetailedView = () => {
       setDetailedView(true);
     };
+
+    const closeDetailedView = () => {
+      console.log("Close")
+      setDetailedView(false);
+    };
+
+    // Effect to handle body overflow when forms are shown or hidden
+    useEffect(() => {
+      if (detailedView) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'auto';
+      }
+  
+      // Cleanup function to reset overflow when the component is unmounted or the forms are closed
+      return () => {
+        document.body.style.overflow = 'auto';
+      };
+      }, [detailedView]);
 
     return (
       <>
@@ -17,7 +36,7 @@ function MovieCard(props) {
       </div>
 
       {detailedView && (
-        <MovieCardDetailed />
+        <MovieCardDetailed imageSrc={props.imageSrc} name={props.name} date={props.date} onClose={closeDetailedView}/>
 )     }
       </>
     )

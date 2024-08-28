@@ -161,6 +161,22 @@ body {
   margin: 0;
 }
 
+.movieCardDetailed {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+}
+
+.movieCardDetailed img {
+  width: 500px;
+}
+
 .footer {
   width: 100%;
   height: 30vh;
