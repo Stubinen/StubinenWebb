@@ -8,12 +8,12 @@ function Movies() {
     movies.sort((a, b) => a.date - b.date);
 
     // Map the movies to an array and if the movie has been shown, assign class "shown" in order to gray out
-    const movieItems = movies.map(m => {
+    const movieItems = movies.map((m, index) => {
         const shown = new Date() > m.date;
         const dateString = m.date.toISOString().split('T')[0]; // formats the date to yyyy-mm-dd
 
         return (
-            <Movie key={m.id} imageSrc={m.image} name={m.name} date={dateString} description={m.description} hasBeenShown={shown}/>
+            <Movie key={index} imageSrc={m.image} name={m.name} date={dateString} description={m.description} hasBeenShown={shown}/>
         );
     });
 
