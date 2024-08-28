@@ -1,11 +1,11 @@
 
-
-function ProfileCard() {
+function ProfileCard(props) {
 
     return (
       <div className="profileCard">
-        <h1>Ludwig</h1>
-        <h2>Webbansvarig</h2>
+        <img src={props.imageSrc} alt="Temp" />
+        <h1>{props.name}</h1>
+        <h2>{props.role}</h2>
       </div>
     )
 }

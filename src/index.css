@@ -227,18 +227,18 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
 #imgLogoFooter {
-  width: 300px;
+  width: 15vw;
   position: absolute;
   left: 25px;
 }
 
 .footer h3 {
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: normal;
   color: white;
 }
 
@@ -248,15 +248,11 @@ p {
   justify-content: center;
 }
 
-.profileCard {
+.profileCard, .profileCard img{
   width: 300px;
   height: 450px;
   border-radius: 13px;
-  filter: drop-shadow(gray 0px 5px 5px);
-  background-image: url("https://placehold.co/500x500");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
   position: relative;
 }
 

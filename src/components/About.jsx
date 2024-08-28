@@ -1,5 +1,6 @@
 import Header from "./Header.jsx"
 import ProfileCard from "./ProfileCard.jsx"
+import mclovin from "../img/mcLovin.jpg"
 
 function About() {
 
@@ -12,13 +13,13 @@ function About() {
         </div>
         <h1 id="titel-h1">Styrelsen 24/25</h1>
         <div className="profiles">
-          <ProfileCard />
-          <ProfileCard />
-          <ProfileCard />
-          <ProfileCard />
-          <ProfileCard />
-          <ProfileCard />
-          <ProfileCard />
+          <ProfileCard name="Samuel" role="Ordförarmästare / Kapten" imageSrc={mclovin}/>
+          <ProfileCard name="Yehya" role="Snubben man swishar" imageSrc={mclovin}/>
+          <ProfileCard name="Chloe" role="Eventgrejsansvarig" imageSrc={mclovin}/>
+          <ProfileCard name="Ada" role="Filmansvarig & Inköpsansvarig (Shoppaholic)" imageSrc={mclovin}/>
+          <ProfileCard name="Axel" role="Posterskaparmagiker" imageSrc={mclovin}/>
+          <ProfileCard name="Natalie" role="Tiktok och memeansvarig" imageSrc={mclovin}/>
+          <ProfileCard name="Ludwig" role="Webbmästare, webbchef, unofficial sekreterare, film-mästare, lvl 100 crook, the list goes on..." imageSrc={mclovin}/>
         </div>
       </div>
     )

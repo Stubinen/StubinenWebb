@@ -8,7 +8,7 @@ function Footer() {
     return (
       <div className="footer">
         <img id="imgLogoFooter" src={logo} alt="Stubinens logo" />
-        <h3>stubinen@stubinen.se</h3>
+        <h3>info@stubinen.org</h3>
         <div id="socialIcons">
             <a href="https://www.instagram.com/stubinenfilmforening/"><img src={instagramLogo} alt="Instagram logo" /></a>
             <a href="#"><img src={tiktokLogo} alt="Tiktok logo" /></a>
