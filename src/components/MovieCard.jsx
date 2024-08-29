@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import MovieCardDetailed from "./MovieCardDetailed"
+import MovieCardCSS from "./styles/MovieCard.module.css"
 
 function MovieCard(props) {
     const [detailedView, setDetailedView] = useState(false);
@@ -9,7 +10,6 @@ function MovieCard(props) {
     };
 
     const closeDetailedView = () => {
-      console.log("Close")
       setDetailedView(false);
     };
 

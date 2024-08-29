@@ -1,0 +1,28 @@
+#titel {
+    text-align: center;
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+    color: white;
+    font-size: 28px;
+    letter-spacing: 4px;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  .previousMovies {
+    margin: auto;
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5vw;
+    justify-content: center;
+    margin-bottom: 10vh;
+  }
+
+  .previousMovies img {
+    width: 8vw;
+    height: 11vw;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: drop-shadow(rgb(0, 0, 0) 0px 2px 2px);
+  }

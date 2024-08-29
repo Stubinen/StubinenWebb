@@ -1,5 +1,6 @@
 import Header from "./Header.jsx"
 import previousMovies from "../data/previouslyShownMovies.js"
+import PreviousMoviesCSS from "./styles/PreviousMovies.module.css"
 
 function PreviousMovies() {
 
@@ -27,12 +28,12 @@ function PreviousMovies() {
     return (
       <div>
         <Header />
-        <h1 id="titel-h1">Visningar de senaste 5 åren</h1>
+        <h1 id={PreviousMoviesCSS.titel}>Visningar de senaste 5 åren</h1>
 
         {movieChunks.map((chunk, index) => (
           <div key={index}>
-            <h1 id="titel-h1">{chunk[0].date.getFullYear().toString().slice(2,4) + "/" + chunk[15].date.getFullYear().toString().slice(2,4)}</h1>
-            <div className="previousMovies">
+            <h1 id={PreviousMoviesCSS.titel}>{chunk[0].date.getFullYear().toString().slice(2,4) + "/" + chunk[15].date.getFullYear().toString().slice(2,4)}</h1>
+            <div className={PreviousMoviesCSS.previousMovies}>
               {chunk.map((m, i) => (
                 <img key={i} src={m.image} alt={m.name} />
               ))}

@@ -1,0 +1,30 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutInfoSection {
+    width: 50%;
+  }
+
+h1 {
+    text-align: center;
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+    color: white;
+    font-size: 28px;
+    letter-spacing: 4px;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  .profiles {
+    margin: auto;
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    justify-content: center;
+    margin-bottom: 10vh;
+  }

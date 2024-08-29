@@ -1,8 +1,9 @@
+import HeaderCSS from "./styles/Header.module.css"
 
 function Header() {
     
     return (
-      <div className="header"></div>
+      <div className={HeaderCSS.header}></div>
     )
 }
   

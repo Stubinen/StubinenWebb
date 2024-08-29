@@ -1,6 +1,7 @@
 import Movie from "./MovieCard.jsx"
 import movies from "../data/moviesData.js"
 import logo from "../img/Logostubinen.png"
+import MoviesCSS from "./styles/Movies.module.css"
 
 function Movies() {
 
@@ -18,11 +19,11 @@ function Movies() {
     });
 
     return (
-    <div className="homepage">
+    <div className={MoviesCSS.homepage}>
         
-        <h1 id="titel-h1">VISNINGAR DENNA TERMIN</h1>
-        <img id="imgLogo" src={logo} alt="Stubinens logo" />
-        <div className="movies">
+        <h1>VISNINGAR DENNA TERMIN</h1>
+        <img id={MoviesCSS.imgLogo} src={logo} alt="Stubinens logo" />
+        <div className={MoviesCSS.movies}>
             {movieItems}
         </div>
     </div>

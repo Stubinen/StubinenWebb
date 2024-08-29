@@ -1,18 +1,19 @@
 import Header from "./Header.jsx"
 import ProfileCard from "./ProfileCard.jsx"
 import mclovin from "../img/mcLovin.jpg"
+import AboutCSS from "./styles/About.module.css"
 
 function About() {
 
     return (
-      <div className="about">
+      <div className={AboutCSS.about}>
         <Header />
-        <div className="aboutInfoSection">
-          <h1 id="titel-h1">Om Stubinen</h1>
-          <p id="aboutText">Stubinen är en filmförening för studenter av stundenter. Vi visar 8 varierade filmer från olika genrer per termin på biografen CNEMA på andra sidan strömmen från campus Norrköping. Ett medlemskap kostar 70 kr per termin och låter dig se bra film till billigt pris. Även om du inte studerar på Linköpings universitet kan du bli medlem och ta del av allt Stubinen har att erbjuda!</p>
+        <div className={AboutCSS.aboutInfoSection}>
+          <h1>Om Stubinen</h1>
+          <p>Stubinen är en filmförening för studenter av stundenter. Vi visar 8 varierade filmer från olika genrer per termin på biografen CNEMA på andra sidan strömmen från campus Norrköping. Ett medlemskap kostar 70 kr per termin och låter dig se bra film till billigt pris. Även om du inte studerar på Linköpings universitet kan du bli medlem och ta del av allt Stubinen har att erbjuda!</p>
         </div>
-        <h1 id="titel-h1">Styrelsen 24/25</h1>
-        <div className="profiles">
+        <h1>Styrelsen 24/25</h1>
+        <div className={AboutCSS.profiles}>
           <ProfileCard name="Samuel" role="Ordförarmästare / Kapten" imageSrc={mclovin}/>
           <ProfileCard name="Yehya" role="Snubben man swishar" imageSrc={mclovin}/>
           <ProfileCard name="Chloe" role="Eventgrejsansvarig" imageSrc={mclovin}/>

@@ -3,6 +3,7 @@ import ReactCountryFlag from "react-country-flag"
 import { useState, useEffect } from "react"
 import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
+import NavBarCSS from "./styles/NavBar.module.css"
 
 function NavBar() {
 
@@ -39,20 +40,20 @@ function NavBar() {
     }, [showLoginForm, showRegisterForm]);
 
     return (
-      <div className="nav-bar">
-        <div className="nav-bar-links">
+      <div className={NavBarCSS.navbar}>
+        <div className={NavBarCSS.navbarLinks}>
           <Link to="/">HEM</Link>
           <Link to="/about">OM STUBINEN</Link>
           <Link to="previouslyShown">VISNINGAR ÖVER ÅREN</Link>
         </div>
 
-        <div className="nav-bar-right">
-          <div className="nav-bar-buttons">
+        <div className={NavBarCSS.navbarRight}>
+          <div className={NavBarCSS.navbarButtons}>
             <button onClick={handleLoginClick}>LOGGA IN</button>
             <button onClick={handleRegisterClick}>REGISTRERA</button>
           </div>
 
-          <div className="nav-bar-flags">
+          <div className={NavBarCSS.navbarFlags}>
             <ReactCountryFlag countryCode="GB" style={{width: '3em', height: '3em'}} svg />
             <ReactCountryFlag countryCode="SE" style={{width: '3em', height: '3em'}} svg />
           </div>
