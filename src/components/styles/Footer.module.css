@@ -24,7 +24,7 @@
     color: rgb(111, 111, 111);
 }
 
-#iconText a:link{
+#iconText a:link, #iconText a:visited{
     color: rgb(111, 111, 111);
 }
 

@@ -67,6 +67,7 @@
   #openIcon, #closeIcon{
     display: none;
     width: 40px;
+    z-index: 50;
   }
 
 @media only screen and (max-width: 1150px)  {

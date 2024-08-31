@@ -9,10 +9,10 @@ function About() {
       <div className={AboutCSS.about}>
         <Header />
         <div className={AboutCSS.aboutInfoSection}>
-          <h1>Om Stubinen</h1>
+          <h1 id={AboutCSS.title}>Om Stubinen</h1>
           <p>Stubinen är en filmförening för studenter av stundenter. Vi visar 8 varierade filmer från olika genrer per termin på biografen CNEMA på andra sidan strömmen från campus Norrköping. Ett medlemskap kostar 70 kr per termin och låter dig se bra film till billigt pris. Även om du inte studerar på Linköpings universitet kan du bli medlem och ta del av allt Stubinen har att erbjuda!</p>
         </div>
-        <h1>Styrelsen 24/25</h1>
+        <h1 id={AboutCSS.title}>Styrelsen 24/25</h1>
         <div className={AboutCSS.profiles}>
           <ProfileCard name="Samuel" role="Ordförande" imageSrc={mclovin}/>
           <ProfileCard name="Yehya" role="Kassör" imageSrc={mclovin}/>
