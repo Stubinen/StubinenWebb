@@ -31,13 +31,17 @@ function MovieCard(props) {
       <>
       <div className={`${props.hasBeenShown ? 'movieCard shown' : 'movieCard'}`}>
         <img onClick={openDetailedView} src={props.imageSrc} alt={props.name} />
-        <h2>{props.name}</h2>
-        <h3 style={{color: `${props.hasBeenShown ? 'red' : ''}`}}>{props.date}</h3>
+        {props.extraDetails && (
+          <>
+          <h2>{props.name}</h2>
+          <h3 style={{color: `${props.hasBeenShown ? 'red' : ''}`}}>{props.date}</h3>
+          </>
+        )};
       </div>
 
       {detailedView && (
         <MovieCardDetailed imageSrc={props.imageSrc} name={props.name} date={props.date} description={props.description} onClose={closeDetailedView}/>
-)     }
+      )}
       </>
     )
 }

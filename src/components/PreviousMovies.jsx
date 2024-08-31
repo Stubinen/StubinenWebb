@@ -1,4 +1,5 @@
 import Header from "./Header.jsx"
+import Movie from "./MovieCard.jsx"
 import previousMovies from "../data/previouslyShownMovies.js"
 import PreviousMoviesCSS from "./styles/PreviousMovies.module.css"
 
@@ -19,11 +20,7 @@ function PreviousMovies() {
   // Split the movies array into chunks of 8
   const movieChunks = chunkArray(previousMovies, 16);
 
-    const movieItems = previousMovies.map(m => {
-      return (
-          <img src={m.image} alt={m.name} />
-      );
-  });
+  movieChunks.sort((a, b) => b[0].date - a[0].date) // Sort so that the most recent chunk of movies is at the top
 
     return (
       <div>
@@ -35,7 +32,7 @@ function PreviousMovies() {
             <h1 id={PreviousMoviesCSS.titel}>{chunk[0].date.getFullYear().toString().slice(2,4) + "/" + chunk[15].date.getFullYear().toString().slice(2,4)}</h1>
             <div className={PreviousMoviesCSS.previousMovies}>
               {chunk.map((m, i) => (
-                <img key={i} src={m.image} alt={m.name} />
+                <Movie key={i} imageSrc={m.image} name={m.name} date={""} description={m.description} hasBeenShown={false} extraDetails={false}/>
               ))}
             </div>
           </div>

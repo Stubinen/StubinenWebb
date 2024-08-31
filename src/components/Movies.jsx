@@ -14,7 +14,7 @@ function Movies() {
         const dateString = m.date.toISOString().split('T')[0]; // formats the date to yyyy-mm-dd
 
         return (
-            <Movie key={index} imageSrc={m.image} name={m.name} date={dateString} description={m.description} hasBeenShown={shown}/>
+            <Movie key={index} imageSrc={m.image} name={m.name} date={dateString} description={m.description} hasBeenShown={shown} extraDetails={true}/>
         );
     });
 
