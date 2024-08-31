@@ -13,10 +13,10 @@ function Footer() {
         <div id={FooterCSS.center}>
           <h3>info@stubinen.org</h3>
           <div id={FooterCSS.socialIcons}>
-              <a href="https://www.instagram.com/stubinenfilmforening/"><img src={instagramLogo} alt="Instagram logo" /></a>
-              <a href="https://www.tiktok.com/@stubinenfilmforening"><img src={tiktokLogo} alt="Tiktok logo" /></a>
-              <a href="https://www.facebook.com/stubinen"><img src={facebookLogo} alt="Facebook logo" /></a>
-              <a href="https://letterboxd.com/stubinen/"><img src={letterboxdLogo} alt="Letterboxd logo" /></a>
+              <a target="_blank" href="https://www.instagram.com/stubinenfilmforening/"><img src={instagramLogo} alt="Instagram logo" /></a>
+              <a target="_blank" href="https://www.tiktok.com/@stubinenfilmforening"><img src={tiktokLogo} alt="Tiktok logo" /></a>
+              <a target="_blank" href="https://www.facebook.com/stubinen"><img src={facebookLogo} alt="Facebook logo" /></a>
+              <a target="_blank" href="https://letterboxd.com/stubinen/"><img src={letterboxdLogo} alt="Letterboxd logo" /></a>
           </div>
           <div id={FooterCSS.iconText}>Icons by <a target="_blank" href="https://icons8.com">Icons8</a></div>
         </div>
