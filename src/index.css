@@ -125,3 +125,7 @@ p {
   overflow: hidden;
   pointer-events: none; /* Prevent interaction when hidden */
 }
+
+.hide {
+  display: none;
+}

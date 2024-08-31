@@ -4,11 +4,21 @@ import { useState, useEffect } from "react"
 import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 import NavBarCSS from "./styles/NavBar.module.css"
+import hamburgerOpen from "../img/open.svg"
+import hamburgerClose from "../img/close.svg"
+import { useMediaQuery } from 'react-responsive'
 
 function NavBar() {
 
     const [showLoginForm, setShowLoginForm] = useState(false);
     const [showRegisterForm, setShowRegisterForm] = useState(false);
+    const [navBarOpen, setNavBarOpen] = useState(false);
+
+    const isMobile = useMediaQuery({ query: '(max-width: 1150px)' });
+
+    const toggleClass = () => {
+      setNavBarOpen(!navBarOpen);
+    }
 
     const handleLoginClick = () => {
       setShowLoginForm(true);
@@ -25,6 +35,11 @@ function NavBar() {
       setShowRegisterForm(false);
     };
 
+    useEffect(() => {
+      if (!isMobile) {
+        setNavBarOpen(true);
+      }
+    })
     // Effect to handle body overflow when forms are shown or hidden
     useEffect(() => {
     if (showLoginForm || showRegisterForm) {
@@ -40,23 +55,20 @@ function NavBar() {
     }, [showLoginForm, showRegisterForm]);
 
     return (
-      <div className={NavBarCSS.navbar}>
-        <div className={NavBarCSS.navbarLinks}>
-          <Link to="/">HEM</Link>
-          <Link to="/about">OM STUBINEN</Link>
-          <Link to="previouslyShown">VISNINGAR ÖVER ÅREN</Link>
-        </div>
+      <>
+      <img onClick={toggleClass} id={NavBarCSS.openIcon} src={hamburgerOpen} alt="Hamburgermenu button" />
+      <div className={navBarOpen ? NavBarCSS.navbar : "hide"}>
+        <img onClick={toggleClass} id={NavBarCSS.closeIcon} src={hamburgerClose} alt="Hamburgermenu button" />
 
-        <div className={NavBarCSS.navbarRight}>
-          <div className={NavBarCSS.navbarButtons}>
-            <button onClick={handleLoginClick}>LOGGA IN</button>
-            <button onClick={handleRegisterClick}>REGISTRERA</button>
-          </div>
+        <Link to="/">HEM</Link>
+        <Link to="/about">OM STUBINEN</Link>
+        <Link to="previouslyShown">VISNINGAR ÖVER ÅREN</Link>
+        <button onClick={handleLoginClick}>LOGGA IN</button>
+        <button onClick={handleRegisterClick}>REGISTRERA</button>
 
-          <div className={NavBarCSS.navbarFlags}>
-            <ReactCountryFlag countryCode="GB" style={{width: '3em', height: '3em'}} svg />
-            <ReactCountryFlag countryCode="SE" style={{width: '3em', height: '3em'}} svg />
-          </div>
+        <div className={NavBarCSS.navbarFlags}>
+          <ReactCountryFlag countryCode="GB" style={{width: '3em', height: '3em'}} svg />
+          <ReactCountryFlag countryCode="SE" style={{width: '3em', height: '3em'}} svg />
         </div>
 
         {showLoginForm && (
@@ -67,6 +79,7 @@ function NavBar() {
           <RegisterForm onClose={handleCloseForm}/>
         )}
       </div>
+      </>
     )
   }
   
