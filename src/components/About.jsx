@@ -14,13 +14,13 @@ function About() {
         </div>
         <h1>Styrelsen 24/25</h1>
         <div className={AboutCSS.profiles}>
-          <ProfileCard name="Samuel" role="Ordförarmästare / Kapten" imageSrc={mclovin}/>
-          <ProfileCard name="Yehya" role="Snubben man swishar" imageSrc={mclovin}/>
-          <ProfileCard name="Chloe" role="Eventgrejsansvarig" imageSrc={mclovin}/>
-          <ProfileCard name="Ada" role="Filmansvarig & Inköpsansvarig (Shoppaholic)" imageSrc={mclovin}/>
-          <ProfileCard name="Axel" role="Posterskaparmagiker" imageSrc={mclovin}/>
-          <ProfileCard name="Natalie" role="Tiktok och memeansvarig" imageSrc={mclovin}/>
-          <ProfileCard name="Ludwig" role="Webbmästare, webbchef, unofficial sekreterare, film-mästare, lvl 100 crook, the list goes on..." imageSrc={mclovin}/>
+          <ProfileCard name="Samuel" role="Ordförande" imageSrc={mclovin}/>
+          <ProfileCard name="Yehya" role="Kassör" imageSrc={mclovin}/>
+          <ProfileCard name="Chloe" role="Eventansvarig" imageSrc={mclovin}/>
+          <ProfileCard name="Ada" role="Filmansvarig" imageSrc={mclovin}/>
+          <ProfileCard name="Axel" role="Marknadsföringsansvarig" imageSrc={mclovin}/>
+          <ProfileCard name="Natalie" role="Marknadsföringsansvarig" imageSrc={mclovin}/>
+          <ProfileCard name="Ludwig" role="Webbansvarig" imageSrc={mclovin}/>
         </div>
       </div>
     )

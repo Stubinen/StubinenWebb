@@ -57,7 +57,7 @@ function NavBar() {
 
     const { pathname } = useLocation();
   
-    // Automatically scrolls to top whenever pathname changes
+    // Closes the navbar when being redirected
     useEffect(() => {
       toggleClass();
     }, [pathname]);
