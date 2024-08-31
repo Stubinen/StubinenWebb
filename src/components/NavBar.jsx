@@ -7,6 +7,7 @@ import NavBarCSS from "./styles/NavBar.module.css"
 import hamburgerOpen from "../img/open.svg"
 import hamburgerClose from "../img/close.svg"
 import { useMediaQuery } from 'react-responsive'
+import { useLocation } from 'react-router-dom';
 
 function NavBar() {
 
@@ -53,6 +54,13 @@ function NavBar() {
       document.body.style.overflow = 'auto';
     };
     }, [showLoginForm, showRegisterForm]);
+
+    const { pathname } = useLocation();
+  
+    // Automatically scrolls to top whenever pathname changes
+    useEffect(() => {
+      toggleClass();
+    }, [pathname]);
 
     return (
       <>
