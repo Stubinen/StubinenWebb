@@ -33,8 +33,8 @@ function MovieCard(props) {
         <img onClick={openDetailedView} src={props.imageSrc} alt={props.name} />
         {props.extraDetails && (
           <>
-          <h2>{props.name}</h2>
-          <h3 style={{color: `${props.hasBeenShown ? 'red' : ''}`}}>{props.date}</h3>
+          <h2 id={MovieCardCSS.nameTitle}>{props.name}</h2>
+          <h3 id={MovieCardCSS.dateTitle} style={{color: `${props.hasBeenShown ? 'red' : ''}`}}>{props.date}</h3>
           </>
         )};
       </div>

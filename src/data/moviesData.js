@@ -3,7 +3,7 @@ let movies = [{
     image: "images/HT24/bullet_train.png",
     name: "Bullet Train",
     description: "Lönnmördaren Ladybug är fast besluten att göra ett lyckat jobb efter en rad tidigare misslyckade uppdrag. Ödet har dock andra planer, då Ladybugs senaste uppdrag ställer honom mot dödliga motståndare från hela världen - alla med liknande, om än motstridiga, mål - på världens snabbaste tåg.",
-    date: new Date("2024-09-01"),
+    date: new Date("2024-08-01"),
 }, {
     id: 1,
     image: "images/HT24/little_women.png",

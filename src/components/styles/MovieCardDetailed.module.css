@@ -26,6 +26,17 @@
     height: 75vh;
     position: relative;
   }
+
+  @media only screen and (max-width: 450px) {
+    .container {
+      width: 35vh;
+      height: 60vh;
+    }
+
+    .content p {
+      font-size: 12px;
+    }
+  }
   
   .content {
     display: flex;
