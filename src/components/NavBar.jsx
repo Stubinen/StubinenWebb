@@ -74,10 +74,12 @@ function NavBar() {
         <button onClick={handleLoginClick}>LOGGA IN</button>
         <button onClick={handleRegisterClick}>REGISTRERA</button>
 
-        <div className={NavBarCSS.navbarFlags}>
+        {!isMobile && (
+          <div className={NavBarCSS.navbarFlags}>
           <ReactCountryFlag countryCode="GB" style={{width: '3em', height: '3em'}} svg />
           <ReactCountryFlag countryCode="SE" style={{width: '3em', height: '3em'}} svg />
         </div>
+        )}
 
         {showLoginForm && (
           <LoginForm onClose={handleCloseForm}/>
@@ -87,6 +89,13 @@ function NavBar() {
           <RegisterForm onClose={handleCloseForm}/>
         )}
       </div>
+
+      {isMobile && (
+          <div className={NavBarCSS.navbarFlags}>
+          <ReactCountryFlag countryCode="GB" style={{width: '3em', height: '3em'}} svg />
+          <ReactCountryFlag countryCode="SE" style={{width: '3em', height: '3em'}} svg />
+        </div>
+      )}
       </>
     )
   }
