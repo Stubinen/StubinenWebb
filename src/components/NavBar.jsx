@@ -13,7 +13,7 @@ function NavBar() {
 
     const [showLoginForm, setShowLoginForm] = useState(false);
     const [showRegisterForm, setShowRegisterForm] = useState(false);
-    const [navBarOpen, setNavBarOpen] = useState(false);
+    const [navBarOpen, setNavBarOpen] = useState(true);
 
     const isMobile = useMediaQuery({ query: '(max-width: 1150px)' });
 
