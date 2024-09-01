@@ -1,4 +1,4 @@
-import {signUpWithEmail} from "../supabase backend/auth.js"
+
 import { useState } from "react";
 
 function RegisterForm({onClose}) {
@@ -6,14 +6,7 @@ function RegisterForm({onClose}) {
     const [registerFirstPage, setRegisterFirstPage] = useState(true);
     
     // Sends data from form as a js object to the supabase auth file
-    const submitForm = async (e) => {
-        e.preventDefault();
-
-        const formData = new FormData(e.target);
-        const payload = Object.fromEntries(formData);
-
-        await signUpWithEmail(payload.email, payload.password, payload);
-    };
+    
 
     return (
     <div className="overlay">
