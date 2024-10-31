@@ -8,12 +8,13 @@ class AboutSection extends Component {
     constructor(props) {
       super(props);
         this.IMAGES = [
-          { src: 'https://api.stubinen.org/img/styrelsen2324/Thea.jpg', name: 'Thea',roll: translate("Ordförande")},
-          { src: 'https://api.stubinen.org/img/styrelsen2324/Kristian.jpg', name: 'Kristian',roll: translate("Kassör")},
-          { src: 'https://api.stubinen.org/img/styrelsen2324/Tobias.jpg', name: 'Tobias',roll: translate("Filmansvarig")},
-          { src: 'https://api.stubinen.org/img/styrelsen2324/Kasper.jpg', name: 'Kasper',roll: translate("Marknadsföring")},
-          { src: 'https://api.stubinen.org/img/styrelsen2324/Victor.jpg', name: 'Victor',roll: translate("Marknadsföring")},
-          { src: 'https://api.stubinen.org/img/styrelsen2324/Emma.jpg', name: 'Emma',roll: translate("Sekreterare")},
+          { src: 'https://api.stubinen.org/img/styrelsen2425/Samuel.jpg', name: 'Samuel',roll: translate("Ordförande")},
+          { src: 'https://api.stubinen.org/img/styrelsen2425/Yehya.jpg', name: 'Yehya',roll: translate("Kassör")},
+          { src: 'https://api.stubinen.org/img/styrelsen2425/Ada.jpg', name: 'Ada',roll: translate("Filmansvarig")},
+          { src: 'https://api.stubinen.org/img/styrelsen2425/Natalie.jpg', name: 'Natalie',roll: translate("Marknadsföring")},
+          { src: 'https://api.stubinen.org/img/styrelsen2425/Axel.jpg', name: 'Axel',roll: translate("Marknadsföring")},
+          { src: 'https://api.stubinen.org/img/styrelsen2425/Chloe.jpg', name: 'Chloe',roll: translate("Eventansvarig")},
+          { src: 'https://api.stubinen.org/img/styrelsen2425/Ludwig.jpg', name: 'Ludwig',roll: translate("Webbansvarig")}
       ];
     }
     render() {
@@ -28,7 +29,7 @@ class AboutSection extends Component {
         return (
           <div className='AboutSection'>
           <Container>
-            <h2>{translate("Styrelsen")} 23/24</h2>
+            <h2>{translate("Styrelsen")} 24/25</h2>
                 <Row form ={true}>
                     {listItems}
                 </Row>
