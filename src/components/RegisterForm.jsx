@@ -1,12 +1,27 @@
-
 import { useState } from "react";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import {auth} from "./firebase";
 
 function RegisterForm({onClose}) {
 
     const [registerFirstPage, setRegisterFirstPage] = useState(true);
     
-    // Sends data from form as a js object to the supabase auth file
-    
+    const submitForm = async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+        const payload = Object.fromEntries(formData);
+
+        try {
+            await createUserWithEmailAndPassword(auth, payload.email, payload.password);
+            const user = auth.currentUser;
+            console.log(user);
+            console.log("User registered successfully");
+
+        } catch (error) {
+            console.log(error.message);
+        }
+    };
 
     return (
     <div className="overlay">
@@ -44,6 +59,7 @@ function RegisterForm({onClose}) {
                     <select name="gender">
                         <option value="Kvinna">Kvinna</option>
                         <option value="Man">Man</option>
+                        <option value="Ickebinär">Ickebinär</option>
                         <option value="Vill ej ange">Vill ej ange</option>
                     </select>
                     
