@@ -12,61 +12,41 @@ function Movies() {
     movies.sort((a, b) => a.date - b.date);
     let movieItems;
 
-    if (!isMobile) {
-        // Map the movies to an array and if the movie has been shown, assign class "shown" in order to gray out
-        movieItems = movies.map((m, index) => {
-            let shown = new Date() > m.date;
+    const moviesWithShown = movies.map((m, index) => {
+        let shown = new Date() > m.date;
+    
+        const currentDateString = new Date().toISOString().split('T')[0];
+        const dateString = m.date.toISOString().split('T')[0]; // formats the date to yyyy-mm-dd
+    
+        // Check if the movie is to be shown today, if so, mark it as not shown
+        if (currentDateString === dateString) {
+            shown = false;
+        }
+    
+        return {
+            index: index,
+            imageSrc: m.image,
+            name: m.name,
+            date: dateString,
+            description: m.description,
+            hasBeenShown: shown,
+            extraDetails: true
+        };
+    });
 
-            const currentDateString = new Date().toISOString().split('T')[0];
-            const dateString = m.date.toISOString().split('T')[0]; // formats the date to yyyy-mm-dd
+    moviesWithShown.sort((a, b) => a.hasBeenShown - b.hasBeenShown);
 
-            // Check if the movie is to be shown today, if so, mark it as not shown
-            if (currentDateString == dateString){
-                shown = false;
-            }
-
-            return (
-                <Movie key={index} imageSrc={m.image} name={m.name} date={dateString} description={m.description} hasBeenShown={shown} extraDetails={true}/>
-            );
-        });
-    }
-    else {
-        const moviesWithShown = movies.map((m, index) => {
-            let shown = new Date() > m.date;
-        
-            const currentDateString = new Date().toISOString().split('T')[0];
-            const dateString = m.date.toISOString().split('T')[0]; // formats the date to yyyy-mm-dd
-        
-            // Check if the movie is to be shown today, if so, mark it as not shown
-            if (currentDateString === dateString) {
-                shown = false;
-            }
-        
-            return {
-                index: index,
-                imageSrc: m.image,
-                name: m.name,
-                date: dateString,
-                description: m.description,
-                hasBeenShown: shown,
-                extraDetails: true
-            };
-        });
-
-        moviesWithShown.sort((a, b) => a.hasBeenShown - b.hasBeenShown);
-
-        movieItems = moviesWithShown.map((m) => (
-            <Movie
-                key={m.index}
-                imageSrc={m.imageSrc}
-                name={m.name}
-                date={m.date}
-                description={m.description}
-                hasBeenShown={m.hasBeenShown}
-                extraDetails={m.extraDetails}
-            />
-        ));
-    }
+    movieItems = moviesWithShown.map((m) => (
+        <Movie
+            key={m.index}
+            imageSrc={m.imageSrc}
+            name={m.name}
+            date={m.date}
+            description={m.description}
+            hasBeenShown={m.hasBeenShown}
+            extraDetails={m.extraDetails}
+        />
+    ));
 
     return (
     <div className={MoviesCSS.homepage}>
