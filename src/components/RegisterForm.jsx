@@ -30,6 +30,7 @@ function RegisterForm({onClose}) {
                     stad: payload.stad,
                     telefonnummer: payload.telefonnummer,
                     gender: payload.gender,
+                    membership: "Not payed",
                 });
             }
             console.log(user);

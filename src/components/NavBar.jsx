@@ -8,12 +8,15 @@ import hamburgerOpen from "../img/open.svg"
 import hamburgerClose from "../img/close.svg"
 import { useMediaQuery } from 'react-responsive'
 import { useLocation } from 'react-router-dom';
+import { auth } from "./firebase";
 
 function NavBar() {
 
     const [showLoginForm, setShowLoginForm] = useState(false);
     const [showRegisterForm, setShowRegisterForm] = useState(false);
     const [navBarOpen, setNavBarOpen] = useState(true);
+    const [isLoggedIn, setLoggedIn] = useState(false);
+
 
     const isMobile = useMediaQuery({ query: '(max-width: 1150px)' });
 
@@ -62,6 +65,28 @@ function NavBar() {
       toggleClass();
     }, [pathname]);
 
+    useEffect(() => {
+      auth.onAuthStateChanged(async (user) => {
+        if (user) {
+          setLoggedIn(true);
+        }
+        else {
+          setLoggedIn(false);
+        }
+      });
+    });
+
+    async function handleLogout(){
+      try {
+        await auth.signOut();
+        window.location.href="/";
+
+      } catch (error) {
+        console.log("Error logging out: ", error.message);
+      }
+
+    }
+
     return (
       <>
       <img onClick={toggleClass} id={NavBarCSS.openIcon} src={hamburgerOpen} alt="Hamburgermenu button" />
@@ -70,9 +95,19 @@ function NavBar() {
 
         <Link to="/">HEM</Link>
         <Link to="/about">OM STUBINEN</Link>
-        <Link to="previouslyShown">VISNINGAR ÖVER ÅREN</Link>
-        <button onClick={handleLoginClick}>LOGGA IN</button>
-        <button onClick={handleRegisterClick}>REGISTRERA</button>
+        <Link to="/previouslyShown">VISNINGAR ÖVER ÅREN</Link>
+
+        { !isLoggedIn ? (
+          <>
+            <button onClick={handleLoginClick}>LOGGA IN</button>
+            <button onClick={handleRegisterClick}>REGISTRERA</button>
+          </>
+        ) : (
+          <>
+            <Link to="/profile">PROFIL</Link>
+            <button onClick={handleLogout}>LOGGA UT</button>
+          </>
+        )}
 
         {!isMobile && (
           <div className={NavBarCSS.navbarFlags}>
