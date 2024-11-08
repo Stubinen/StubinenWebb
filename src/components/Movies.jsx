@@ -5,9 +5,6 @@ import MoviesCSS from "./styles/Movies.module.css"
 import { useMediaQuery } from 'react-responsive'
 
 function Movies() {
-
-    const isMobile = useMediaQuery({ query: '(max-width: 750px)' })
-
     // Sort movies by soonest to latest date
     movies.sort((a, b) => a.date - b.date);
     let movieItems;

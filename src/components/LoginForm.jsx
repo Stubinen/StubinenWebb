@@ -1,12 +1,22 @@
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "./firebase";
 
 function LoginForm({onClose}) {
-    const submitForm = (e) => {
+
+    const submitForm = async (e) => {
         e.preventDefault();
 
         const formData = new FormData(e.target);
         const payload = Object.fromEntries(formData);
 
-        console.log(payload);
+        try {
+            await signInWithEmailAndPassword(auth, payload.email, payload.password);
+            console.log("User successfully logged in");
+            window.location.href="/profile";
+            
+        } catch (error) {
+            console.log(error.message);
+        }
     };
 
     return (

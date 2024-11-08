@@ -5,6 +5,7 @@ import Homepage from "./components/Homepage.jsx"
 import About from "./components/About.jsx"
 import PreviousMovies from "./components/PreviousMovies.jsx"
 import ScrollToTop from "./components/ScrollToTop.js"
+import Profile from "./components/Profile.jsx"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Homepage />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/previouslyShown" element={<PreviousMovies />}/>
+        <Route path="/profile" element={<Profile />}/>
       </Routes>
       
       <Footer/>

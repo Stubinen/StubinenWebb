@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import {auth} from "./firebase";
+import {auth, db} from "./firebase";
+import {setDoc, doc} from "firebase/firestore";
 
 function RegisterForm({onClose}) {
 
@@ -15,8 +16,25 @@ function RegisterForm({onClose}) {
         try {
             await createUserWithEmailAndPassword(auth, payload.email, payload.password);
             const user = auth.currentUser;
+
+            // If user was successfully registered
+            if(user){
+                await setDoc(doc(db, "Users", user.uid), {
+                    email: user.email,
+                    first_name: payload.first_name,
+                    last_name: payload.last_name,
+                    kar_medlemskap: payload.kar_medlemskap,
+                    personnummer: payload.personnummer,
+                    adress: payload.adress,
+                    postnummer: payload.postnummer,
+                    stad: payload.stad,
+                    telefonnummer: payload.telefonnummer,
+                    gender: payload.gender,
+                });
+            }
             console.log(user);
             console.log("User registered successfully");
+            window.location.href="/profile";
 
         } catch (error) {
             console.log(error.message);
