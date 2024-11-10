@@ -31,6 +31,7 @@ function RegisterForm({onClose}) {
                     telefonnummer: payload.telefonnummer,
                     gender: payload.gender,
                     membership: "Not payed",
+                    aktiv_denna_termin: "No",
                 });
             }
             console.log(user);

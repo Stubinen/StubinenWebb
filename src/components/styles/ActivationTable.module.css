@@ -1,0 +1,25 @@
+.container{
+  color: white;
+  width: 60vw;
+  text-align: center;
+}
+
+.container ul {
+  padding: 0;
+}
+.container li {
+  list-style: none;
+  background-color: #1a1a1a;
+  font-size: 1.5em;
+  padding: 0.5em;
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+li:hover {
+  transform: scale(1.03);
+}
+
+li:nth-child(even) {
+  background-color: #373737;
+}

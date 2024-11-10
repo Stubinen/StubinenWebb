@@ -3,7 +3,9 @@
 function NormalMember(props) {
     
     return (
-      <div>NormalMember</div>
+      <div>
+        <h1>Normal</h1>
+      </div>
     )
 }
   

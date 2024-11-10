@@ -3,7 +3,9 @@
 function GoldMember(props) {
     
     return (
-      <div>GoldMember</div>
+      <div>
+        <h1>GoldMember</h1>
+      </div>
     )
 }
   

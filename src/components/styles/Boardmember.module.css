@@ -6,6 +6,18 @@
     width: 80%;
 }
 
+.container button {
+  border: none;
+    background-color: hsl(0,0%, 51%);
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 #title {
     text-align: center;
     margin-bottom: 5vh;
@@ -24,18 +36,5 @@
     font-size: 28px;
     letter-spacing: 4px;
     font-weight: normal;
-    text-transform: uppercase;
-  }
-
-  #number {
-    background-color: rgb(255, 0, 0);
-    padding: 20px;
-    border-radius: 25px;
-    text-align: center;
-    margin-bottom: 5vh;
-    color: white;
-    font-size: 21px;
-    letter-spacing: 4px;
-    font-weight: bold;
     text-transform: uppercase;
   }

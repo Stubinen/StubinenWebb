@@ -10,6 +10,7 @@ import Profile from "./components/Profile.jsx"
 function App() {
   return (
     <>
+    <div className="appContainer">
       <NavBar/>
       <ScrollToTop/>
       <Routes>
@@ -20,6 +21,7 @@ function App() {
       </Routes>
       
       <Footer/>
+    </div>
     </>
   )
 }

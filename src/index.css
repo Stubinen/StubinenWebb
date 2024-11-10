@@ -10,6 +10,12 @@ body {
   background-color: hsl(0, 0%, 6%);
 }
 
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 p {
   color: white;
 }

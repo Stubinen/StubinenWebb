@@ -1,0 +1,16 @@
+.container{
+  overflow-x:auto;
+  color: white;
+  width: 95vw;
+}
+
+.userTable {
+  width: 95vw;
+  font-size: 0.9em;
+  text-align: left;
+  background-color: #1a1a1a;
+}
+
+tr:nth-child(even) {
+  background-color: #373737;
+}
