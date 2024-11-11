@@ -14,3 +14,7 @@
 tr:nth-child(even) {
   background-color: #373737;
 }
+
+#tableTitles {
+  cursor: pointer;
+}
