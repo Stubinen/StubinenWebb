@@ -4,15 +4,123 @@
     border-radius: 22px;
     filter: drop-shadow(black 0px 5px 5px);
     margin-bottom: 5vh;
-    background-image: url('/images/McLovin.png');
+    background-image: url('/images/McLovin1.png');
     background-repeat: no-repeat;
     background-size: cover;
+    color: rgb(52, 52, 52);
+
+    font-family: "Arial", "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
-#text {
+#textTop {
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 40px;
-    left: 170px;
+    top: 55px;
+    left: 171px;
+
+    font-size: 9px;
+    font-weight: bold;
+}
+
+#textTop1 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50px;
+    left: 215px;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#textMiddle {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 76px;
+    left: 196px;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#textMiddle1 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 76px;
+    left: 308px;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#name {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 28px;
+    left: 21px;
+
+    letter-spacing: 1px;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+#adress {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 16px;
+    left: 21px;
+
+    letter-spacing: 1px;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+#stad {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 5px;
+    left: 21px;
+
+    letter-spacing: 1px;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+#sex {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 111px;
+    right: 63px;
+
+    font-size: 9px;
+    font-weight: bold;
+}
+
+#issueDate {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 141px;
+    left: 177px;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+#class {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 141px;
+    left: 235px;
+    font-size: 9px;
+    font-weight: bold;
 }

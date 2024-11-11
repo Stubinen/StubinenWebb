@@ -21,7 +21,7 @@ function Boardmember(props) {
     return (
       <div className={BoardmemberCSS.container}>
         <h1 id={BoardmemberCSS.bigTitle}>Välkommen {props.data.first_name}</h1>
-        <MemberCard />
+        <MemberCard data={props.data}/>
         <div>
           <button onClick={handleShowUsers}>VISA MEDLEMMAR</button>
           <button onClick={handleShowActivation}>VISA ICKE-AKTIVERADE MEDLEMMAR</button>
