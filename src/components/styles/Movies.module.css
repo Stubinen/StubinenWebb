@@ -20,8 +20,9 @@
 }
 
 #imgLogo {
+    margin-top: 15vh;
     width: 350px;
-    margin-bottom: 5vh;
+    margin-bottom: 30vh;
 }
 
 .movies {

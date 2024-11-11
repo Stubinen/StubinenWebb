@@ -47,9 +47,8 @@ function Movies() {
 
     return (
     <div className={MoviesCSS.homepage}>
-        
-        <h1 id={MoviesCSS.title}>VISNINGAR DENNA TERMIN</h1>
         <img id={MoviesCSS.imgLogo} src={logo} alt="Stubinens logo" />
+        <h1 id={MoviesCSS.title}>VISNINGAR DENNA TERMIN</h1>
         <div className={MoviesCSS.movies}>
             {movieItems}
         </div>
