@@ -6,12 +6,11 @@ import MemberTableCSS from "./styles/MemberTable.module.css"
 function MemberTable() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  var lastSortedAttribute = "";
+  const [lastSortedAttribute, setLastSortedAttribute] = useState(true);
 
   function sortByAttribute(attribute){ // Sorts the users based on attribute, reverses if already sorted
     var sortedUsers;
-    if (attribute != lastSortedAttribute && lastSortedAttribute != ""){
+    if (attribute != lastSortedAttribute){
       sortedUsers = [...users].sort((a, b) => {
         // Case insensitive string comparison for sorting
         const valueA = a[attribute].toLowerCase(); // Normalize to lowercase for case-insensitive sorting
@@ -25,7 +24,7 @@ function MemberTable() {
     }
     
     setUsers(sortedUsers);
-    lastSortedAttribute = attribute;
+    setLastSortedAttribute(attribute);
   }
 
 useEffect(() => {
