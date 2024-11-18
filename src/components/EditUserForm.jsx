@@ -1,5 +1,5 @@
 import {db} from "./firebase";
-import { collection, getDocs, where, query, updateDoc, doc } from 'firebase/firestore';
+import { updateDoc, doc } from 'firebase/firestore';
 
 function EditUserForm({onClose, ...props}) {
 
@@ -17,18 +17,13 @@ function EditUserForm({onClose, ...props}) {
             await updateDoc(userDocRef, payload);
             
             onClose();
-            
+
             console.log('Document updated successfully');
         } catch (error) {
             console.error('Error updating document: ', error);
         }
         
     };
-
-    const activateUser = async (docId) => {
-
-        
-      };
 
     return (
     <div className="overlay">

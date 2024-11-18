@@ -11,7 +11,6 @@ function MemberTable() {
   const [showEditUser, setEditUser] = useState(false);
 
   function editUser(user){
-    console.log(user);
     setEditUser(user);
   }
 
