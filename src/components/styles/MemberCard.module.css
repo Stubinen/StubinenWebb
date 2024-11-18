@@ -119,8 +119,8 @@
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 141px;
-    left: 235px;
-    font-size: 9px;
+    bottom: 15px;
+    left: 210px;
+    font-size: 18px;
     font-weight: bold;
 }

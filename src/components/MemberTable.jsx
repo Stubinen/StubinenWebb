@@ -2,11 +2,22 @@ import {db} from "./firebase";
 import { collection, getDocs } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import MemberTableCSS from "./styles/MemberTable.module.css"
+import EditUserForm from "./EditUserForm";
 
 function MemberTable() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [lastSortedAttribute, setLastSortedAttribute] = useState(true);
+  const [showEditUser, setEditUser] = useState(false);
+
+  function editUser(user){
+    console.log(user);
+    setEditUser(user);
+  }
+
+  const handleCloseForm = () => {
+    setEditUser(false);
+  };
 
   function sortByAttribute(attribute){ // Sorts the users based on attribute, reverses if already sorted
     var sortedUsers;
@@ -46,6 +57,11 @@ useEffect(() => {
     if (loading) return <p>Loading...</p>;
 
     return (
+      <>
+        {showEditUser && (
+          <EditUserForm onClose={handleCloseForm} user={showEditUser}/>
+        )}
+
       <div className={MemberTableCSS.container}>
       <h2>User List</h2>
       <table className={MemberTableCSS.userTable}>
@@ -66,7 +82,7 @@ useEffect(() => {
         </thead>
         <tbody>
           {users.map(user => (
-            <tr key={user.id}>
+            <tr onClick={() => editUser(user)} key={user.id} style={{cursor: "copy"}}>
               <td>{user.email}</td>
               <td>{user.first_name}</td>
               <td>{user.last_name}</td>
@@ -83,6 +99,7 @@ useEffect(() => {
         </tbody>
       </table>
     </div>
+      </>
     )
 }
   
