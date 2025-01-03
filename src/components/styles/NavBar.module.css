@@ -108,5 +108,18 @@
     right: 20px;
   }
 
+  .navbarFlags button {
+    border: none;
+    background-color: hsla(0, 0%, 0%, 0);
+    color: white;
+    padding: 0;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+
   
 }

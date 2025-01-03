@@ -114,8 +114,8 @@ function NavBar() {
 
         {!isMobile && (
           <div className={NavBarCSS.navbarFlags}>
-          <button type="submit" onClick={() => i18n.changeLanguage("en")} disabled={i18n.resolvedLanguage === "en"}><ReactCountryFlag countryCode="GB" style={{width: '3em', height: '3em'}} svg /></button>
-          <button type="submit" onClick={() => i18n.changeLanguage("se")} disabled={i18n.resolvedLanguage === "se"}><ReactCountryFlag countryCode="SE" style={{width: '3em', height: '3em'}} svg /></button>
+          <button type="submit" onClick={() => i18n.changeLanguage("en")}><ReactCountryFlag countryCode="GB" style={{width: '3em', height: '3em'}} svg /></button>
+          <button type="submit" onClick={() => i18n.changeLanguage("se")}><ReactCountryFlag countryCode="SE" style={{width: '3em', height: '3em'}} svg /></button>
         </div>
         )}
 
@@ -130,8 +130,8 @@ function NavBar() {
 
       {isMobile && (
           <div className={NavBarCSS.navbarFlags}>
-          <button type="submit" onClick={() => i18n.changeLanguage("en")} disabled={i18n.resolvedLanguage === "en"}><ReactCountryFlag countryCode="GB" style={{width: '3em', height: '3em'}} svg /></button>
-          <button type="submit" onClick={() => i18n.changeLanguage("se")} disabled={i18n.resolvedLanguage === "se"}><ReactCountryFlag countryCode="SE" style={{width: '3em', height: '3em'}} svg /></button>
+          <button type="submit" onClick={() => i18n.changeLanguage("en")}><ReactCountryFlag countryCode="GB" style={{width: '3em', height: '3em'}} svg /></button>
+          <button type="submit" onClick={() => i18n.changeLanguage("se")}><ReactCountryFlag countryCode="SE" style={{width: '3em', height: '3em'}} svg /></button>
         </div>
       )}
       </>
