@@ -1,4 +1,4 @@
-import logo from "../img/Logostubinen.png"
+//import logo from "https://ik.imagekit.io/stubinen/Logostubinen.png"
 import instagramLogo from "../img/icons8-instagram.svg"
 import facebookLogo from "../img/icons8-facebook.svg"
 import tiktokLogo from "../img/icons8-tiktok.svg"
@@ -9,7 +9,7 @@ function Footer() {
 
     return (
       <div className={FooterCSS.footer}>
-        <img id={FooterCSS.imgLogoFooter} src={logo} alt="Stubinens logo" />
+        <img id={FooterCSS.imgLogoFooter} src="https://ik.imagekit.io/stubinen/Logostubinen.png" alt="Stubinens logo" />
         <div id={FooterCSS.center}>
           <h3>info@stubinen.org</h3>
           <div id={FooterCSS.socialIcons}>
