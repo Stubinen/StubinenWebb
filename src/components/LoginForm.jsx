@@ -24,12 +24,12 @@ function LoginForm({onClose}) {
     return (
     <div className="overlay">
         <div className="form-container">
-            <h2>Logga in</h2>
+            <h2>{t('Navbar-login')}</h2>
             <form onSubmit={submitForm}>
                 <input type="email" name="email" placeholder={t('Form-email')} required/>
                 <input type="password" name="password" placeholder={t('Form-password')} required/>
                 <button type="submit">{t('Navbar-login')}</button>
-                <button type="button" onClick={onClose}>{t('Form-close')}</button>
+                <button type="button" className="close-button" onClick={onClose}>{t('Form-close')}</button>
             </form>
         </div>
     </div>

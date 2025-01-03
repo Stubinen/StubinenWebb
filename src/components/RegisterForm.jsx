@@ -88,7 +88,7 @@ function RegisterForm({onClose}) {
                     <button type="button" onClick={() => setRegisterFirstPage(true)}>{t('Form-previous')}</button>
                     <button type="submit">{t('Navbar-register')}</button>
                 </div>
-                <button type="button" onClick={onClose}>{t('Form-close')}</button>
+                <button type="button" className="close-button" onClick={onClose}>{t('Form-close')}</button>
             </form>
         </div>
     </div>

@@ -93,7 +93,12 @@ p {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-.form-container div {
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container form div{
   display: flex;
   flex-direction: column;
 }
@@ -113,7 +118,7 @@ p {
 
 .form-container button {
   padding: 0.5em;
-  background-color: #007BFF;
+  background-color: #292364;
   color: white;
   border: none;
   border-radius: 4px;
@@ -121,8 +126,10 @@ p {
   margin-top: 1em;
 }
 
-.form-container button[type="button"] {
-  background-color: red;
+.close-button {
+  background-color: rgb(255, 0, 0);
+  width: 100px;
+  align-self: center;
 }
 
 .hidden {

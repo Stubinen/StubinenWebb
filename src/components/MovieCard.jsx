@@ -30,7 +30,7 @@ function MovieCard(props) {
     return (
       <>
       <div className={`${props.hasBeenShown ? 'movieCard shown' : 'movieCard'}`}>
-        <img onClick={openDetailedView} src={props.imageSrc} alt={props.name} />
+        <img onClick={openDetailedView} src={props.imageSrc} alt={props.name} loading="lazy"/>
         {props.extraDetails && (
           <>
           <h2 id={MovieCardCSS.nameTitle}>{props.name}</h2>
