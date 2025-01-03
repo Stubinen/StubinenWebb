@@ -2,8 +2,11 @@ import Header from "./Header.jsx"
 import Movie from "./MovieCard.jsx"
 import previousMovies from "../data/previouslyShownMovies.js"
 import PreviousMoviesCSS from "./styles/PreviousMovies.module.css"
+import { useTranslation } from "react-i18next"
 
 function PreviousMovies() {
+  
+  const { t } = useTranslation();
 
     // Sort movies by soonest to latest date
     previousMovies.sort((a, b) => a.date - b.date);
@@ -25,7 +28,7 @@ function PreviousMovies() {
     return (
       <div>
         <Header />
-        <h1 id={PreviousMoviesCSS.titel}>Visningar de senaste 5 åren</h1>
+        <h1 id={PreviousMoviesCSS.titel}>{t('Past5years')}</h1>
 
         {movieChunks.map((chunk, index) => (
           <div key={index}>

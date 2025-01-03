@@ -55,6 +55,11 @@
     
   }
 
+  .navbarFlags button {
+    padding: 0;
+    background-color: hsla(0, 0%, 0%, 0);
+  }
+
   .navbar a {
     color: white;
     padding: 1.5rem;
@@ -102,4 +107,6 @@
     top: 20px;
     right: 20px;
   }
+
+  
 }

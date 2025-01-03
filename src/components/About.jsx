@@ -2,25 +2,27 @@ import Header from "./Header.jsx"
 import ProfileCard from "./ProfileCard.jsx"
 import mclovin from "../img/mcLovin.jpg"
 import AboutCSS from "./styles/About.module.css"
+import { useTranslation } from "react-i18next"
 
 function About() {
+    const { t } = useTranslation();
 
     return (
       <div className={AboutCSS.about}>
         <Header />
         <div className={AboutCSS.aboutInfoSection}>
-          <h1 id={AboutCSS.title}>Om Stubinen</h1>
-          <p>Stubinen är en filmförening för studenter av stundenter. Vi visar 8 varierade filmer från olika genrer per termin på biografen CNEMA på andra sidan strömmen från campus Norrköping. Ett medlemskap kostar 70 kr per termin och låter dig se bra film till billigt pris. Även om du inte studerar på Linköpings universitet kan du bli medlem och ta del av allt Stubinen har att erbjuda!</p>
+          <h1 id={AboutCSS.title}>{t('Navbar-about')}</h1>
+          <p>{t('About-desc')}</p>
         </div>
-        <h1 id={AboutCSS.title}>Styrelsen 24/25</h1>
+        <h1 id={AboutCSS.title}>{t('About-board')}</h1>
         <div className={AboutCSS.profiles}>
-          <ProfileCard name="Samuel" role="Ordförande" imageSrc={mclovin}/>
-          <ProfileCard name="Yehya" role="Kassör" imageSrc={mclovin}/>
-          <ProfileCard name="Chloe" role="Eventansvarig" imageSrc={mclovin}/>
-          <ProfileCard name="Ada" role="Filmansvarig" imageSrc={mclovin}/>
-          <ProfileCard name="Axel" role="Marknadsföringsansvarig" imageSrc={mclovin}/>
-          <ProfileCard name="Natalie" role="Marknadsföringsansvarig" imageSrc={mclovin}/>
-          <ProfileCard name="Ludwig" role="Webbansvarig" imageSrc={mclovin}/>
+          <ProfileCard name="Samuel" role={t('About-ordf')} imageSrc={mclovin}/>
+          <ProfileCard name="Yehya" role={t('About-kass')} imageSrc={mclovin}/>
+          <ProfileCard name="Chloe" role={t('About-event')} imageSrc={mclovin}/>
+          <ProfileCard name="Ada" role={t('About-film')} imageSrc={mclovin}/>
+          <ProfileCard name="Axel" role={t('About-pr')} imageSrc={mclovin}/>
+          <ProfileCard name="Natalie" role={t('About-pr')} imageSrc={mclovin}/>
+          <ProfileCard name="Ludwig" role={t('About-webb')} imageSrc={mclovin}/>
         </div>
       </div>
     )

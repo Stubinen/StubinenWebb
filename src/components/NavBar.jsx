@@ -10,6 +10,8 @@ import { useMediaQuery } from 'react-responsive'
 import { useLocation } from 'react-router-dom';
 import { auth } from "./firebase";
 
+import { useTranslation } from "react-i18next";
+
 function NavBar() {
 
     const [showLoginForm, setShowLoginForm] = useState(false);
@@ -17,6 +19,7 @@ function NavBar() {
     const [navBarOpen, setNavBarOpen] = useState(true);
     const [isLoggedIn, setLoggedIn] = useState(false);
 
+    const { t, i18n } = useTranslation();
 
     const isMobile = useMediaQuery({ query: '(max-width: 1150px)' });
 
@@ -93,26 +96,26 @@ function NavBar() {
       <div className={navBarOpen ? NavBarCSS.navbar : "hide"}>
         <img onClick={toggleClass} id={NavBarCSS.closeIcon} src={hamburgerClose} alt="Hamburgermenu button" />
 
-        <Link to="/">HEM</Link>
-        <Link to="/about">OM STUBINEN</Link>
-        <Link to="/previouslyShown">VISNINGAR ÖVER ÅREN</Link>
+        <Link to="/">{t('Navbar-home')}</Link>
+        <Link to="/about">{t('Navbar-about')}</Link>
+        <Link to="/previouslyShown">{t('Navbar-previous')}</Link>
 
         { !isLoggedIn ? (
           <>
-            <button onClick={handleLoginClick}>LOGGA IN</button>
-            <button onClick={handleRegisterClick}>REGISTRERA</button>
+            <button onClick={handleLoginClick}>{t('Navbar-login')}</button>
+            <button onClick={handleRegisterClick}>{t('Navbar-register')}</button>
           </>
         ) : (
           <>
             <Link to="/profile">PROFIL</Link>
-            <button onClick={handleLogout}>LOGGA UT</button>
+            <button onClick={handleLogout}>{t('Navbar-signout')}</button>
           </>
         )}
 
         {!isMobile && (
           <div className={NavBarCSS.navbarFlags}>
-          <ReactCountryFlag countryCode="GB" style={{width: '3em', height: '3em'}} svg />
-          <ReactCountryFlag countryCode="SE" style={{width: '3em', height: '3em'}} svg />
+          <button type="submit" onClick={() => i18n.changeLanguage("en")} disabled={i18n.resolvedLanguage === "en"}><ReactCountryFlag countryCode="GB" style={{width: '3em', height: '3em'}} svg /></button>
+          <button type="submit" onClick={() => i18n.changeLanguage("se")} disabled={i18n.resolvedLanguage === "se"}><ReactCountryFlag countryCode="SE" style={{width: '3em', height: '3em'}} svg /></button>
         </div>
         )}
 
@@ -127,8 +130,8 @@ function NavBar() {
 
       {isMobile && (
           <div className={NavBarCSS.navbarFlags}>
-          <ReactCountryFlag countryCode="GB" style={{width: '3em', height: '3em'}} svg />
-          <ReactCountryFlag countryCode="SE" style={{width: '3em', height: '3em'}} svg />
+          <button type="submit" onClick={() => i18n.changeLanguage("en")} disabled={i18n.resolvedLanguage === "en"}><ReactCountryFlag countryCode="GB" style={{width: '3em', height: '3em'}} svg /></button>
+          <button type="submit" onClick={() => i18n.changeLanguage("se")} disabled={i18n.resolvedLanguage === "se"}><ReactCountryFlag countryCode="SE" style={{width: '3em', height: '3em'}} svg /></button>
         </div>
       )}
       </>

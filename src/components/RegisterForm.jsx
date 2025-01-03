@@ -2,8 +2,10 @@ import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import {auth, db} from "./firebase";
 import {setDoc, doc} from "firebase/firestore";
+import { useTranslation } from "react-i18next"
 
 function RegisterForm({onClose}) {
+    const { t } = useTranslation();
 
     const [registerFirstPage, setRegisterFirstPage] = useState(true);
     
@@ -46,47 +48,47 @@ function RegisterForm({onClose}) {
     return (
     <div className="overlay">
         <div className="form-container">
-            <h2>Registrera</h2>
+            <h2>{t('Navbar-register')}</h2>
             <form onSubmit={submitForm}>
                 <div className={`${registerFirstPage ? '' : 'hidden'}`}>
-                    <input type="text" name="first_name" placeholder="Förnamn" required/>
-                    <input type="text" name="last_name" placeholder="Efternamn" required/>
-                    <input type="email" name="email" placeholder="Epost" required/>
+                    <input type="text" name="first_name" placeholder={t('Form-firstname')} required/>
+                    <input type="text" name="last_name" placeholder={t('Form-lastname')} required/>
+                    <input type="email" name="email" placeholder={t('Form-email')} required/>
                 
-                    <label htmlFor="kar_medlemskap">Kårmedlemskap</label>
+                    <label htmlFor="kar_medlemskap">{t('Form-studentunion')}</label>
                     <select name="kar_medlemskap">
-                        <option value="Ingen (men är student)">Ingen (men är student)</option>
-                        <option value="Ej student">Ej student</option>
-                        <option value="LinTek">LinTek</option>
-                        <option value="Consensus">Consensus</option>
-                        <option value="StuFF">StuFF</option>
+                        <option value="Ingen (men är student)">{t('Form-studentunion-1')}</option>
+                        <option value="Ej student">{t('Form-studentunion-2')}</option>
+                        <option value="LinTek">{t('Form-studentunion-3')}</option>
+                        <option value="Consensus">{t('Form-studentunion-4')}</option>
+                        <option value="StuFF">{t('Form-studentunion-5')}</option>
                     </select>
                     
-                    <input type="password" name="password" placeholder="Lösenord" required/>
-                    <input type="password" name="repeat_password" placeholder="Upprepa Lösenord" required/>
+                    <input type="password" name="password" placeholder={t('Form-password')} required/>
+                    <input type="password" name="repeat_password" placeholder={t('Form-repeatpassword')} required/>
 
-                    <button type="button" onClick={() => setRegisterFirstPage(false)}>Nästa</button>
+                    <button type="button" onClick={() => setRegisterFirstPage(false)}>{t('Form-next')}</button>
                 </div>
 
                 <div className={`${registerFirstPage ? 'hidden' : ''}`}>
-                    <input type="text" name="personnummer" placeholder="Personnummer" required/>
-                    <input type="text" name="adress" placeholder="Adress" required/>
-                    <input type="text" name="postnummer" placeholder="Postnummer" required/>
-                    <input type="text" name="stad" placeholder="Stad" required/>
-                    <input type="text" name="telefonnummer" placeholder="Telefonnummer" required/>
+                    <input type="text" name="personnummer" placeholder={t('Form-personalnumber')} required/>
+                    <input type="text" name="adress" placeholder={t('Form-address')} required/>
+                    <input type="text" name="postnummer" placeholder={t('Form-zipcode')} required/>
+                    <input type="text" name="stad" placeholder={t('Form-city')} required/>
+                    <input type="text" name="telefonnummer" placeholder={t('Form-phonenumber')} required/>
 
-                    <label htmlFor="gender">Kön</label>
+                    <label htmlFor="gender">{t('Form-gender')}</label>
                     <select name="gender">
-                        <option value="Kvinna">Kvinna</option>
-                        <option value="Man">Man</option>
-                        <option value="Ickebinär">Ickebinär</option>
-                        <option value="Vill ej ange">Vill ej ange</option>
+                        <option value="Kvinna">{t('Form-gender-1')}</option>
+                        <option value="Man">{t('Form-gender-2')}</option>
+                        <option value="Ickebinär">{t('Form-gender-3')}</option>
+                        <option value="Vill ej ange">{t('Form-gender-4')}</option>
                     </select>
                     
-                    <button type="button" onClick={() => setRegisterFirstPage(true)}>Föregående</button>
-                    <button type="submit">Registrera</button>
+                    <button type="button" onClick={() => setRegisterFirstPage(true)}>{t('Form-previous')}</button>
+                    <button type="submit">{t('Navbar-register')}</button>
                 </div>
-                <button type="button" onClick={onClose}>Stäng</button>
+                <button type="button" onClick={onClose}>{t('Form-close')}</button>
             </form>
         </div>
     </div>
