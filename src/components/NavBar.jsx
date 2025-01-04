@@ -9,6 +9,7 @@ import hamburgerClose from "../img/close.svg"
 import { useMediaQuery } from 'react-responsive'
 import { useLocation } from 'react-router-dom';
 import { auth } from "./firebase";
+import { Toaster } from "react-hot-toast";
 
 import { useTranslation } from "react-i18next";
 
@@ -92,6 +93,8 @@ function NavBar() {
 
     return (
       <>
+      <div><Toaster/></div>
+
       <img onClick={toggleClass} id={NavBarCSS.openIcon} src={hamburgerOpen} alt="Hamburgermenu button" />
       <div className={navBarOpen ? NavBarCSS.navbar : "hide"}>
         <img onClick={toggleClass} id={NavBarCSS.closeIcon} src={hamburgerClose} alt="Hamburgermenu button" />

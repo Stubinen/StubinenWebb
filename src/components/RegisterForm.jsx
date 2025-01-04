@@ -3,6 +3,8 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import {auth, db} from "./firebase";
 import {setDoc, doc} from "firebase/firestore";
 import { useTranslation } from "react-i18next"
+import { generateFirebaseAuthErrorMessage } from "./errorHandler";
+import toast from "react-hot-toast";
 
 function RegisterForm({onClose}) {
     const { t } = useTranslation();
@@ -15,6 +17,11 @@ function RegisterForm({onClose}) {
         const formData = new FormData(e.target);
         const payload = Object.fromEntries(formData);
 
+        if (payload.password !== payload.repeat_password) {
+            toast.error("Password does not match the repeated password");
+            return;
+        }
+        
         try {
             await createUserWithEmailAndPassword(auth, payload.email, payload.password);
             const user = auth.currentUser;
@@ -36,12 +43,12 @@ function RegisterForm({onClose}) {
                     aktiv_denna_termin: "No",
                 });
             }
-            console.log(user);
-            console.log("User registered successfully");
+            //console.log(user);
+            //console.log("User registered successfully");
             window.location.href="/profile";
 
         } catch (error) {
-            console.log(error.message);
+            generateFirebaseAuthErrorMessage(error);
         }
     };
 
