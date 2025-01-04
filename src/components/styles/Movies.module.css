@@ -1,6 +1,6 @@
 #title {
     text-align: center;
-    margin-top: 50vh;
+    margin-top: 60vh;
     margin-bottom: 5vh;
     color: white;
     font-size: 28px;
@@ -20,8 +20,8 @@
 }
 
 #imgLogo {
-    margin-top: 10vh;
-    width: 350px;
+    margin-top: 8vh;
+    width: 400px;
 }
 
 .movies {

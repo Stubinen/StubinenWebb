@@ -2,8 +2,8 @@ import Movie from "./MovieCard.jsx"
 import movies from "../data/moviesData.js"
 import logo from "../img/Logostubinen.png"
 import MoviesCSS from "./styles/Movies.module.css"
-import { useMediaQuery } from 'react-responsive'
 import { useTranslation } from "react-i18next";
+import logotext from "../assets/Stubinen_logo_text.png"
 
 function Movies() {
 
@@ -51,7 +51,8 @@ function Movies() {
 
     return (
     <div className={MoviesCSS.homepage}>
-        <img id={MoviesCSS.imgLogo} src={logo} alt="Stubinens logo" />
+        <img id={MoviesCSS.imgLogo} src={logotext} alt="Stubinens logo" />
+
         <h1 id={MoviesCSS.title}>{t('Viewings')}</h1>
         <div className={MoviesCSS.movies}>
             {movieItems}

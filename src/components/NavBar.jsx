@@ -104,9 +104,11 @@ function NavBar() {
         <Link to="/previouslyShown">{t('Navbar-previous')}</Link>
 
         { !isLoggedIn ? (
-          <>
+          <> 
+          <div>
             <button onClick={handleLoginClick}>{t('Navbar-login')}</button>
             <button onClick={handleRegisterClick}>{t('Navbar-register')}</button>
+          </div>
           </>
         ) : (
           <>
