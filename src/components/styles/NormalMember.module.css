@@ -3,26 +3,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 80%;
-}
-
-.container button {
-  border: none;
-    background-color: hsl(0,0%, 51%);
-    color: white;
-    padding: 15px 30px;
-    text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 #title {
+    margin-top: 5vh;
     text-align: center;
-    margin-bottom: 5vh;
-    color: white;
-    font-size: 21px;
+    color: rgb(255, 255, 255);
+    font-size: 28px;
     letter-spacing: 4px;
     font-weight: normal;
     text-transform: uppercase;
@@ -38,3 +25,4 @@
     font-weight: normal;
     text-transform: uppercase;
   }
+
