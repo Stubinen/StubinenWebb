@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { auth, db } from "./firebase";
 import { doc, getDoc } from "firebase/firestore";
 import ProfileCSS from "./styles/Profile.module.css"
+import loadingIcon from "../assets/loading.gif"
 
 import GoldMember from "./GoldMember"
 import NormalMember from "./NormalMember"
@@ -58,7 +59,7 @@ function Profile() {
           </>
         ) : (
           <div className={ProfileCSS.loadingContainer}>
-            <p>Loading...</p>
+            <img src={loadingIcon} alt="Loading" style={{borderRadius: "15px", width: "100px"}} />
           </div>
         )}
       </div>
