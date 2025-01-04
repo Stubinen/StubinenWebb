@@ -29,7 +29,8 @@ function PreviousMovies() {
       <div>
         <Header />
         <h1 id={PreviousMoviesCSS.titel}>{t('Past5years')}</h1>
-
+        <h1 id={PreviousMoviesCSS.titel}>Work in progress</h1>
+        {/* commented for production build
         {movieChunks.map((chunk, index) => (
           <div key={index}>
             <h1 id={PreviousMoviesCSS.titel}>{chunk[0].date.getFullYear().toString().slice(2,4) + "/" + chunk[15].date.getFullYear().toString().slice(2,4)}</h1>
@@ -40,6 +41,7 @@ function PreviousMovies() {
             </div>
           </div>
         ))}
+        */}
 
       </div>
     )
