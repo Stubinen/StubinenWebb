@@ -3,7 +3,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import {auth, db} from "./firebase";
 import {setDoc, doc} from "firebase/firestore";
 import { useTranslation } from "react-i18next"
-import { generateFirebaseAuthErrorMessage } from "./errorHandler";
+import { generateFirebaseAuthErrorMessage } from "./ErrorHandler";
 import toast from "react-hot-toast";
 
 function RegisterForm({onClose}) {

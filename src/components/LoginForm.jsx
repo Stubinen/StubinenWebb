@@ -1,7 +1,7 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./firebase";
 import { useTranslation } from "react-i18next"
-import { generateFirebaseAuthErrorMessage } from "./errorHandler";
+import { generateFirebaseAuthErrorMessage } from "./ErrorHandler";
 
 function LoginForm({onClose}) {
     const { t } = useTranslation();
