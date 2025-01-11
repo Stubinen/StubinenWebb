@@ -24,7 +24,7 @@ function LoginForm({onClose}) {
 
     return (
     <div className="overlay" onClick={onClose}>
-        <div className="form-container">
+        <div className="form-container" onClick={(e) => e.stopPropagation()}>
             <h2>{t('Navbar-login')}</h2>
             <form onSubmit={submitForm}>
                 <input type="email" name="email" placeholder={t('Form-email')} required/>

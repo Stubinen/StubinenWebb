@@ -54,7 +54,7 @@ function RegisterForm({onClose}) {
 
     return (
     <div className="overlay" onClick={onClose}>
-        <div className="form-container">
+        <div className="form-container" onClick={(e) => e.stopPropagation()}>
             <h2>{t('Navbar-register')}</h2>
             <form onSubmit={submitForm}>
                 <div className={`${registerFirstPage ? '' : 'hidden'}`}>
