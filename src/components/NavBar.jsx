@@ -10,6 +10,7 @@ import { useMediaQuery } from 'react-responsive'
 import { useLocation } from 'react-router-dom';
 import { auth } from "./firebase";
 import { Toaster } from "react-hot-toast";
+import LanguageToggle from "./LanguageToggle";
 
 import { useTranslation } from "react-i18next";
 
@@ -43,11 +44,24 @@ function NavBar() {
       setShowRegisterForm(false);
     };
 
+    // Lock scroll if in hamburgermenu
+    useEffect(() => {
+      if (isMobile){
+        if(navBarOpen){
+          document.body.style.overflow = 'hidden';
+        }
+        else {
+          document.body.style.overflow = 'auto';
+        }
+      }
+    })
+
     useEffect(() => {
       if (!isMobile) {
         setNavBarOpen(true);
       }
     })
+
     // Effect to handle body overflow when forms are shown or hidden
     useEffect(() => {
     if (showLoginForm || showRegisterForm) {
@@ -86,7 +100,7 @@ function NavBar() {
         window.location.href="/";
 
       } catch (error) {
-        console.log("Error logging out: ", error.message);
+        //console.log("Error logging out: ", error.message);
       }
 
     }
@@ -119,8 +133,7 @@ function NavBar() {
 
         {!isMobile && (
           <div className={NavBarCSS.navbarFlags}>
-          <button type="submit" onClick={() => i18n.changeLanguage("en")}><ReactCountryFlag countryCode="GB" style={{width: '3em', height: '3em'}} svg /></button>
-          <button type="submit" onClick={() => i18n.changeLanguage("se")}><ReactCountryFlag countryCode="SE" style={{width: '3em', height: '3em'}} svg /></button>
+            <LanguageToggle />
         </div>
         )}
 
@@ -135,8 +148,7 @@ function NavBar() {
 
       {isMobile && (
           <div className={NavBarCSS.navbarFlags}>
-          <button type="submit" onClick={() => i18n.changeLanguage("en")}><ReactCountryFlag countryCode="GB" style={{width: '3em', height: '3em'}} svg /></button>
-          <button type="submit" onClick={() => i18n.changeLanguage("se")}><ReactCountryFlag countryCode="SE" style={{width: '3em', height: '3em'}} svg /></button>
+            <LanguageToggle />
         </div>
       )}
       </>

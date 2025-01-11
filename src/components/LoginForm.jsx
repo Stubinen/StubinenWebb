@@ -14,7 +14,7 @@ function LoginForm({onClose}) {
 
         try {
             await signInWithEmailAndPassword(auth, payload.email, payload.password);
-            console.log("User successfully logged in");
+            //console.log("User successfully logged in");
             window.location.href="/profile";
             
         } catch (error) {
@@ -23,7 +23,7 @@ function LoginForm({onClose}) {
     };
 
     return (
-    <div className="overlay">
+    <div className="overlay" onClick={onClose}>
         <div className="form-container">
             <h2>{t('Navbar-login')}</h2>
             <form onSubmit={submitForm}>

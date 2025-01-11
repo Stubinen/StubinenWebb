@@ -53,7 +53,7 @@ function RegisterForm({onClose}) {
     };
 
     return (
-    <div className="overlay">
+    <div className="overlay" onClick={onClose}>
         <div className="form-container">
             <h2>{t('Navbar-register')}</h2>
             <form onSubmit={submitForm}>
