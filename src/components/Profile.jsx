@@ -14,7 +14,6 @@ function Profile() {
 
     const fetchUserData = async () => {
       auth.onAuthStateChanged(async (user) => {
-        console.log(user);
         const docRef = doc(db, "Users", user.uid);
         const userInfo = await getDoc(docRef);
         if(userInfo.exists()) {
