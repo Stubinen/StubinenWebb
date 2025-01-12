@@ -13,5 +13,5 @@
       /* Fade to black from the bottom */
       linear-gradient(to top, hsl(0, 0%, 6%), rgba(0, 0, 0, 0) 30%),
       /* Background image */
-      url('https://api.stubinen.org/img/styrelsen2425/gruppbild test1.jpg');
+      url('https://ik.imagekit.io/stubinen/gruppbild%20test1.jpg');
   }

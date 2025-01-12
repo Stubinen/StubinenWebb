@@ -30,7 +30,7 @@ let movies = [{
     date: new Date("2024-11-03"),
 }, {
     id: 5,
-    image: "https://api.stubinen.org/img/postersVT24/MV.png",
+    image: "https://ik.imagekit.io/stubinen/MV.png",
     name: "Medlemmarnas Val!",
     description: "En gång varje termin uppfyller vi er önskning! Vilken film vill du att vi ska visa på CNEMA härnäst? Ta chansen att nominera och rösta så kanske vi visar just din film!",
     date: new Date("2024-11-17"),
