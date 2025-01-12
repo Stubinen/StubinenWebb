@@ -26,8 +26,8 @@ function EditUserForm({onClose, ...props}) {
     };
 
     return (
-    <div className="overlay">
-        <div className="form-container">
+    <div className="overlay" onClick={onClose}>
+        <div className="form-container" onClick={(e) => e.stopPropagation()}>
             <h2>Edit user</h2>
             <form onSubmit={submitForm}>
                 <input defaultValue={props.user.first_name} type="text" name="first_name" placeholder="Förnamn" required/>
