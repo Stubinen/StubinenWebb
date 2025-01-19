@@ -27,6 +27,7 @@ function Movies() {
         return {
             index: index,
             imageSrc: m.image,
+            trailer: m.trailer,
             name: m.name,
             date: dateString,
             description: m.description,
@@ -41,6 +42,7 @@ function Movies() {
         <Movie
             key={m.index}
             imageSrc={m.imageSrc}
+            trailer={m.trailer}
             name={m.name}
             date={m.date}
             description={m.description}

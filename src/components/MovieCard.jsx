@@ -40,7 +40,7 @@ function MovieCard(props) {
       </div>
 
       {detailedView && (
-        <MovieCardDetailed imageSrc={props.imageSrc} name={props.name} date={props.date} description={props.description} onClose={closeDetailedView}/>
+        <MovieCardDetailed imageSrc={props.imageSrc} trailer={props.trailer} name={props.name} date={props.date} description={props.description} onClose={closeDetailedView}/>
       )}
       </>
     )
